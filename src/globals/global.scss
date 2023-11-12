@@ -1,0 +1,90 @@
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  color: var(--main-color);
+  line-height: 1.2;
+}
+
+h1{
+  font-size: 70px;
+}
+
+h2{
+  font-size: 50px;
+}
+
+h3{
+  font-size: 40px;
+}
+
+h4{
+  font-size: 35px;
+}
+
+h5{
+  font-size: 30px;
+}
+
+h6{
+  font-size: 25px;
+}
+
+p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  color: var(--paragraph-color);
+  line-height: 1.65;
+}
+
+//Where you see cursive green font - it is going to be a span tag.
+span{
+  font-family: 'Yellowtail', cursive;
+  color: var(--secondary-color);
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+button{
+  padding: 28px 40px;
+  display: flex;
+  justify-content: center;
+  //Change justify-content if necessary
+  align-items: center;
+  font-size: 20px;
+  color: var(--white-color);
+  font-weight: 700;
+  background: var(--main-color);
+  line-height: 1.2;
+  border-radius: var(--border-radius-button);
+  &:hover,
+  &:focus{
+    background: var(--hover-bg-color);
+    color: var(--main-color);
+  }
+  &:active{
+    background: var(--white-color);
+  }
+}
+
+//for icons with product category name on product page(tag <a></a>)
+.category__icon-link{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white-color);
+  background: var(--main-color);
+  padding: 6px 12px;
+  border-radius: var(--border-radius-icon);
+  &:hover{
+    background: var(--hover-bg-color);
+    color: var(--main-color);
+  }
+  &:active{
+    background: var(--white-color);
+  }
+}
+
