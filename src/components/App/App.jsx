@@ -1,7 +1,8 @@
-import './App.css';
 import Title from '../Title/Title';
 import Paragraph from '../Paragraph/Paragraph';
 import Span from '../Span/Span';
+import './App.scss';
+
 function App() {
   return (
       <div>
