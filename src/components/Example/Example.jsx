@@ -1,4 +1,3 @@
-import './Example.scss'
 import Title from '@/components/Title/Title';
 import Paragraph from '@/components/Paragraph/Paragraph';
 import Span from '@/components/Span/Span';
