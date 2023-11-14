@@ -1,0 +1,30 @@
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  color: var(--main-color);
+  line-height: 1.2;
+
+  &-1 {
+    font-size: 70px;
+  }
+
+  &-2 {
+    font-size: 50px;
+  }
+
+  &-3 {
+    font-size: 40px;
+  }
+
+  &-4 {
+    font-size: 35px;
+  }
+
+  &-5 {
+    font-size: 30px;
+  }
+
+  &-6 {
+    font-size: 25px;
+  }
+}
