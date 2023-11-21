@@ -1,11 +1,15 @@
 import './App.scss';
-import Example from '@/components/Example/Example';
+import HomePage from "@/pages/HomePage/HomePage";
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
       <div>
-          {/*See Example component*/}
-          <Example></Example>
+         <Router>
+
+             <HomePage/>
+
+         </Router>
       </div>
   );
 }
