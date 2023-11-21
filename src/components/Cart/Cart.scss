@@ -1,0 +1,31 @@
+.cart{
+  display: flex;
+  align-items: center;
+  padding: 4px 0 4px 5px;
+  gap: 12px;
+  width: 159px;
+  background: #FAFAFA;
+  border: 1px solid var(--grey-bg-color);
+  border-radius: var(--border-radius-card);
+  & a{
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-color);
+    border-radius: var(--border-radius-round);
+    &.active{
+      background: var(--hover-bg-color);
+    }
+    & img{
+      width: 21px;
+      height: 21px;
+    }
+  }
+  &__qty{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--main-color);
+  }
+}

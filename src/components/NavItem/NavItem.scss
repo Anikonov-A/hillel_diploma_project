@@ -1,0 +1,14 @@
+.navbar__list-item{
+  & a{
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 700;
+    &.active{
+      color: var(--hover-bg-color);
+    }
+    &:hover{
+      color: var(--hover-bg-color);
+    }
+  }
+}
+
