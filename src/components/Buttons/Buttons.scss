@@ -1,0 +1,132 @@
+//==================================Navigation Buttons========================================//
+.button {
+  padding: 28px 49px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Roboto",sans-serif;
+  font-size: 20px;
+  color: var(--white-color);
+  font-weight: 700;
+  line-height: 1.2;
+  border-radius: var(--border-radius-button);
+  border: 1px solid transparent;
+  transition: all 0.3s ease 0.1s;
+}
+.green {
+  background: var(--main-color);
+  &:hover, &:focus {
+    background: var(--hover-bg-color);
+    color: var(--main-color);
+  }
+  &:active {
+    background: var(--active-bg-yellow);
+    color: var(--main-color);
+    transform: scale(0.98);
+  }
+  &:visited {
+    background: var(--main-color);
+    color: var(--visited-link-color);
+  }
+  &:visited:hover{
+    background: var(--hover-bg-color);
+  }
+}
+
+.yellow {
+  background: var(--hover-bg-color);
+  color: var(--main-color);
+
+  &:hover, &:focus {
+    background: var(--main-color);
+    color: var(--white-color);
+  }
+  &:active {
+    background: var(--active-bg-green);
+    color: var(--white-color);
+    transform: scale(0.98);
+  }
+  &:visited{
+    background: var(--hover-bg-color);
+    color: var(--visited-link-color);
+  }
+  &:visited:hover{
+   background: var(--main-color);
+  }
+}
+.yellow-on-green{
+  background: var(--hover-bg-color);
+  color: var(--main-color);
+  &:hover, &:focus {
+    background: var(--hover-bg-color);
+    box-shadow: 0 10px 25px -3px var(--active-bg-yellow);
+    color: var(--white-color);
+  }
+  &:active{
+    color: var(--white-color);
+    transform: scale(0.98);
+  }
+  &:visited{
+    background: var(--hover-bg-color);
+    color: var(--visited-link-color);
+  }
+  &:visited:hover{
+    background: var(--hover-bg-color);
+    box-shadow: 0 10px 25px -3px var(--active-bg-yellow);
+  }
+}
+.transparent {
+  border: 1px solid var(--main-color);
+  background: transparent;
+  color: #274C5B;
+  &:hover,&:focus{
+    background: var(--main-color);
+    color: var(--white-color);
+  }
+  &:visited{
+    background: transparent;
+    color:var(--visited-link-color);
+  }
+  &:visited:hover{
+    background: var(--main-color);
+  }
+  &:active{
+    transform: scale(0.98);
+  }
+}
+//===========================================Pagination Button===========================================//
+.pag-btn{
+  text-align: center;
+  font-family: "Open Sans",sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.2;
+  border-radius: var(--border-radius-button);
+}
+.btn-active{
+  color: var(--white-color);
+  padding: 23px 57px;
+  background: var(--main-color);
+}
+.btn-nonactive{
+  color: var(--main-color);
+  background: var(--tab-na-bg-color);
+  padding: 23px 61px;
+
+}
+
+
+//===========================================Form Button=================================================//
+.form-button{
+  padding: 28px 65px;
+  background: var(--main-color);
+  &:hover, &:focus {
+    background: var(--hover-bg-color);
+    color: var(--main-color);
+  }
+  &:active {
+    background: var(--active-bg-yellow);
+    color: var(--main-color);
+    transform: scale(0.98);
+  }
+}

@@ -27,7 +27,6 @@ function App() {
                   <Route path="*" element={<ErrorPage/>}/>
               </Routes>
           </Router>
-          {/*<Example></Example>*/}
       </div>
   );
 }
