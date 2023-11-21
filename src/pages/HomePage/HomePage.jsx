@@ -1,7 +1,10 @@
-import './HomePage.scss';
+import HeroSection from "./HeroSection/HeroSection";
+import "./HomePage.scss"
 
-function HomePage () {
-
+export default function HomePage() {
+    return (
+        <main className="wrapper">
+            <HeroSection/>
+        </main>
+    )
 }
-
-export default HomePage;
