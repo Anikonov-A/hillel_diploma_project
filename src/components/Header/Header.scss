@@ -1,0 +1,12 @@
+.header{
+  padding-top: 70px;
+  padding-bottom: 70px;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
