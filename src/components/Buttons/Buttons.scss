@@ -15,6 +15,7 @@
 }
 .green {
   background: var(--main-color);
+  color: var(--white-color);
   &:hover, &:focus {
     background: var(--hover-bg-color);
     color: var(--main-color);
@@ -26,10 +27,11 @@
   }
   &:visited {
     background: var(--main-color);
-    color: var(--visited-link-color);
+    color: var(--white-color);
   }
   &:visited:hover{
     background: var(--hover-bg-color);
+    color: var(--main-color);
   }
 }
 
@@ -48,10 +50,11 @@
   }
   &:visited{
     background: var(--hover-bg-color);
-    color: var(--visited-link-color);
+    color: var(--main-color);
   }
   &:visited:hover{
-   background: var(--main-color);
+    background: var(--main-color);
+    color: var(--white-color);
   }
 }
 .yellow-on-green{
@@ -68,11 +71,12 @@
   }
   &:visited{
     background: var(--hover-bg-color);
-    color: var(--visited-link-color);
+    color: var(--main-color);
   }
   &:visited:hover{
     background: var(--hover-bg-color);
     box-shadow: 0 10px 25px -3px var(--active-bg-yellow);
+    color: var(--white-color);
   }
 }
 .transparent {
@@ -85,10 +89,11 @@
   }
   &:visited{
     background: transparent;
-    color:var(--visited-link-color);
+    color: var(--main-color);
   }
   &:visited:hover{
     background: var(--main-color);
+    color: var(--white-color);
   }
   &:active{
     transform: scale(0.98);
@@ -114,8 +119,6 @@
   padding: 23px 61px;
 
 }
-
-
 //===========================================Form Button=================================================//
 .form-button{
   padding: 28px 65px;
