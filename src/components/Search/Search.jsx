@@ -1,6 +1,5 @@
 import './Search.scss';
 import {NavLink} from 'react-router-dom';
-import icon from '../../images/Search/Search.svg';
 import {paths} from '../../common/url';
 
 function Search () {
@@ -12,7 +11,7 @@ function Search () {
                     <input type="text" id="searchInput" className="search__input"/>
                 </div>
                 <NavLink to={paths.SHOP}>
-                    <img src={icon} alt="search-icon"/>
+                    <img src="../../../public/images/search/search.svg" alt="search-icon"/>
                 </NavLink>
             </form>
         </div>
