@@ -5,7 +5,7 @@ function Cart () {
     return (
         <div className="cart">
             <NavLink to={paths.CART}>
-                <img src="../../../public/images/cart/cart.svg" alt="to-cart"/>
+                <img src="./images/cart/cart.svg" alt="to-cart"/>
             </NavLink>
             <div className="cart__qty">Cart (0)</div>
         </div>
