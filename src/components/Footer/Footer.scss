@@ -1,0 +1,9 @@
+.footer{
+  padding-top: 110px;
+  display: flex;
+  flex-direction: column;
+  &__inner{
+    padding-bottom: 100px;
+    display: flex;
+  }
+}
