@@ -1,5 +1,6 @@
-import "./HomePage.scss"
 import HeroSection from "./HeroSection/HeroSection";
+import "./HomePage.scss"
+
 import OfferCardsSection from "./OfferCardsSection/OfferCardsSection";
 
 export default function HomePage() {
