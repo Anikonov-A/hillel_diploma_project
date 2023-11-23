@@ -10,7 +10,7 @@ function Title(props) {
 }
 
 Title.propTypes = {
-    size: number.isRequired,
+    size: number,
     addClasses: string
 }
 

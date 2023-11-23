@@ -1,6 +1,6 @@
 import './Cart.scss';
 import {NavLink} from 'react-router-dom';
-import {paths} from "../../common/url";
+import {paths} from "../../../../common/url";
 function Cart () {
     return (
         <div className="cart">

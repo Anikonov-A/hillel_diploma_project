@@ -1,6 +1,6 @@
 import './Search.scss';
 import {NavLink} from 'react-router-dom';
-import {paths} from '../../common/url';
+import {paths} from '../../../../common/url';
 
 function Search () {
     return (

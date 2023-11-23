@@ -1,15 +1,18 @@
 import './App.scss';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 import HomePage from '../../pages/HomePage/HomePage';
-import AboutPage from "../../pages/AboutPage/AboutPage";
-import ShopPage from "../../pages/ShopPage/ShopPage";
-import ServicePage from "../../pages/ServicePage/ServicePage";
-import TeamPage from "../../pages/TeamPage/TeamPage";
-import ContactPage from "../../pages/ContactPage/ContactPage";
-import CartPage from "../../pages/CartPage/CartPage";
+import AboutPage from '../../pages/AboutPage/AboutPage';
+import ShopPage from '../../pages/ShopPage/ShopPage';
+import ServicePage from '../../pages/ServicePage/ServicePage';
+import TeamPage from '../../pages/TeamPage/TeamPage';
+import ContactPage from '../../pages/ContactPage/ContactPage';
+import CartPage from '../../pages/CartPage/CartPage';
 import ErrorPage from '../../pages/ErrorPage/ErrorPage';
-
+import ChangeLogPage from '../../pages/ChangeLogPage/ChangeLogPage';
+import LicencesPage from '../../pages/LicencesPage/LicencesPage';
+import PasswordPage from '../../pages/PasswordPage/PasswordPage';
 function App() {
   return (
       <div>
@@ -23,8 +26,12 @@ function App() {
                   <Route path="/team" element={<TeamPage/>}/>
                   <Route path="/contacts" element={<ContactPage/>}/>
                   <Route path="/cart" element={<CartPage/>}/>
-                  <Route path="*" element={<ErrorPage/>}/>
+                  <Route path="/error" element={<ErrorPage/>}/>
+                  <Route path="/licences" element={<LicencesPage/>}/>
+                  <Route path="/password-protection" element={<PasswordPage/>}/>
+                  <Route path="/changelog" element={<ChangeLogPage/>}/>
               </Routes>
+              <Footer></Footer>
           </Router>
       </div>
   );

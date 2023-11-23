@@ -1,6 +1,6 @@
 import './Navigation.scss';
 import NavItem from "../NavItem/NavItem";
-import {paths} from '../../common/url';
+import {paths} from '../../../common/url';
 
 function Navigation () {
     const pages = [

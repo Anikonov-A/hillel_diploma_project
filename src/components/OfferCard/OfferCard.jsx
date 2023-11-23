@@ -1,6 +1,6 @@
 import "./OfferCard.scss"
 import {Link} from "react-router-dom";
-import Span from "../Span/Span";
+import Span from "@/components/Span/Span";
 import {paths} from '@/common/url';
 import {string} from "prop-types";
 

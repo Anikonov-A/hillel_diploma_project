@@ -1,0 +1,35 @@
+.footer__contacts{
+  text-align: right;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-right: 1px solid #D4D4D4;
+  flex-basis: 27.64%;
+  &-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &-title{
+    margin-bottom: 40px;
+  }
+  &-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    &:last-child{
+      margin-bottom: 36px;
+    }
+    & p a{
+      &:hover{
+        color: var(--hover-bg-color);
+      }
+    }
+  }
+  &-name{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.65;
+    color: var(--paragraph-color);
+  }
+}

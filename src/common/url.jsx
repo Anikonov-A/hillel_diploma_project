@@ -7,4 +7,21 @@ export const paths = {
     CONTACTS: '/contacts',
     CART: '/cart',
     ERROR: '/error',
+    LICENCES: '/licences',
+    PASSWORD: '/password-protection',
+    CHANGELOG: '/changelog'
+}
+
+export const imagePaths = {
+    Instagram: "./images/social/instagram.svg",
+    Facebook: "./images/social/facebook.svg",
+    Twitter: "./images/social/twitter.svg",
+    Pinterest: "./images/social/pinterest.svg",
+}
+
+export const outerUrls = {
+    Instagram: "https://www.instagram.com/",
+    Facebook: "https://www.facebook.com/",
+    Twitter: "https://twitter.com/",
+    Pinterest: "https://www.pinterest.com/",
 }
