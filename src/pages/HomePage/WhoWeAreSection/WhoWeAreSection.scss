@@ -1,0 +1,32 @@
+.whoWeAreSection {
+  height: 931px;
+  background-color: var(--white-color);
+  background-image: url("../../../../public/who-we-are-bg-img.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  overflow: hidden;
+
+
+  .container {
+    width: 100%;
+    background-image: url("../../../../public/who-we-are-bg2.svg");
+    background-repeat: no-repeat;
+    background-position-x: 57%;
+    background-position-y: 100px;
+
+    .whoWeAreContentBlock {
+      width: 50%;
+      margin-right: 0;
+      margin-left: auto;
+      padding: 178px 260px 185px 0;
+
+      .spanMb {
+        margin-bottom: 8px;
+      }
+
+      .block {
+        margin-top: 35px;
+      }
+    }
+  }
+}
