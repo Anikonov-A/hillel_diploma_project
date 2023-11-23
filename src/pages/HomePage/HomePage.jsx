@@ -1,4 +1,6 @@
+import "./HomePage.scss"
 import HeroSection from "./HeroSection/HeroSection";
+import WhoWeAre from "./WhoWeAreSection/WhoWeAreSection";
 import "./HomePage.scss"
 
 import OfferCardsSection from "./OfferCardsSection/OfferCardsSection";
@@ -8,6 +10,7 @@ export default function HomePage() {
         <main className="wrapper">
             <HeroSection/>
             <OfferCardsSection />
+            <WhoWeAre/>
         </main>
     )
 }
