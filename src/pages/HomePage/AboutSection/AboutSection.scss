@@ -1,0 +1,54 @@
+.AboutSection {
+  background-color: var(--grey-bg-color);
+  background-image: url("../../../../public/about-section-bg.png");
+  background-repeat: no-repeat;
+  background-position-x: 90px;
+  background-position-y: 50px;
+
+  .AboutContentBlock {
+    width: 50%;
+    margin-right: 0;
+    margin-left: auto;
+    padding-top: 186px;
+    padding-right: 260px;
+    padding-bottom: 199px;
+
+    .spanMb {
+      margin-bottom: 8px;
+    }
+
+    .title {
+      margin-bottom: 14px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin: 46px 0;
+      padding-right: 100px;
+      padding-left: 0;
+
+       .block {
+        display: flex;
+        gap: 19px;
+
+         img {
+           width: 101px;
+           height: 101px;
+         }
+
+         .blockContent {
+           display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+
+           .blockContentTitle {
+             margin-bottom: 8px;
+           }
+         }
+      }
+    }
+  }
+}
+
