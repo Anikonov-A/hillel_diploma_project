@@ -1,0 +1,23 @@
+.offer {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background: var(--main-color);
+
+  &__title {
+    color: var(--white-color);
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+  }
+
+  &__products-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}

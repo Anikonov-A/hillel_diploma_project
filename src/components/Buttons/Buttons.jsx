@@ -40,3 +40,9 @@ export function FormButton({text}) {
 FormButton.propTypes = {
     text:string.isRequired
 }
+
+export function AddBtn () {
+    return (
+        <button type="button" className="btn-add green">Add to cart</button>
+    )
+}
