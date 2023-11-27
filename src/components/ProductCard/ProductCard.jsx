@@ -1,6 +1,6 @@
 import './ProductCard.scss';
 import {Link} from 'react-router-dom';
-import {AddBtn} from '../../../../components/Buttons/Buttons';
+import {AddBtn} from '../Buttons/Buttons';
 function ProductCard ({data, category}) {
 
     return (

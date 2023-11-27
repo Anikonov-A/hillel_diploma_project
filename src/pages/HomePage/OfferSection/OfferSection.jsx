@@ -4,7 +4,7 @@ import Title from '../../../components/Title/Title';
 import {NavButton} from '../../../components/Buttons/Buttons';
 import {useEffect, useState} from "react";
 import axios from "axios";
-import ProductCard from './ProductCard/ProductCard';
+import ProductCard from '../../../components/ProductCard/ProductCard';
 
 function OfferSection({ category, title }) {
     const [data, setData] = useState({});
