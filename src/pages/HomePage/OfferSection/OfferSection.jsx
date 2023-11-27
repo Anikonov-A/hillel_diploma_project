@@ -6,7 +6,7 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import ProductCard from './ProductCard/ProductCard';
 
-function OfferSection({ category }) {
+function OfferSection({ category, title }) {
     const [data, setData] = useState({});
     const [categoryData, setCategoryData] = useState([]);
     useEffect(() => {
@@ -41,7 +41,7 @@ function OfferSection({ category }) {
                 <Span>Offer</Span>
                 <div className="offer__wrapper">
                     <Title addClasses="offer__title" size={2}>
-                        We Offer Organic {category}
+                        {title}
                     </Title>
                     <NavButton
                         to={`/products/${category.toLowerCase()}`}

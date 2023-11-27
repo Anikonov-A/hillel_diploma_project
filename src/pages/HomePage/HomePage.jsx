@@ -11,10 +11,10 @@ export default function HomePage() {
         <main className="wrapper">
             <HeroSection/>
             <OfferCardsSection />
-            <OfferSection category="Vegetables"></OfferSection>
+            <OfferSection category="Vegetables" title="We Offer Organic Vegetables"></OfferSection>
             {/*Uncomment to see how it works*/}
-            {/*<OfferSection category="Fresh"></OfferSection>*/}
-            {/*<OfferSection category="Nuts"></OfferSection>*/}
+            {/*<OfferSection category="Fresh"></OfferSection>
+            <OfferSection category="Nuts"></OfferSection>*/}
             <WhoWeAre/>
         </main>
     )
