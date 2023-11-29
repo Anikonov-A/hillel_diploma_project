@@ -4,7 +4,6 @@ import Span from "../Span/Span";
 import {Link} from "react-router-dom";
 
 export default function ExpertCard({data}){
-
     return (
         <div className={styles.expert_card}>
             <div className={styles.expert_img}>
