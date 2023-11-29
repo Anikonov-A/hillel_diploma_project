@@ -1,0 +1,68 @@
+{
+  "experts": [
+    {
+      "id": 1,
+      "name": "Giovani Bacardo",
+      "industry": "Farmer",
+      "photo": "./images/expert-photo/giovani.jpg",
+      "social": {
+        "facebook": "./images/social/facebook.svg",
+        "twitter": "./images/social/twitter.svg"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Marianne Loreno",
+      "industry": "Designer",
+      "photo": "./images/expert-photo/marianne.jpg",
+      "social": {
+        "instagram": "./images/social/instagram.svg",
+        "facebook": "./images/social/facebook.svg",
+        "twitter": "./images/social/twitter.svg"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Riga Pelore",
+      "industry": "Farmer",
+      "photo": "./images/expert-photo/riga.jpg",
+      "social": {
+        "instagram": "./images/social/instagram.svg",
+        "facebook": "./images/social/facebook.svg",
+        "twitter": "./images/social/twitter.svg"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Keira Knightley",
+      "industry": "Farmer",
+      "photo": "./images/expert-photo/keira.jpg",
+      "social": {
+        "facebook": "./images/social/facebook.svg",
+        "twitter": "./images/social/twitter.svg"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Scott Lawrence",
+      "industry": "Designer",
+      "photo": "./images/expert-photo/scott.jpg",
+      "social": {
+        "instagram": "./images/social/instagram.svg",
+        "facebook": "./images/social/facebook.svg",
+        "twitter": "./images/social/twitter.svg"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Karen Allen",
+      "industry": "Farmer",
+      "photo": "./images/expert-photo/karen.jpg",
+      "social": {
+        "instagram": "./images/social/instagram.svg",
+        "facebook": "./images/social/facebook.svg",
+        "twitter": "./images/social/twitter.svg"
+      }
+    }
+  ]
+}
