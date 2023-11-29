@@ -1,6 +1,7 @@
 import styles from "./ExpertCard.module.scss"
 import Title from "../Title/Title";
 import Span from "../Span/Span";
+import {Link} from "react-router-dom";
 
 export default function ExpertCard({data}){
 
@@ -17,9 +18,9 @@ export default function ExpertCard({data}){
                 <div className={styles.expert_right_block}>
                     {Object.entries(data.social).map(([platform, socialData]) => (
                         <div key={platform}>
-                            <a href={socialData.link} target="_blank">
+                            <Link to={socialData.link} target="_blank">
                                 <img src={socialData.img} alt={platform} />
-                            </a>
+                            </Link>
                         </div>
                     ))}
                 </div>
