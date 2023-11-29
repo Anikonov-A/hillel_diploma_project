@@ -6,8 +6,14 @@
       "industry": "Farmer",
       "photo": "./images/expert-photo/giovani.jpg",
       "social": {
-        "facebook": "./images/social/facebook.svg",
-        "twitter": "./images/social/twitter.svg"
+        "facebook": {
+          "img": "./images/social/facebook.svg",
+          "link": "https://uk-ua.facebook.com/"
+        },
+        "twitter": {
+          "img": "./images/social/twitter.svg",
+          "link": "https://twitter.com/"
+        }
       }
     },
     {
@@ -16,9 +22,18 @@
       "industry": "Designer",
       "photo": "./images/expert-photo/marianne.jpg",
       "social": {
-        "instagram": "./images/social/instagram.svg",
-        "facebook": "./images/social/facebook.svg",
-        "twitter": "./images/social/twitter.svg"
+        "instagram": {
+          "img": "./images/social/instagram.svg",
+          "link": "https://www.instagram.com/"
+        },
+        "facebook": {
+          "img": "./images/social/facebook.svg",
+          "link": "https://uk-ua.facebook.com/"
+        },
+        "twitter": {
+          "img": "./images/social/twitter.svg",
+          "link": "https://twitter.com/"
+        }
       }
     },
     {
@@ -27,9 +42,18 @@
       "industry": "Farmer",
       "photo": "./images/expert-photo/riga.jpg",
       "social": {
-        "instagram": "./images/social/instagram.svg",
-        "facebook": "./images/social/facebook.svg",
-        "twitter": "./images/social/twitter.svg"
+        "instagram": {
+          "img": "./images/social/instagram.svg",
+          "link": "https://www.instagram.com/"
+        },
+        "facebook": {
+          "img": "./images/social/facebook.svg",
+          "link": "https://uk-ua.facebook.com/"
+        },
+        "twitter": {
+          "img": "./images/social/twitter.svg",
+          "link": "https://twitter.com/"
+        }
       }
     },
     {
@@ -38,8 +62,14 @@
       "industry": "Farmer",
       "photo": "./images/expert-photo/keira.jpg",
       "social": {
-        "facebook": "./images/social/facebook.svg",
-        "twitter": "./images/social/twitter.svg"
+        "facebook": {
+          "img": "./images/social/facebook.svg",
+          "link": "https://uk-ua.facebook.com/"
+        },
+        "twitter": {
+          "img": "./images/social/twitter.svg",
+          "link": "https://twitter.com/"
+        }
       }
     },
     {
@@ -48,9 +78,18 @@
       "industry": "Designer",
       "photo": "./images/expert-photo/scott.jpg",
       "social": {
-        "instagram": "./images/social/instagram.svg",
-        "facebook": "./images/social/facebook.svg",
-        "twitter": "./images/social/twitter.svg"
+        "instagram": {
+          "img": "./images/social/instagram.svg",
+          "link": "https://www.instagram.com/"
+        },
+        "facebook": {
+          "img": "./images/social/facebook.svg",
+          "link": "https://uk-ua.facebook.com/"
+        },
+        "twitter": {
+          "img": "./images/social/twitter.svg",
+          "link": "https://twitter.com/"
+        }
       }
     },
     {
@@ -59,9 +98,18 @@
       "industry": "Farmer",
       "photo": "./images/expert-photo/karen.jpg",
       "social": {
-        "instagram": "./images/social/instagram.svg",
-        "facebook": "./images/social/facebook.svg",
-        "twitter": "./images/social/twitter.svg"
+        "instagram": {
+          "img": "./images/social/instagram.svg",
+          "link": "https://www.instagram.com/"
+        },
+        "facebook": {
+          "img": "./images/social/facebook.svg",
+          "link": "https://uk-ua.facebook.com/"
+        },
+        "twitter": {
+          "img": "./images/social/twitter.svg",
+          "link": "https://twitter.com/"
+        }
       }
     }
   ]

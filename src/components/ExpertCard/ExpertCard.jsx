@@ -1,45 +1,26 @@
 import styles from "./ExpertCard.module.scss"
 import Title from "../Title/Title";
 import Span from "../Span/Span";
-import {useEffect, useState} from "react";
-import axios from "axios";
-import logo from "../Logo/Logo";
 
-export default function ExpertCard({ data }){
-    const [expertData, setExpertData] = useState(null);
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get('/data/experts.json');
-                setExpertData(response.data.experts);
-                const expertsData = response.data.experts
-                console.log(expertsData[0].social)
-            } catch (error) {
-                console.error('Error fetching expert data:', error);
-            }
-        };
-
-        fetchData();
-    }, []);
-    if (!expertData) {
-        return <div>Loading...</div>;
-    }
-
-    const firstExpert = expertData[0];
+export default function ExpertCard({data}){
 
     return (
-        <div>
-            <div>
-                <img src={firstExpert.photo} alt={firstExpert.name} />
+        <div className={styles.expert_card}>
+            <div className={styles.expert_img}>
+                <img src={data.photo} alt={data.name} />
             </div>
-            <div>
-                <div>
-                    <Title size={5}>{firstExpert.name}</Title>
-                    <Span children="">{firstExpert.industry}</Span>
+            <div className={styles.expert_info}>
+                <div className={styles.expert_left_block}>
+                    <Title size={5}>{data.name}</Title>
+                    <Span children="">{data.industry}</Span>
                 </div>
-                <div>
-                    {Object.entries(firstExpert.social).map(([platform, icon]) => (
-                        <img key={platform} src={icon} alt={platform} />
+                <div className={styles.expert_right_block}>
+                    {Object.entries(data.social).map(([platform, socialData]) => (
+                        <div key={platform}>
+                            <a href={socialData.link} target="_blank">
+                                <img src={socialData.img} alt={platform} />
+                            </a>
+                        </div>
                     ))}
                 </div>
             </div>
