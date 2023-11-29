@@ -1,0 +1,16 @@
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  &__image{
+    max-width: 36px;
+  }
+  &__title{
+    color: var(--main-color);
+    font-size: 38px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.2;
+  }
+}

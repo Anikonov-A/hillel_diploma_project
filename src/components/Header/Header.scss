@@ -1,0 +1,18 @@
+.header{
+  background: rgba(255, 255, 255, 0.90);
+  padding-top: 70px;
+  padding-bottom: 70px;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  &__container{
+    max-width: 1630px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

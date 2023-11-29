@@ -1,0 +1,54 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+.container {
+  max-width: 1430px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+//USE THESE STYLING while doing components
+
+/*button{
+  padding: 28px 40px;
+  display: flex;
+  justify-content: center;
+  //Change justify-content if necessary
+  align-items: center;
+  font-size: 20px;
+  color: var(--white-color);
+  font-weight: 700;
+  background: var(--main-color);
+  line-height: 1.2;
+  border-radius: var(--border-radius-button);
+  &:hover,
+  &:focus{
+    background: var(--hover-bg-color);
+    color: var(--main-color);
+  }
+  &:active{
+    background: var(--white-color);
+  }
+}
+
+//for icons with product category name on product page(tag <a></a>)
+.category__icon-link{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white-color);
+  background: var(--main-color);
+  padding: 6px 12px;
+  border-radius: var(--border-radius-icon);
+  &:hover{
+    background: var(--hover-bg-color);
+    color: var(--main-color);
+  }
+  &:active{
+    background: var(--white-color);
+  }
+}*/

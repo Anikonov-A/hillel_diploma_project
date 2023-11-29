@@ -1,0 +1,21 @@
+.copyright{
+  border-top:1px solid var(--footer-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  &__title{
+    margin-left: 5px;
+    & a{
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.65;
+      color: var(--paragraph-color);
+      &:hover{
+        color: var(--hover-bg-color);
+      }
+    }
+  }
+}

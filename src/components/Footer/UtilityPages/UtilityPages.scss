@@ -1,0 +1,24 @@
+.utility__pages{
+  text-align: left;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-left: 1px solid #D4D4D4;
+  flex-basis: 27.64%;
+  &-title{
+    margin-bottom: 24px;
+  }
+  &-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    & li a{
+      font-family: "Open Sans", sans-serif;
+      font-size: 18px;
+      line-height: 2.72;
+      color: var(--paragraph-color);
+      &:hover{
+        color: var(--hover-bg-color);
+      }
+    }
+  }
+}

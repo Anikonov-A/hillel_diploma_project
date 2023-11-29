@@ -1,0 +1,29 @@
+:root {
+  --main-color: #274C5B;
+  --secondary-color: #7EB693;
+  --paragraph-color: #525C60;
+  --white-color: #FFFFFF;
+  --footer-border:#D4D4D4;
+
+  --hover-bg-color: #EFD372;
+  --grey-bg-color: #F9F8F8;
+  --tab-na-bg-color: #EFF6F1;
+  --info-bg-color: #ECECEC;
+
+  --active-bg-yellow: #fad587;
+  --active-bg-green:#315c6e;
+
+  --visited-link-color:#9400D3;
+  --hero-bg-grey:#f1eff0;
+  --hero-linear-bg:linear-gradient(
+                  rgba(241, 239, 240, 0.2),
+                  rgba(241, 239, 240, 0.2) 100%
+  );
+
+  --padding-section: 185px;
+
+  --border-radius-card: 36px;
+  --border-radius-button: 16px;
+  --border-radius-icon: 8px;
+  --border-radius-round: 50%;
+}
