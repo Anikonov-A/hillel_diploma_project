@@ -32,7 +32,7 @@ PaginationButton.propTypes ={
 
 export function FormButton({text}) {
     return (
-        <button type="button" className="button form-button">
+        <button type="submit" className="button form-button">
             {text}
         </button>
     )

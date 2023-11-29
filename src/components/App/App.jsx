@@ -13,8 +13,13 @@ import ErrorPage from '../../pages/ErrorPage/ErrorPage';
 import ChangeLogPage from '../../pages/ChangeLogPage/ChangeLogPage';
 import LicencesPage from '../../pages/LicencesPage/LicencesPage';
 import PasswordPage from '../../pages/PasswordPage/PasswordPage';
+import Subscription from '../Subscription/Subscription';
 function App() {
-  return (
+
+    const handleSubscribe = (values) => {
+        console.log('Subscribed with values:', values);
+    }
+    return (
       <div>
           <Router>
               <Header></Header>
@@ -31,6 +36,7 @@ function App() {
                   <Route path="/password-protection" element={<PasswordPage/>}/>
                   <Route path="/changelog" element={<ChangeLogPage/>}/>
               </Routes>
+              <Subscription subscribe={handleSubscribe}></Subscription>
               <Footer></Footer>
           </Router>
       </div>
