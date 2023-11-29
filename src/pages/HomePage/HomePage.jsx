@@ -1,6 +1,6 @@
 import "./HomePage.scss"
 import HeroSection from "./HeroSection/HeroSection";
-import About from "./AboutSection/AboutSection";
+import AboutSection from "./AboutSection/AboutSection";
 import WhoWeAre from "./WhoWeAreSection/WhoWeAreSection";
 import "./HomePage.scss"
 
@@ -11,7 +11,7 @@ export default function HomePage() {
         <main className="wrapper">
             <HeroSection/>
             <OfferCardsSection />
-            <About/>
+            <AboutSection className='AboutSection'/>
             <WhoWeAre/>
         </main>
     )
