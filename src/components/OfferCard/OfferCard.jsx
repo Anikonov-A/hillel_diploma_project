@@ -7,7 +7,7 @@ import {string} from "prop-types";
 export default function OfferCard({cardClass, spanText, pText}) {
     return (
             <Link to={paths.SHOP} className="card-link">
-                <div className={`${cardClass} card-wrapper`}>
+                <div className={`${cardClass} card-block`}>
                     <div className="content-block">
                         <Span>{spanText}</Span>
                         <p>{pText}</p>
