@@ -1,11 +1,11 @@
 .aboutWrapper {
+ display: flex;
+ justify-content: center;
 
  .aboutContentBlock {
-  width: 50%;
-  margin-right: 0;
-  margin-left: auto;
+  max-width: 911px;
   padding-top: 186px;
-  padding-right: 260px;
+  padding-right: 196px;
   padding-bottom: 199px;
 
   .spanMb {
@@ -14,10 +14,16 @@
 
   .title {
    margin-bottom: 14px;
+   padding-right: 210px;
+
   }
 
   .paragraph {
    margin-bottom: 46px;
+  }
+
+  .blockContentTitle {
+   padding: 0;
   }
 
   #containerVertical {
@@ -44,6 +50,7 @@
    }
   }
  }
+//}
 }
 .blockImg {
  display: flex;
@@ -66,17 +73,16 @@
 }
 
 .aboutSection1 {
- background-color: var(--grey-bg-color);
+ width: 911px;
  background-image: url("../../../public/about-section-bg1.png");
  background-repeat: no-repeat;
- background-position-x: 90px;
- background-position-y: 50px;
+ background-position-y: 40px;
 }
 
 .aboutSection2 {
- background-color: var(--white-color);
+ width: 911px;
  background-image: url("../../../public/about-section-bg2.png");
  background-repeat: no-repeat;
- background-position-x: 10px;
+ background-position-x: 15%;
  background-position-y: 120px;
 }

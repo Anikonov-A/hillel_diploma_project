@@ -27,22 +27,23 @@ AboutImgBlock.propTypes = {
 }
 
 
-export function About({className, spanTitle, title, pText1, pText2, id, imgBlock1, imgBlock2, buttonText}) {
+export function About({addClasses, className, spanTitle, title, pText1, pText2, id, imgBlock1, imgBlock2, buttonText}) {
     return (
-        <section className={`${className} aboutWrapper`}>
-            <div className='aboutContentBlock'>
-                <Span addClasses="spanMb">
-                    {spanTitle}
-                </Span>
-                <Title size={2} >{title}< /Title>
-                <Paragraph addClasses='paragraph'>{pText1}</Paragraph>
-                <Paragraph addClasses='paragraph'>{pText2}</Paragraph>
-                <div id={id}>
-                   <div>{imgBlock1}</div>
-                   <div>{imgBlock2}</div>
+        <section className={`${addClasses || ""} aboutWrapper`}>
+                <div className={className}></div>
+                <div className='aboutContentBlock'>
+                    <Span addClasses="spanMb">
+                        {spanTitle}
+                    </Span>
+                    <Title size={2} >{title}< /Title>
+                    <Paragraph addClasses='paragraph'>{pText1}</Paragraph>
+                    <Paragraph addClasses='paragraph'>{pText2}</Paragraph>
+                    <div id={id}>
+                        <div>{imgBlock1}</div>
+                        <div>{imgBlock2}</div>
+                    </div>
+                    <NavButton to="/products" className="button green" text={buttonText} />
                 </div>
-                <NavButton to="/products" className="button green" text={buttonText} />
-            </div>
         </section>
     )
 }
