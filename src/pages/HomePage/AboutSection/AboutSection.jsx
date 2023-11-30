@@ -21,7 +21,7 @@ export default function AboutSection() {
 
     return (
        <div>
-           <About className='aboutSection1' spanTitle={spanTitle} title = {title} pText1 = {pText1}
+           <About addClasses='bgGrey' className='aboutSection1' spanTitle={spanTitle} title = {title} pText1 = {pText1}
                    id = 'containerVertical' imgBlock1 = {imgBlock1} imgBlock2 = {imgBlock2}
                   buttonText = {buttonText}/>
        </div>
