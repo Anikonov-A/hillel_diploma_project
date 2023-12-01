@@ -1,0 +1,65 @@
+.WhatWeGrowSection {
+  margin: 200px 0;
+  background: url(../../../../public/images/ServicePage/back.png) no-repeat;
+  background-position: center 100px;
+
+  .wwGrowHeading {
+    display: flex;
+    flex-direction: column;
+    width: 485px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .wwMain {
+    margin: 110px 0 180px 0;
+    display: flex;
+    justify-content: space-between;
+
+    &-left,
+    &-right {
+      width: 396px;
+    }
+
+    &-left {
+      text-align: right;
+    }
+  }
+
+  .point-card {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+
+    &-wrapper {
+      width: 61.13px;
+      height: 62.371px;
+      background-repeat: no-repeat;
+      background-size: 46px 50px;
+      background-position: center;
+    }
+
+    &_title {
+      margin-bottom: 5px;
+    }
+  }
+
+  .left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .wwButton {
+    text-align: center;
+  }
+
+  .wwBtn {
+    background-color: var(--white-color);
+    border: 3px solid var(--main-color);
+  }
+}
