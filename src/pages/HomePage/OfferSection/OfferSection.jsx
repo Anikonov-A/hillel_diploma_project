@@ -47,7 +47,7 @@ function OfferSection({ title }) {
                         {title}
                     </Title>
                     <NavButton
-                        to={`/products/${selectedCategory.name.toLowerCase()}`}
+                        to={'/products'}
                         className="offer__products-link button yellow-on-green"
                         text="View All Products"
                     />
