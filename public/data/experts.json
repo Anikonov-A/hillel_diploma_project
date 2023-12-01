@@ -1,0 +1,116 @@
+{
+  "experts": [
+    {
+      "id": 1,
+      "name": "Giovani Bacardo",
+      "industry": "Farmer",
+      "photo": "./images/expert-photo/giovani.jpg",
+      "social": {
+        "facebook": {
+          "img": "./images/social/facebook.svg",
+          "link": "https://uk-ua.facebook.com/"
+        },
+        "twitter": {
+          "img": "./images/social/twitter.svg",
+          "link": "https://twitter.com/"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "name": "Marianne Loreno",
+      "industry": "Designer",
+      "photo": "./images/expert-photo/marianne.jpg",
+      "social": {
+        "instagram": {
+          "img": "./images/social/instagram.svg",
+          "link": "https://www.instagram.com/"
+        },
+        "facebook": {
+          "img": "./images/social/facebook.svg",
+          "link": "https://uk-ua.facebook.com/"
+        },
+        "twitter": {
+          "img": "./images/social/twitter.svg",
+          "link": "https://twitter.com/"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "name": "Riga Pelore",
+      "industry": "Farmer",
+      "photo": "./images/expert-photo/riga.jpg",
+      "social": {
+        "instagram": {
+          "img": "./images/social/instagram.svg",
+          "link": "https://www.instagram.com/"
+        },
+        "facebook": {
+          "img": "./images/social/facebook.svg",
+          "link": "https://uk-ua.facebook.com/"
+        },
+        "twitter": {
+          "img": "./images/social/twitter.svg",
+          "link": "https://twitter.com/"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "name": "Keira Knightley",
+      "industry": "Farmer",
+      "photo": "./images/expert-photo/keira.jpg",
+      "social": {
+        "facebook": {
+          "img": "./images/social/facebook.svg",
+          "link": "https://uk-ua.facebook.com/"
+        },
+        "twitter": {
+          "img": "./images/social/twitter.svg",
+          "link": "https://twitter.com/"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "name": "Scott Lawrence",
+      "industry": "Designer",
+      "photo": "./images/expert-photo/scott.jpg",
+      "social": {
+        "instagram": {
+          "img": "./images/social/instagram.svg",
+          "link": "https://www.instagram.com/"
+        },
+        "facebook": {
+          "img": "./images/social/facebook.svg",
+          "link": "https://uk-ua.facebook.com/"
+        },
+        "twitter": {
+          "img": "./images/social/twitter.svg",
+          "link": "https://twitter.com/"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "name": "Karen Allen",
+      "industry": "Farmer",
+      "photo": "./images/expert-photo/karen.jpg",
+      "social": {
+        "instagram": {
+          "img": "./images/social/instagram.svg",
+          "link": "https://www.instagram.com/"
+        },
+        "facebook": {
+          "img": "./images/social/facebook.svg",
+          "link": "https://uk-ua.facebook.com/"
+        },
+        "twitter": {
+          "img": "./images/social/twitter.svg",
+          "link": "https://twitter.com/"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+.ChooseUsSection {
+  min-height: 898px;
+  background-color: var(--grey-bg-color);
+  padding: 190px 0;
+}
+
+.mybenefits {
+  max-width: 670px;
+}
+
+.mybenefits-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.myimg-wrapper {
+  display: block;
+  background: url('../../../../public/images/ChooseUs/veggie-table.webp') no-repeat;
+  background-size: cover;
+  border-radius: 30px;
+  width: 666px;
+  height: 558px;
+  margin-top: 30px;
+}
+
+.points-block {
+  width: 486px;
+}
+
+.point-wrapper {
+  width: 339px;
+  background: url('../../../../public/images/ChooseUs/quote-point.svg') no-repeat;
+  background-size: 19px;
+  background-position: 20px 36.7px;
+  padding: 29px 0 29px 46px;
+  border-radius: 49px;
+  background-color: var(--info-bg-color);
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.point {
+  margin: 12px 0 24px 45px;
+}
+
+.about-cards {
+  margin-top: 90px;
+  padding: 0 156px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.about-card {
+  width: 260px;
+}
+
+.about-card_title {
+  margin: 15px 0;
+}
+
+.about-card_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 35px;
+  background-color: var(--white-color);
+  border-radius: 30px;
+  text-align: center;
+}
+
+.about-card_content:last-child {
+  padding: 50px 25px;
+}
+
+.card-wrapper {
+  width: 95px;
+  height: 95px;
+  border-radius: 18px;
+  background-repeat: no-repeat;
+  background-size: 46px 50px;
+  background-position: center;
+  background-color: var(--grey-bg-color);
+}

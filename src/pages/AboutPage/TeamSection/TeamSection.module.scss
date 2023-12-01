@@ -1,0 +1,25 @@
+.container{
+  max-width: 1430px;
+  margin: auto;
+  padding: 150px 15px;
+  text-align: center;
+
+  h2{
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .parag_wrapper{
+    max-width: 900px;
+    margin:0 auto 41px;
+  }
+  .expert_cont{
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 25px;
+    row-gap: 42px;
+
+
+  }
+}
