@@ -14,6 +14,8 @@ import ChangeLogPage from '../../pages/ChangeLogPage/ChangeLogPage';
 import LicencesPage from '../../pages/LicencesPage/LicencesPage';
 import PasswordPage from '../../pages/PasswordPage/PasswordPage';
 import Subscription from '../Subscription/Subscription';
+import CategoryPage from '../CategoryPage/CategoryPage';
+import ProductPage from "../ProductPage/ProductPage";
 function App() {
 
     const handleSubscribe = (values) => {
@@ -27,6 +29,8 @@ function App() {
                   <Route exact path="/" element={<HomePage/>} />
                   <Route path="/about" element={<AboutPage/>}/>
                   <Route path="/products" element={<ShopPage/>}/>
+                  <Route path="/products/:category" element={<CategoryPage />} />
+                  <Route path="/products/:category/:productName" element={<ProductPage />} />
                   <Route path="/services" element={<ServicePage/>}/>
                   <Route path="/team" element={<TeamPage/>}/>
                   <Route path="/contacts" element={<ContactPage/>}/>

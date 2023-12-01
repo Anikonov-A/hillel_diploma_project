@@ -133,3 +133,19 @@
     transform: scale(0.98);
   }
 }
+//============================================ADD BTN======================================================//
+
+.btn-add{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 12px;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: var(--border-radius-icon);
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  z-index: 2;
+  transition: all 0.3s ease 0s;
+}

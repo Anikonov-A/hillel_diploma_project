@@ -1,0 +1,105 @@
+{
+  "categories": [
+    {
+      "name": "Vegetables",
+      "items": [
+        {
+          "id": 1,
+          "name": "Zucchini",
+          "image": "./images/products/vegetables/zucchini.png",
+          "price": 12
+        },
+        {
+          "id": 2,
+          "name": "Cabbage",
+          "image": "./images/products/vegetables/cabbage.png",
+          "price": 17
+        },
+        {
+          "id": 3,
+          "name": "Onion",
+          "image": "./images/products/vegetables/onion.png",
+          "price": 17
+        },
+        {
+          "id": 4,
+          "name": "Broccoli",
+          "image": "./images/products/vegetables/broccoli.png",
+          "price": 13
+        },
+        {
+          "id": 5,
+          "name": "Red Tomatoes",
+          "image": "./images/products/vegetables/tomatoes.png",
+          "price": 17
+        }
+      ]
+    },
+
+    {
+      "name": "Fresh",
+      "items": [
+        {
+          "id": 6,
+          "name": "Bananas",
+          "image": "./images/products/fresh/bananas.png",
+          "price": 14
+        },
+        {
+          "id": 7,
+          "name": "Eggs",
+          "image": "./images/products/fresh/eggs.png",
+          "price": 17
+        },
+        {
+          "id": 8,
+          "name": "Zelco Suji Eloichi Rusk",
+          "image": "./images/products/fresh/rusk.png",
+          "price": 15
+        },
+        {
+          "id": 9,
+          "name": "Fresh Corn",
+          "image": "./images/products/fresh/corn.png",
+          "price": 17
+        },
+        {
+          "id": 10,
+          "name": "Mung Bean",
+          "image": "./images/products/fresh/mungbean.png",
+          "price": 11
+        }
+      ]
+    },
+
+    {
+      "name": "Nuts",
+      "items": [
+        {
+          "id": 11,
+          "name": "Brown Hazelnut",
+          "image": "./images/products/nuts/hazelnut.png",
+          "price": 12
+        },
+        {
+          "id": 12,
+          "name": "Organic Almonds",
+          "image": "./images/products/nuts/almonds.png",
+          "price": 15
+        },
+        {
+          "id": 13,
+          "name": "White Cashew",
+          "image": "./images/products/nuts/cashew.png",
+          "price": 12
+        },
+        {
+          "id": 14,
+          "name": "Pistachios",
+          "image": "./images/products/nuts/pistachios.png",
+          "price": 15
+        }
+      ]
+    }
+  ]
+}
