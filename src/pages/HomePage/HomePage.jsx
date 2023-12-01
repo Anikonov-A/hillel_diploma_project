@@ -11,7 +11,7 @@ export default function HomePage() {
         <main className="wrapper">
             <HeroSection/>
             <OfferCardsSection />
-            <OfferSection category="Vegetables" title="We Offer Organic For You"></OfferSection>
+            <OfferSection title="We Offer Organic For You"></OfferSection>
             <WhoWeAre/>
         </main>
     )

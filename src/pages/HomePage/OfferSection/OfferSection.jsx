@@ -1,25 +1,30 @@
 import './OfferSection.scss';
 import Span from '../../../components/Span/Span';
 import Title from '../../../components/Title/Title';
-import {NavButton} from '../../../components/Buttons/Buttons';
-import {useEffect, useState} from "react";
+import { NavButton } from '../../../components/Buttons/Buttons';
+import { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from '../../../components/ProductCard/ProductCard';
 
-function OfferSection({ category, title }) {
+function OfferSection({ title }) {
     const [data, setData] = useState({});
+    const [selectedCategory, setSelectedCategory] = useState({});
     const [categoryData, setCategoryData] = useState([]);
+
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get("/data.json");
                 setData(response.data);
-                const selectedCategory = response.data.categories.find(
-                    (cat) => cat.name === category
-                );
 
-                if (selectedCategory) {
-                    setCategoryData(selectedCategory.items);
+
+                const randomCategory = response.data.categories[Math.floor(Math.random() * response.data.categories.length)];
+
+                setSelectedCategory(randomCategory);
+
+                if (randomCategory) {
+                    const shuffledCategoryData = randomCategory.items.sort(() => Math.random() - 0.5);
+                    setCategoryData(shuffledCategoryData.slice(0, 4));
                 }
             } catch (error) {
                 console.log("Error fetching data", error);
@@ -27,13 +32,11 @@ function OfferSection({ category, title }) {
         };
 
         fetchData();
-    }, [category]);
+    }, []);
 
-    if (!data || !categoryData.length) {
+    if (!data || !selectedCategory || !categoryData.length) {
         return <p>Loading...</p>;
     }
-
-    const shuffledCategoryData = categoryData.sort(() => Math.random() - 0.5);
 
     return (
         <section className="offer">
@@ -44,21 +47,20 @@ function OfferSection({ category, title }) {
                         {title}
                     </Title>
                     <NavButton
-                        to={`/products/${category.toLowerCase()}`}
+                        to={`/products/${selectedCategory.name.toLowerCase()}`}
                         className="offer__products-link button yellow-on-green"
-                        text={`View All ${category}`}
+                        text="View All Products"
                     />
                 </div>
                 <div className="offer__products-wrapper">
-                    {shuffledCategoryData.slice(0, 4).map((item) => (
-                        <ProductCard key={item.id} data={item} category={category} />
+                    {categoryData.map((item) => (
+                        <ProductCard key={item.id} data={item} category={selectedCategory.name} />
                     ))}
                 </div>
             </div>
         </section>
     );
 }
-
 export default OfferSection;
 
 
