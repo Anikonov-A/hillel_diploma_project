@@ -1,23 +1,16 @@
 import './ServicePage.scss';
-
 import WhatWeGrowSection from './WhatGrowSection/WhatWeGrow';
+import StyleGuide from "@/components/StyleGuide/StyleGuide";
 
 function ServicePage () {
-  return (
-    <main className="wrapper">
-        <WhatWeGrowSection/>
-    </main>
-)
-
-import StyleGuide from "../../components/StyleGuide/StyleGuide";
-
-function ServicePage () {
-  return(
-      <div className="wrapper">
-          <StyleGuide titleText="Services" backgroundClass="bg-services" />
-      </div>
-  )
-
+    return (
+        <main className="wrapper">
+            <StyleGuide titleText="Services" backgroundClass="bg-services"/>
+            <WhatWeGrowSection/>
+        </main>
+    )
 }
+
+
 
 export default ServicePage;
