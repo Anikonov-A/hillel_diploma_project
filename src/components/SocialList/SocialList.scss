@@ -1,13 +1,5 @@
-.footer__socials{
-  text-align: center;
-  padding-left: 40px;
-  padding-right: 40px;
-  flex-basis: 44.72%;
-  &-desc{
-    margin-top: 23px;
-    margin-bottom: 29px;
-  }
-  &-list{
+.socials{
+  &__list{
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -28,3 +20,4 @@
     }
   }
 }
+
