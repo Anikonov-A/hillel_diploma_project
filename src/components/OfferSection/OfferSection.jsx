@@ -1,12 +1,12 @@
 import './OfferSection.scss';
-import Span from '../../../components/Span/Span';
-import Title from '../../../components/Title/Title';
-import { NavButton } from '../../../components/Buttons/Buttons';
+import Span from '../Span/Span';
+import Title from '../Title/Title';
+import { NavButton } from '../Buttons/Buttons';
 import { useEffect, useState } from "react";
 import axios from "axios";
-import ProductCard from '../../../components/ProductCard/ProductCard';
+import ProductCard from '../ProductCard/ProductCard';
 
-function OfferSection({ title }) {
+function OfferSection() {
     const [data, setData] = useState({});
     const [selectedCategory, setSelectedCategory] = useState({});
     const [categoryData, setCategoryData] = useState([]);
@@ -44,7 +44,7 @@ function OfferSection({ title }) {
                 <Span>Offer</Span>
                 <div className="offer__wrapper">
                     <Title addClasses="offer__title" size={2}>
-                        {title}
+                        We Offer Organic For You
                     </Title>
                     <NavButton
                         to={'/products'}
