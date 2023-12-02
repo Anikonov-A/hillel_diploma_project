@@ -1,0 +1,21 @@
+.location{
+  padding-top: 122px;
+  padding-bottom: 122px;
+  border-radius: var(--border-radius-card);
+  background: url("../../../../public/images/locationsection/location-bg.png") center / cover no-repeat;
+  &__content{
+    max-width: 514px;
+    width: 100%;
+    background: var(--white-color);
+    border-radius: var(--border-radius-card);
+    padding: 46px 53px;
+    margin-left: auto;
+    margin-right: 108px;
+  }
+  &__title{
+    margin-bottom: 10px;
+  }
+  &__desc{
+    margin-bottom: 20px;
+  }
+}

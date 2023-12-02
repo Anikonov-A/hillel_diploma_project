@@ -1,0 +1,32 @@
+.location{
+  &__place{
+    & a{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 6px;
+      border-radius: var(--border-radius-button);
+      transition: all .3s ease-in-out;
+      &:hover{
+        background: var(--hover-bg-color);
+      }
+    }
+  }
+  &__city{
+    font-weight: 700;
+  }
+  &__info{
+    max-width: 160px;
+    width: 100%;
+  }
+  &__icon{
+    max-width: 50px;
+    width: 100%;
+  }
+  &__address{
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--paragraph-color);
+    font-family: 'Open Sans', sans-serif;
+  }
+}
