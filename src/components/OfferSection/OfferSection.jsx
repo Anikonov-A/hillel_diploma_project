@@ -14,7 +14,7 @@ function OfferSection() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("/data.json");
+                const response = await axios.get("/data/data.json");
                 setData(response.data);
 
 
