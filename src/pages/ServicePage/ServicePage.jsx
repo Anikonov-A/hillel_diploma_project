@@ -2,6 +2,7 @@ import './ServicePage.scss';
 import ServicesVideoSection from './ServicesVideoSection/ServicesVideoSection';
 import WhatWeGrowSection from './WhatGrowSection/WhatWeGrow';
 import StyleGuide from "@/components/StyleGuide/StyleGuide";
+import OfferSection from '../../components/OfferSection/OfferSection';
 
 function ServicePage () {
     return (
@@ -9,6 +10,7 @@ function ServicePage () {
             <StyleGuide titleText="Services" backgroundClass="bg-services"/>
             <WhatWeGrowSection/>
             <ServicesVideoSection/>
+            <OfferSection/>
         </main>
     )
 }
