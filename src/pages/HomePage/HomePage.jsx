@@ -6,6 +6,7 @@ import OfferSection from '../../components/OfferSection/OfferSection';
 import "./HomePage.scss"
 
 import OfferCardsSection from "./OfferCardsSection/OfferCardsSection";
+import Slider from "./TestimonialSection/TestimonialSection";
 
 export default function HomePage() {
     return (
@@ -13,6 +14,7 @@ export default function HomePage() {
             <HeroSection/>
             <OfferCardsSection />
             <AboutSection className='AboutSection'/>
+            <Slider/>
             <OfferSection/>
             <WhoWeAre/>
         </main>
