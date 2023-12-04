@@ -6,7 +6,7 @@ import { string } from "prop-types";
 // Classes for Nav buttons -- button(is default styles) green||yellow||yellow-on-green||transparent (for modify nav button)
 export function NavButton({to, text, className}) {
     return (
-        <Link to={to} className={className}>
+        <Link to={to} className={className} onClick={()=>window.scrollTo(0,0)}>
             {text} <ArrowButton/>
         </Link>
     )
