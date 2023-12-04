@@ -1,9 +1,9 @@
 import './ProductsSection.scss';
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Title from '../Title/Title';
-import SortForm from '../SortForm/SortForm';
-import ProductCard from '../ProductCard/ProductCard';
+import Title from '../../../components/Title/Title';
+import SortForm from '../../../components/SortForm/SortForm';
+import ProductCard from '../../../components/ProductCard/ProductCard';
 
 function ProductsSection() {
     const [data, setData] = useState({});
@@ -68,7 +68,7 @@ function ProductsSection() {
     return (
         <section className="products">
             <div className="container">
-                <Title size={2} addClasses="products__title">Our Products</Title>
+                <Title size={2} addClasses="products__title">All Products</Title>
 
                 <SortForm sortBy={sortBy} onSortChange={handleSortChange} />
 
