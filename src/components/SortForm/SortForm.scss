@@ -1,0 +1,20 @@
+.sort__form{
+  margin-bottom: 50px;
+  &-label{
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--paragraph-color);
+  }
+  &-select{
+    padding: 15px;
+    font-size: 20px;
+    width: 378px;
+    color: var(--main-color);
+    background: var(--white-color);
+    border-radius: var(--border-radius-button);
+    border: 10px solid transparent;
+    &:focus{
+      border: 10px solid var(--secondary-color);
+    }
+  }
+}

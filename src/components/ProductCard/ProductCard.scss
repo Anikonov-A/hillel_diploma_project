@@ -8,6 +8,12 @@
   background: var(--white-color);
   position: relative;
   border-radius: var(--border-radius-card);
+  margin-bottom: 50px;
+  border: 1px solid var(--secondary-color);
+  transition: all .3s ease-in-out;
+  &:hover{
+    border: 1px solid var(--hover-bg-color)
+  }
   &:hover img{
     transform: scale(1.04);
   }
