@@ -37,4 +37,7 @@
 }
 .toast-modify{
   width:450px;
+  position: sticky;
+  top: 0;
+  left:calc(50% - 225px)
 }
