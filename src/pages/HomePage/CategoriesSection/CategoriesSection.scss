@@ -1,0 +1,24 @@
+.categories{
+  padding-top: 113px;
+  padding-bottom: 263px;
+  background: var(--white-color);
+  &__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__span{
+    margin-bottom: 8px;
+  }
+  &__title{
+    margin-bottom: 40px;
+  }
+  &__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 122px;
+  }
+}
