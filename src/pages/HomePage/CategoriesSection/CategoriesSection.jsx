@@ -62,7 +62,7 @@ function CategoriesSection () {
                             <ProductCard key={item.id} data={item} category={getCategoryName(item.id)} />
                         ))}
                     </div>
-                    <NavButton to="/products" text="Load more" className="upload-btn button green"></NavButton>
+                    <NavButton to="/products" text="Watch more" className="upload-btn button green"></NavButton>
                 </div>
             </div>
         </section>
