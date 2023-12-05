@@ -16,10 +16,19 @@ import PasswordPage from '../../pages/PasswordPage/PasswordPage';
 import Subscription from '../Subscription/Subscription';
 import CategoryPage from '../CategoryPage/CategoryPage';
 import ProductPage from "../ProductPage/ProductPage";
-function App() {
 
+function App() {
     const handleSubscribe = (values) => {
-        console.log('Subscribed with values:', values);
+        const SUBSCRIBE_KEY = "subscribeData";
+        const currentData = JSON.parse(localStorage.getItem(SUBSCRIBE_KEY)) || [];
+        const newKey = (currentData.length + 1).toString();
+        currentData.push({
+            emails: {
+                [newKey]: values.email
+            }
+        });
+        localStorage.setItem(SUBSCRIBE_KEY, JSON.stringify(currentData));
+
     }
     return (
       <div>
@@ -43,6 +52,7 @@ function App() {
               <Subscription subscribe={handleSubscribe}></Subscription>
               <Footer></Footer>
           </Router>
+
       </div>
   );
 }
