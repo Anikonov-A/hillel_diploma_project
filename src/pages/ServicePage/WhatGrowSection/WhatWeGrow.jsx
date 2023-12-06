@@ -88,7 +88,7 @@ const WhatWeGrowSection = () => {
         </section>
 
         <div className='wwButton'>
-          <NavButton to="/about" className="button yellow wwBtn" text="Explore More" />
+          <NavButton to="/services/single" className="button green" text="Explore More" />
         </div>
 
       </div>
