@@ -15,11 +15,11 @@ function UtilityPages () {
         <div className="utility__pages">
             <Title addClasses="utility__pages-title" size={5}>Utility Pages</Title>
             <ul className="utility__pages-list">
-                {pages.map((page, index) => {
+                {pages.map((page) => {
                     return (
                         <Fragment key={page.name}>
                             <li>
-                                <NavLink to={page.path}>{page.name}</NavLink>
+                                <NavLink to={page.path} onClick={()=>window.scrollTo(0,0)}>{page.name}</NavLink>
                             </li>
                         </Fragment>
                     )

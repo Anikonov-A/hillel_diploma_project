@@ -4,6 +4,10 @@ import {FormButton} from '../Buttons/Buttons';
 import {useFormik} from 'formik';
 import {string} from 'yup';
 
+import {ToastContainer, toast} from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
 const email = {
     defaultValue: '',
     inputType: 'email',
@@ -12,15 +16,28 @@ const email = {
         .required('Email is a required field'),
 }
 
-function Subscription ({ subscribe }) {
+function Subscription({subscribe}) {
     const formik = useFormik({
-        initialValues: { email: email.defaultValue },
+        initialValues: {email: email.defaultValue},
         validationSchema: email.vSchema,
-        onSubmit: async (values, { resetForm }) => {
+        onSubmit: async (values, {resetForm}) => {
             await subscribe(values);
+            toast.success("You have successfully subscribed to the newsletter!",{
+                className:"toast-modify",
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                progress: undefined,
+                theme: "light",
+            });
             resetForm();
+
         },
     })
+
 
     return (
         <section className="subscription">
@@ -32,12 +49,25 @@ function Subscription ({ subscribe }) {
                     <form className="subscription__form" onSubmit={formik.handleSubmit}>
                         <div className="subscription__input-wrapper">
                             <label htmlFor="email"></label>
-                            <input className="subscription__input" id="email" value={formik.values.email} type="email" placeholder="Your Email Address" onChange={formik.handleChange}/>
+                            <input className="subscription__input" id="email" required value={formik.values.email} type="email"
+                                   placeholder="Your Email Address" onChange={formik.handleChange}/>
                         </div>
                         <FormButton text="Subscribe"></FormButton>
                     </form>
                 </div>
             </div>
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss={false}
+                draggable={false}
+                pauseOnHover={false}
+                theme="light"
+            />
         </section>
     )
 }

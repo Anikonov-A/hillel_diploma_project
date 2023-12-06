@@ -1,0 +1,28 @@
+.error__section{
+  min-height: 770px;
+  background-image: url("../../../public/images/errorpage/bgdetails.png"),
+  url("../../../public/images/errorpage/bgimage.png");
+  background-color: var(--hero-bg-grey);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &-content{
+    padding-top: 214px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &-number{
+    background: url("../../../public/images/errorpage/404.png");
+    padding-top: 110px;
+    padding-bottom: 110px;
+    width: 502px;
+    margin-bottom: 10px;
+  }
+  &-title{
+    margin-bottom: 10px;
+  }
+  &-desc{
+    margin-bottom: 20px;
+  }
+}

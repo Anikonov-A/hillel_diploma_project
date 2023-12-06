@@ -3,6 +3,7 @@ import AboutUsSection from './AboutUsSection/AboutUsSection'
 import ChooseUsSection from './ChooseUsSection/ChooseUsSection';
 import TeamSection from "./TeamSection/TeamSection";
 import StyleGuide from "../../components/StyleGuide/StyleGuide";
+import OfferSection from '../../components/OfferSection/OfferSection';
 
 function AboutPage () {
   return (
@@ -11,6 +12,7 @@ function AboutPage () {
         <AboutUsSection/>
         <ChooseUsSection/>
         <TeamSection sliceFrom={0} sliceTo={3} />
+        <OfferSection/>
     </main>
 )
 }

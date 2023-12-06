@@ -6,7 +6,7 @@ import { string } from "prop-types";
 // Classes for Nav buttons -- button(is default styles) green||yellow||yellow-on-green||transparent (for modify nav button)
 export function NavButton({to, text, className}) {
     return (
-        <Link to={to} className={className}>
+        <Link to={to} className={className} onClick={()=>window.scrollTo(0,0)}>
             {text} <ArrowButton/>
         </Link>
     )
@@ -39,4 +39,10 @@ export function FormButton({text}) {
 }
 FormButton.propTypes = {
     text:string.isRequired
+}
+
+export function AddBtn () {
+    return (
+        <button type="button" className="btn-add green">Add to cart</button>
+    )
 }

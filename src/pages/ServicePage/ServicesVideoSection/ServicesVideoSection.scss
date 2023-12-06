@@ -1,0 +1,27 @@
+.services-video-section {
+  background: url(../../../../public/images/ServicePage/flowersField.webp) 50% no-repeat;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 140px;
+  
+  .svs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    .sectionVSdesc {
+      width: 670px;
+      margin: 25px 0 50px 0;
+    }
+    
+    .svs_img {
+      width: 107px;
+      height: 107px;
+    }
+    
+    .svs_button-wrapper {
+      margin-bottom: 260px;
+    }
+  }
+}

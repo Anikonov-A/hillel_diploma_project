@@ -6,7 +6,7 @@
     background: url("../../../public/images/subscription-bg/subscription-bg.png") center / cover no-repeat;
     padding-top: 105px;
     padding-bottom: 105px;
-    border-radius: var(--border-radius-button);
+    border-radius: var(--border-radius-card);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,4 +34,10 @@
       color: #ABABAB;
     }
   }
+}
+.toast-modify{
+  width:450px;
+  position: sticky;
+  top: 0;
+  left:calc(50% - 225px)
 }

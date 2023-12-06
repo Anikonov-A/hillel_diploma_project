@@ -1,0 +1,22 @@
+.contact__card{
+  align-self: flex-start;
+  max-width: 400px;
+  width: 100%;
+  & a{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 12px 14px;
+    border-radius:16px;
+    transition: all .5s ease-in-out;
+    &:hover{
+      background: var(--secondary-color);
+    }
+  }
+  &-image{
+    & img{
+      width: 90px;
+    }
+  }
+}

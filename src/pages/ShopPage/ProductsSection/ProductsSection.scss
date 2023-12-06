@@ -1,0 +1,14 @@
+.products{
+  padding-top: 90px;
+  background: var(--grey-bg-color);
+  &__title{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+}
