@@ -68,7 +68,7 @@ function Search() {
                         {productList.length > 0 ? (
                             productList.map((product, index) => (
                                 <li key={index}>
-                                    <Link to={`/product/${product.category}/${product.name.toLowerCase()}`} onClick={operationWithSearch}>
+                                    <Link to={`/products/${product.category}/${product.name.toLowerCase()}`} onClick={operationWithSearch}>
                                         {product.name}
                                     </Link>
                                 </li>
