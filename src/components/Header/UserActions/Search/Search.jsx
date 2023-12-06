@@ -11,7 +11,7 @@ function Search () {
                     <input type="text" id="searchInput" className="search__input"/>
                 </div>
                 <NavLink to={paths.SHOP}>
-                    <img src="./images/search/search.svg" alt="search-icon"/>
+                    <img src="/images/search/search.svg" alt="search-icon"/>
                 </NavLink>
             </form>
         </div>
