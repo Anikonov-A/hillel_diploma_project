@@ -1,4 +1,4 @@
-[
+export const testimonials = [
   {
     "id": 1,
     "photo": "./images/testimonial-photo/testimonial-photo1.jpg",
@@ -18,7 +18,7 @@
     "photo": "./images/testimonial-photo/testimonial-photo3.jpeg",
     "text": "Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.",
     "author": "Diana Lee",
-    "trade": "SEO"
+    "trade": "CEO"
   }
-
 ]
+
