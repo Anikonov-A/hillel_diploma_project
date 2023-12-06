@@ -1,9 +1,10 @@
-.search{
-  &__form{
+.search {
+  &__form {
     display: flex;
     align-items: center;
     position: relative;
-    & a{
+
+    & label {
       position: absolute;
       top: 5px;
       right: 5px;
@@ -14,25 +15,53 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      &.active{
+
+      &.active {
         background: var(--hover-bg-color);
       }
-      & img{
+
+      & img {
         width: 21px;
         height: 21px;
       }
     }
   }
-  &__input{
+
+  &__input {
     width: 376px;
     padding: 20px;
     font-size: 20px;
     background: #FAFAFA;
     border: 1px solid var(--grey-bg-color);
     border-radius: var(--border-radius-card);
+
     &:focus,
-    &:active{
+    &:active {
       border: 1px solid var(--secondary-color);
     }
   }
+}
+
+.search__wrapper {
+  ul {
+    position: absolute;
+    padding: 15px 30px;
+    background-color: #FAFAFA;
+    border-radius: var(--border-radius-card);
+    width: 100%;
+    margin-top: 10px;
+
+    li:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
 }
