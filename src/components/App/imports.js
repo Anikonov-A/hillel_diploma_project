@@ -14,6 +14,7 @@ import PasswordPage from '../../pages/PasswordPage/PasswordPage';
 import Subscription from '../Subscription/Subscription';
 import CategoryPage from '../CategoryPage/CategoryPage';
 import ProductPage from "../ProductPage/ProductPage";
+import ProductDetail from '../ProductPage/ProductPage';
 
 export {
     Header,
@@ -32,4 +33,5 @@ export {
     Subscription,
     CategoryPage,
     ProductPage,
+    ProductDetail
 };

@@ -1,6 +1,7 @@
 import './App.scss';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import { Header, Footer, HomePage, AboutPage, ShopPage, ServicePage, TeamPage, ContactPage, CartPage, ErrorPage, ChangeLogPage, LicencesPage, PasswordPage, Subscription, CategoryPage, ProductPage, } from "./imports"
+import { Header, Footer, HomePage, AboutPage, ShopPage, ServicePage, TeamPage, ContactPage, CartPage, ErrorPage, ChangeLogPage, LicencesPage, PasswordPage, Subscription, CategoryPage, ProductPage, ProductDetail } from "./imports"
+
 function App() {
     const handleSubscribe = (values) => {
         const SUBSCRIBE_KEY = "subscribeData";
@@ -24,6 +25,7 @@ function App() {
                   <Route path="/products" element={<ShopPage/>}/>
                   <Route path="/products/:category" element={<CategoryPage />} />
                   <Route path="/products/:category/:productName" element={<ProductPage />} />
+                  <Route path="/product/:id" element={<ProductDetail />} />
                   <Route path="/services" element={<ServicePage/>}/>
                   <Route path="/team" element={<TeamPage/>}/>
                   <Route path="/contacts" element={<ContactPage/>}/>
