@@ -1,6 +1,6 @@
 import { useFormik } from "formik";
 import { Fragment } from "react";
-import { string, number, object } from 'yup';
+import { string, object } from 'yup';
 
 import './TestimonialForm.scss'
 
