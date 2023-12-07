@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './ProductPage.scss';
-import { AddBtn } from '../Buttons/Buttons';
 import '../ProductCard/ProductCard.scss';
 import Paragraph from '../../components/Paragraph/Paragraph';
 import Title from '@/components/Title/Title';
+import StyleGuide from '../../components/StyleGuide/StyleGuide'
 
 function ProductDetail() {
     const { id } = useParams();
@@ -83,12 +83,12 @@ function ProductDetail() {
 
     return (
         <div className='wrapper'>
-            <section className='product-details_banner pp-centred'></section>
+            <StyleGuide titleText="Shop Single" backgroundClass="bg-shop-single"/>
 
             <section className='product-details_section container'>
 
                 <div className="pp-img_wrapper">
-                    <span className='offer__product-category-link green'>{categoryName}</span>
+                    <span className='offer__product-category-link green test11'>{categoryName}</span>
                     <img className='pp-img' src={product.image} alt={product.name} />
                 </div>
 
@@ -124,11 +124,17 @@ function ProductDetail() {
 
             </section>
 
-            <div className='test5 container'>
-                <button onClick={() => setActiveTab('description')}>Description</button>
-                <button onClick={() => setActiveTab('additional_info')}>Additional Info</button>
-                <Paragraph>{activeTab === 'description' ? product.description : product.additional_info}</Paragraph>
-            </div>
+            <article className='container test7'>
+                <div className='test5'>
+                    <button className='pp-btns_des green' onClick={() => setActiveTab('description')}>Product Description</button>
+                    <button className='pp-btns_des tests green' onClick={() => setActiveTab('additional_info')}>Additional Info</button>
+                </div>
+                <div className='test6'>
+                    <Paragraph>{activeTab === 'description' ? product.description : product.additional_info}</Paragraph>
+                </div>
+            </article>
+
+
         </div>
     );
 }
