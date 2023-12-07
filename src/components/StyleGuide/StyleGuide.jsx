@@ -5,7 +5,7 @@ import "./StyleGuide.scss"
 export default function StyleGuide({ titleText , backgroundClass }){
     return(
      <section className={`${backgroundClass} style_component_wrapper`}>
-          <Title size={1}>{titleText}</Title>
+          <Title size={2}>{titleText}</Title>
      </section>
     )
 }

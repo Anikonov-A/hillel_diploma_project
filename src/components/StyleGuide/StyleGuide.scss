@@ -1,7 +1,7 @@
 .style_component_wrapper {
   min-width: 1920px;
   margin: auto;
-  min-height: 450px;
+  min-height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@
 }
 
 .bg-about_us {
-  background: url("../../../public/images/style-guide-images/about-us.png") center/ cover no-repeat;
+  background: url("../../../public/images/style-guide-images/about-us.png") center / cover no-repeat;
 }
 
 .bg-shop {
