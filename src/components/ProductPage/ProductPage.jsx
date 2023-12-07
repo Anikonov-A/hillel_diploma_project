@@ -52,7 +52,7 @@ function ProductDetail() {
 
     if (loading) {
         return (
-            <div className="loader">
+            <div className="productPage__loader">
                 <svg
                     width="100"
                     height="100"
@@ -74,41 +74,42 @@ function ProductDetail() {
     }
 
     if (error) {
-        return <div className="error-message">Ошибка: {error}</div>;
+        return <div className="productPage-message__error">Ошибка: {error}</div>;
     }
 
     if (!product) {
-        return <div className="not-found-message">Товар не найден</div>;
+        return <div className="productPage-message__notFound">Товар не найден</div>;
     }
 
     return (
         <div className='wrapper'>
+
             <StyleGuide titleText="Shop Single" backgroundClass="bg-shop-single"/>
 
-            <section className='product-details_section container'>
+            <section className='productPage-section__details container'>
 
-                <div className="pp-img_wrapper">
-                    <span className='offer__product-category-link green test11'>{categoryName}</span>
-                    <img className='pp-img' src={product.image} alt={product.name} />
+                <div className="productPage-img__wrapper">
+                    <span className='productPage-img__wrapper-span offer__product-category-link green'>{categoryName}</span>
+                    <img className='productPage-img__wrapper-image' src={product.image} alt={product.name} />
                 </div>
 
-                <div className='pp-content_wrapper'>
+                <div className='productPage-content__wrapper'>
 
-                    <div className="pp-content">
+                    <div className="productPage__content">
                         <Title size={3}>{product.name}</Title>
 
-                        <p className='pp-content_price'>
-                            <span className="old-price">${(product.price + 7) * quantity}.00</span>
+                        <p className='productPage__content-prices'>
+                            <span className='productPage__content-prices-old'>${(product.price + 7) * quantity}.00</span>
                             ${product.price * quantity}.00
                         </p>
 
                         <Paragraph>{product.info}</Paragraph>
                     </div>
 
-                    <div className='pp_btns-wrapper'>
+                    <div className='productPage-controls__wrapper'>
                         <div>
-                            <label className='label-test' htmlFor='quantity'>Quantity :  </label>
-                            <input className='input-test'
+                            <label className='productPage-controls__label' htmlFor='quantity'>Quantity :  </label>
+                            <input className='productPage-controls__input'
                                 type="number"
                                 min="1"
                                 value={quantity}
@@ -117,21 +118,24 @@ function ProductDetail() {
                                 id="quantity"
                                 autoComplete="off" />
                         </div>
-                        <button type='button' className='pp-btn_add green'>Add to cart</button>
+                        <button type='button' className='productPage-controls__wrapper__btn green'>Add to cart</button>
 
                     </div>
                 </div>
 
             </section>
 
-            <article className='container test7'>
-                <div className='test5'>
-                    <button className='pp-btns_des green' onClick={() => setActiveTab('description')}>Product Description</button>
-                    <button className='pp-btns_des tests green' onClick={() => setActiveTab('additional_info')}>Additional Info</button>
+            <article className='productPage-btns__wrapper container'>
+
+                <div className='productPage-btns__block'>
+                    <button className='productPage-btns green' onClick={() => setActiveTab('description')}>Product Description</button>
+                    <button className='productPage-btns productPage-btns__transparent green' onClick={() => setActiveTab('additional_info')}>Additional Info</button>
                 </div>
-                <div className='test6'>
+
+                <div className='productPage-btns__desc'>
                     <Paragraph>{activeTab === 'description' ? product.description : product.additional_info}</Paragraph>
                 </div>
+
             </article>
 
 
