@@ -1,6 +1,6 @@
 import './App.scss';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import { Header, Footer, HomePage, AboutPage, ShopPage, ServicePage, TeamPage, ContactPage, CartPage, ErrorPage, ChangeLogPage, LicencesPage, PasswordPage, Subscription, CategoryPage, ProductPage, } from "./imports"
+import { Header, Footer, HomePage, AboutPage, ShopPage, ServicePage, ServiceSinglePage, TeamPage, ContactPage, CartPage, ErrorPage, ChangeLogPage, LicencesPage, PasswordPage, Subscription, CategoryPage, ProductPage, } from "./imports"
 function App() {
     const handleSubscribe = (values) => {
         const SUBSCRIBE_KEY = "subscribeData";
@@ -32,6 +32,7 @@ function App() {
                   <Route path="/licences" element={<LicencesPage/>}/>
                   <Route path="/password-protection" element={<PasswordPage/>}/>
                   <Route path="/changelog" element={<ChangeLogPage/>}/>
+                  <Route path="/services/single" element={<ServiceSinglePage/>}/>
               </Routes>
               <Subscription subscribe={handleSubscribe}></Subscription>
               <Footer></Footer>

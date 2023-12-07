@@ -1,0 +1,32 @@
+.store__services-block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  &-content{
+    border-radius: var(--border-radius-button);
+    padding: 63px 45px;
+    background: var(--grey-bg-color);
+  }
+  &-title{
+    margin-bottom: 7px;
+  }
+}
+
+.bg{
+  max-width: 379px;
+  width: 100%;
+  padding-top: 126px;
+  padding-bottom: 126px;
+  border-radius: var(--border-radius-button);
+}
+
+.bg__service-one{
+  background: url("../../../../../public/images/ServicePage/block-bg-1.jpg");
+}
+.bg__service-two{
+  background: url("../../../../../public/images/ServicePage/block-bg-2.jpg");
+}
+.row-reverse{
+  flex-direction: row-reverse;
+}
