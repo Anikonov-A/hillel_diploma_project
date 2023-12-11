@@ -1,9 +1,13 @@
 .sort__form{
   margin-bottom: 50px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
   &-label{
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
     color: var(--paragraph-color);
+    font-weight: 700;
   }
   &-select{
     padding: 15px;
@@ -12,9 +16,10 @@
     color: var(--main-color);
     background: var(--white-color);
     border-radius: var(--border-radius-button);
-    border: 10px solid transparent;
+    outline: 10px solid var(--paragraph-color);
+    transition: all .3s ease-in-out;
     &:focus{
-      border: 10px solid var(--secondary-color);
+      outline: 10px solid var(--secondary-color);
     }
   }
 }
