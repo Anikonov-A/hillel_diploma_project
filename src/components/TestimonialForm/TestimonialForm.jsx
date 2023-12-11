@@ -1,6 +1,6 @@
 import { useFormik } from "formik";
 import { Fragment } from "react";
-import { string, number, object } from 'yup';
+import { string, object } from 'yup';
 
 import './TestimonialForm.scss'
 
@@ -72,7 +72,7 @@ export default function TestimonialForm({ onAdd }) {
             formItems.push((
                 <Fragment key={key}>
                    <div className='form-item'>
-                       {formik.errors[key] && <div style={{color: 'red'}}>{formik.errors[key]}</div>}
+
                            <label htmlFor={key}>{labelText}</label>
                        {inputType === 'textarea' ? (
                            <textarea
@@ -90,6 +90,7 @@ export default function TestimonialForm({ onAdd }) {
                                onChange={formik.handleChange}
                            />
                        )}
+                       {formik.errors[key] && <div style={{color: 'red'}}>{formik.errors[key]}</div>}
                    </div>
                 </Fragment>
             ));
