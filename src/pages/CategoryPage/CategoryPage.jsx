@@ -6,7 +6,7 @@ function CategoryPage () {
     const { category } = useParams();
 
     return (
-        <div className="wrapper">
+        <div className="wrapper bg-category">
             <StyleGuide titleText={category} backgroundClass="bg-about_us"/>
             <CategoryProducts></CategoryProducts>
         </div>

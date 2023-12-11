@@ -16,10 +16,10 @@
     color: var(--main-color);
     background: var(--white-color);
     border-radius: var(--border-radius-button);
-    outline: 10px solid var(--paragraph-color);
+    //outline: 10px solid var(--paragraph-color);
     transition: all .3s ease-in-out;
     &:focus{
-      outline: 10px solid var(--secondary-color);
+      outline: 1px solid var(--secondary-color);
     }
   }
 }
