@@ -27,7 +27,7 @@ function App() {
                   <Route path="/services" element={<ServicePage/>}/>
                   <Route path="/team" element={<TeamPage/>}/>
                   <Route path="/contacts" element={<ContactPage/>}/>
-                  <Route path="/cart" element={<CartPage/>}/>
+                  <Route path="/cart" element={<CartPage />}/>
                   <Route path="/error" element={<ErrorPage/>}/>
                   <Route path="/licences" element={<LicencesPage/>}/>
                   <Route path="/password-protection" element={<PasswordPage/>}/>
