@@ -1,0 +1,45 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-content {
+  width: 55vw;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0  5px 15px;
+  transform: scale(0.5);
+  transition: 0.4s;
+  padding: 35px;
+}
+
+.modal-content.active {
+  transform: scale(1);
+}
+
+.modal-content-title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bold;
+}
+
