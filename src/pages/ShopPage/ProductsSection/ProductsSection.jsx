@@ -4,14 +4,15 @@ import { useEffect} from "react";
 import SortForm from '@/components/SortForm/SortForm';
 import ProductCard from '@/components/ProductCard/ProductCard';
 import {useDispatch, useSelector} from "react-redux";
-import {fetchProductsAsync, setSortBy, setSortedProducts} from "@/store/slices/productsSlice";
+import {setSortBy, setSortedProducts} from "@/store/slices/productsSlice";
+import {fetchDataAsync} from "../../../store/slices/categoriesSlice";
 
 function ProductsSection() {
     const dispatch = useDispatch();
     const { data, sortBy, sortedProducts } = useSelector((state) => state.products);
 
     useEffect(() => {
-        dispatch(fetchProductsAsync());
+        dispatch(fetchDataAsync());
     }, [dispatch]);
 
     useEffect(() => {

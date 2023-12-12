@@ -5,14 +5,15 @@ import { NavButton } from '../Buttons/Buttons';
 import { useEffect } from "react";
 import ProductCard from '../ProductCard/ProductCard';
 import {useDispatch, useSelector} from "react-redux";
-import {fetchOfferDataAsync, setCategoryData} from "../../store/slices/offerSlice";
+import {setCategoryData} from "../../store/slices/offerSlice";
+import {fetchDataAsync} from "../../store/slices/categoriesSlice";
 
 function OfferSection() {
     const dispatch = useDispatch();
     const { selectedCategory, categoryData } = useSelector((state) => state.offer);
 
     useEffect(() => {
-        dispatch(fetchOfferDataAsync());
+        dispatch(fetchDataAsync());
     }, [dispatch]);
 
     useEffect(() => {

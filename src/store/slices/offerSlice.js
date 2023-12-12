@@ -1,14 +1,6 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createSlice} from '@reduxjs/toolkit';
+import {fetchDataAsync} from "./categoriesSlice";
 
-export const fetchOfferDataAsync = createAsyncThunk('offer/fetchData', async () => {
-    try {
-        const response = await axios.get('/data/data.json');
-        return response.data;
-    } catch (error) {
-        throw error;
-    }
-});
 
 const offerSlice = createSlice({
     name: 'offer',
@@ -22,22 +14,22 @@ const offerSlice = createSlice({
         },
     },
     extraReducers: (builder) => {
-        builder.addCase(fetchOfferDataAsync.pending, (state) => {
+        builder.addCase(fetchDataAsync.pending, (state) => {
             state.loading = true;
         });
-        builder.addCase(fetchOfferDataAsync.fulfilled, (state, action) => {
+        builder.addCase(fetchDataAsync.fulfilled, (state, action) => {
             state.data = action.payload;
             const randomCategory = action.payload.categories[Math.floor(Math.random() * action.payload.categories.length)];
             state.selectedCategory = randomCategory;
 
             if (randomCategory) {
-                const shuffledCategoryData = randomCategory.items.sort(() => Math.random() - 0.5);
+                const shuffledCategoryData = [...randomCategory.items].sort(() => Math.random() - 0.5);
                 state.categoryData = shuffledCategoryData.slice(0, 4);
             }
 
             state.loading = false;
         });
-        builder.addCase(fetchOfferDataAsync.rejected, (state) => {
+        builder.addCase(fetchDataAsync.rejected, (state) => {
             state.loading = false;
         });
     },

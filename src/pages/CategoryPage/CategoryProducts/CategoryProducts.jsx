@@ -2,9 +2,10 @@ import './CategoryProducts.scss';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { fetchCategoryDataAsync, setSortBy, setSortedProducts } from '@/store/slices/categorySlice';
+import { setSortBy, setSortedProducts } from '@/store/slices/categorySlice';
 import SortForm from '../../../components/SortForm/SortForm';
 import ProductCard from '../../../components/ProductCard/ProductCard';
+import {fetchDataAsync} from "../../../store/slices/categoriesSlice";
 
 function CategoryProducts() {
     const { category } = useParams();
@@ -12,7 +13,7 @@ function CategoryProducts() {
     const { data, sortBy, sortedProducts } = useSelector((state) => state.category);
 
     useEffect(() => {
-        dispatch(fetchCategoryDataAsync());
+        dispatch(fetchDataAsync());
     }, [dispatch]);
 
     useEffect(() => {

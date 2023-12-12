@@ -1,14 +1,6 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createSlice} from '@reduxjs/toolkit';
+import {fetchDataAsync} from "./categoriesSlice";
 
-export const fetchCategoryDataAsync = createAsyncThunk('category/fetchData', async () => {
-    try {
-        const response = await axios.get('/data/data.json');
-        return response.data;
-    } catch (error) {
-        throw error;
-    }
-});
 
 const categorySlice = createSlice({
     name: 'category',
@@ -22,7 +14,7 @@ const categorySlice = createSlice({
         },
     },
     extraReducers: (builder) => {
-        builder.addCase(fetchCategoryDataAsync.fulfilled, (state, action) => {
+        builder.addCase(fetchDataAsync.fulfilled, (state, action) => {
             state.data = action.payload;
         });
     },
