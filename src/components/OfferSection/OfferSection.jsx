@@ -2,41 +2,25 @@ import './OfferSection.scss';
 import Span from '../Span/Span';
 import Title from '../Title/Title';
 import { NavButton } from '../Buttons/Buttons';
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect } from "react";
 import ProductCard from '../ProductCard/ProductCard';
+import {useDispatch, useSelector} from "react-redux";
+import {fetchOfferDataAsync, setCategoryData} from "../../store/slices/offerSlice";
 
 function OfferSection() {
-    const [data, setData] = useState({});
-    const [selectedCategory, setSelectedCategory] = useState({});
-    const [categoryData, setCategoryData] = useState([]);
+    const dispatch = useDispatch();
+    const { selectedCategory, categoryData } = useSelector((state) => state.offer);
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get("/data/data.json");
-                setData(response.data);
+        dispatch(fetchOfferDataAsync());
+    }, [dispatch]);
 
-
-                const randomCategory = response.data.categories[Math.floor(Math.random() * response.data.categories.length)];
-
-                setSelectedCategory(randomCategory);
-
-                if (randomCategory) {
-                    const shuffledCategoryData = randomCategory.items.sort(() => Math.random() - 0.5);
-                    setCategoryData(shuffledCategoryData.slice(0, 4));
-                }
-            } catch (error) {
-                console.log("Error fetching data", error);
-            }
-        };
-
-        fetchData();
-    }, []);
-
-    if (!data || !selectedCategory || !categoryData.length) {
-        return <p>Loading...</p>;
-    }
+    useEffect(() => {
+        if (selectedCategory && selectedCategory.items) {
+            const shuffledCategoryData = [...selectedCategory.items].sort(() => Math.random() - 0.5);
+            dispatch(setCategoryData(shuffledCategoryData.slice(0, 4)));
+        }
+    }, [selectedCategory, dispatch]);
 
     return (
         <section className="offer">
@@ -46,11 +30,7 @@ function OfferSection() {
                     <Title addClasses="offer__title" size={2}>
                         We Offer Organic For You
                     </Title>
-                    <NavButton
-                        to={'/products'}
-                        className="offer__products-link button yellow-on-green"
-                        text="View All Products"
-                    />
+                    <NavButton to={'/products'} className="offer__products-link button yellow-on-green" text="View All Products" />
                 </div>
                 <div className="offer__products-wrapper">
                     {categoryData.map((item) => (
@@ -61,6 +41,7 @@ function OfferSection() {
         </section>
     );
 }
+
 export default OfferSection;
 
 

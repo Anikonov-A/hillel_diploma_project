@@ -19,7 +19,7 @@ function ProductCard ({data, category}) {
                 </Link>
             </div>
             <div className="offer__product-price">{`$${data.price}.00`}</div>
-            <AddBtn></AddBtn>
+            <AddBtn />
         </div>
     )
 }
