@@ -2,6 +2,7 @@ import './ProductCard.scss';
 import {Link} from 'react-router-dom';
 import {AddBtn} from '../Buttons/Buttons';
 function ProductCard ({data, category}) {
+
     function scroll(){
         window.scrollTo(0,0)
     }
@@ -18,7 +19,7 @@ function ProductCard ({data, category}) {
                 </Link>
             </div>
             <div className="offer__product-price">{`$${data.price}.00`}</div>
-            <AddBtn></AddBtn>
+            <AddBtn />
         </div>
     )
 }
