@@ -1,22 +1,37 @@
 import './ProductPage.scss';
 import {useParams} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import React, {useEffect} from "react";
+import {useDispatch} from "react-redux";
+import {fetchDataAsync} from "../../store/slices/categoriesSlice";
+import {useSelector} from "react-redux";
 
 function ProductPage () {
-    const { productName } = useParams();
+    const { category, productName } = useParams();
+    const navigate = useNavigate();
+    const { data } = useSelector((state) => state.categories);
+    const dispatch = useDispatch();
 
-    // const { category, productName } = useParams();
-    // const product = data.categories
-    //   .find((cat) => cat.name.toLowerCase() === category.toLowerCase())
-    //   .items.find((item) => item.name.toLowerCase() === productName.toLowerCase());
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                await dispatch(fetchDataAsync());
+            } catch (error) {
+                console.error('Failed to fetch data:', error);
+            }
+        };
 
-    // return (
-    //     <div>
-    //         <h2>{product.name}</h2>
-    //         <p>Price: ${product.price}.00</p>
-    //         <img src={product.image} alt={product.name} />
-    //         {/*..... */}
-    //     </div>
-    // );
+        fetchData();
+
+        // Переместите navigate внутрь useEffect
+        const currentCategory = data.categories?.find((cat) => cat.name.toLowerCase() === category.toLowerCase());
+        const currentProduct = currentCategory?.items?.find((product) => product.name.toLowerCase() === productName.toLowerCase());
+
+        if (!currentProduct) {
+            navigate('/error');
+        }
+    }, [dispatch, navigate, data, category, productName]);
+
 
     return (
         <div className="product__name">{productName}</div>
