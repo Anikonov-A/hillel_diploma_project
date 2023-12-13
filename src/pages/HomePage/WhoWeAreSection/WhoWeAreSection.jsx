@@ -6,8 +6,8 @@ import Paragraph from "@/components/Paragraph/Paragraph";
 export default function WhoWeAre() {
     return (
         <section className='whoWeAreSection'>
-            <div className="container">
-               <div className='whoWeAreContentBlock'>
+            <div className="whoWeAreSection-wrapper">
+                <div className='whoWeAreContentBlock'>
                     <Span addClasses="spanMb">
                         Eco Friendly
                     </Span>

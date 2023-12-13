@@ -1,10 +1,10 @@
 import './CartPage.scss'
-import {NavButton} from "../../components/Buttons/Buttons";
+import TestimonialModalSection from "./TestimonialModalsection/TestimonialModalSection";
 
 function CartPage () {
     return (
         <div className='container feedback'>
-            <NavButton className='button green' to='/contacts' text='Leave a Review'/>
+            <TestimonialModalSection/>
         </div>
     )
 

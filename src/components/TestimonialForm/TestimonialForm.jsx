@@ -94,7 +94,6 @@ export default function TestimonialForm({ onAdd }) {
                    </div>
                 </Fragment>
             ));
-
         }
 
         return (
@@ -102,9 +101,11 @@ export default function TestimonialForm({ onAdd }) {
                 <div className='form-items'>
                     {formItems}
                 </div>
-                <button type='button' onClick={formik.handleSubmit} className="button form-button">
-                    Send Review
-                </button>
+                <div className="btn-block">
+                    <button type='button' onClick={formik.handleSubmit} className="button form-button">
+                        Send Review
+                    </button>
+                </div>
             </>
         )
     }
