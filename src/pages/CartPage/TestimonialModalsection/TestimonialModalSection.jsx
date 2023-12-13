@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TestimonialModal from "../../../components/TestimonialModal/TestimonialModal";
+import TestimonialModal from "@/components/TestimonialModal/TestimonialModal";
 
 export default function TestimonialModalSection() {
     const [modalOpen, setModalOpen] = useState(false);
