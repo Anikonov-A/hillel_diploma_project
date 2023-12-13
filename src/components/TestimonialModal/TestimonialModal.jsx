@@ -19,10 +19,10 @@ export default function TestimonialModal ({ openModal, setOpenModal }) {
         <div className={openModal ? 'modal active' : 'modal'} onClick={()=> setOpenModal(false)}>
             <div className={openModal ? 'modal-content active' : 'modal-content'} onClick={e => e.stopPropagation()}>
                 <div className="titleCloseBtn">
-                    <button className='button green'
+                    <button className='button-modal'
                         onClick={() => {
                             setOpenModal(false); }}>
-                        X
+                        x
                     </button>
                 </div>
                 <div className="modal-content-title">
