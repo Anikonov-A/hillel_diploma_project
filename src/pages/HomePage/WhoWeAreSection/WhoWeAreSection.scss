@@ -1,13 +1,14 @@
 .whoWeAreSection {
   height: 931px;
+  width: 1920px;
+  margin: 0 auto;
   background-color: var(--white-color);
   background-image: url("../../../../public/who-we-are-bg-img.png");
   background-repeat: no-repeat;
   background-position: left;
   overflow: hidden;
 
-  .container {
-    width: 100%;
+  .whoWeAreSection-wrapper {
     background-image: url("../../../../public/who-we-are-bg2.svg");
     background-repeat: no-repeat;
     background-position-x: 57%;
