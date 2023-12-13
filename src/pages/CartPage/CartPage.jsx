@@ -6,6 +6,7 @@ import CrossIcon from "../../components/CrossIcon";
 
 
 // import {NavButton} from "../../components/Buttons/Buttons";
+import TestimonialModalSection from "./TestimonialModalsection/TestimonialModalSection";
 
 function CartPage() {
     let finalPrice = 0;
@@ -60,6 +61,8 @@ function CartPage() {
 
 
     return (
+        <div className='container feedback'>
+            <TestimonialModalSection/>
         <div className='wrapper container'>
             {/*<NavButton className='button green' to='/contacts' text='Leave a Review'/>*/}
             <div className="shopping-cart">

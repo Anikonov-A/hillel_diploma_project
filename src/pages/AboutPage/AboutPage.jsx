@@ -4,6 +4,7 @@ import ChooseUsSection from './ChooseUsSection/ChooseUsSection';
 import TeamSection from "./TeamSection/TeamSection";
 import StyleGuide from "../../components/StyleGuide/StyleGuide";
 import OfferSection from '../../components/OfferSection/OfferSection';
+import React from "react";
 
 function AboutPage () {
   return (

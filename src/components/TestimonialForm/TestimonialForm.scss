@@ -21,6 +21,7 @@
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+        margin-left: 0;
       }
 
       input,  textarea {
@@ -35,11 +36,11 @@
       }
     }
   }
+  .btn-block {
+    text-align: center;
+  }
 }
 
-//.form-items .form-item:nth-child(3) {
-//  grid-column-start: 1;
-//  grid-column-end: 3;
-//}
+
 
 

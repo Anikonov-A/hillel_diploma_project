@@ -19,7 +19,7 @@ function UtilityPages () {
                     return (
                         <Fragment key={page.name}>
                             <li>
-                                <NavLink to={page.path} onClick={()=>window.scrollTo(0,0)}>{page.name}</NavLink>
+                                <NavLink to="#" onClick={()=>window.scrollTo(0,0)}>{page.name}</NavLink>
                             </li>
                         </Fragment>
                     )
