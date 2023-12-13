@@ -3,6 +3,7 @@ import categoriesSlice from './slices/categoriesSlice';
 import offerSlice from "./slices/offerSlice";
 import productsSlice from "./slices/productsSlice";
 import categorySlice from "./slices/categorySlice";
+import cartSlice from "./slices/cartSlice";
 
 const store = configureStore({
     reducer: {
@@ -10,6 +11,7 @@ const store = configureStore({
         offer: offerSlice,
         products:productsSlice,
         category:categorySlice,
+        cart:cartSlice,
 
     },
 });
