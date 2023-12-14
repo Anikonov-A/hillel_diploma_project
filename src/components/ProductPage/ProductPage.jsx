@@ -1,41 +1,51 @@
 import './ProductPage.scss';
-import {useParams} from "react-router-dom";
-import {useNavigate} from "react-router-dom";
-import React, {useEffect} from "react";
-import {useDispatch} from "react-redux";
-import {fetchDataAsync} from "../../store/slices/categoriesSlice";
-import {useSelector} from "react-redux";
+import {useNavigate, useParams} from "react-router-dom";
+import {useEffect} from "react";
+import axios from "axios";
 
-function ProductPage () {
-    const { category, productName } = useParams();
+
+function ProductPage() {
+    const {productName,category} = useParams();
     const navigate = useNavigate();
-    const { data } = useSelector((state) => state.categories);
-    const dispatch = useDispatch();
-
     useEffect(() => {
         const fetchData = async () => {
             try {
-                await dispatch(fetchDataAsync());
+                const response = await axios.get('/data/data.json');
+                const result = response.data;
+
+                if (!result || !result.categories) {
+                    navigate('/error');
+                }
+
+                const isValidCategory = result.categories.some((cat) => cat.name.toLowerCase() === category.toLowerCase());
+
+                if (!isValidCategory) {
+                    navigate('/error');
+                }
+
+                const categoryData = result.categories.find((cat) => cat.name.toLowerCase() === category.toLowerCase());
+                const isValidProduct = categoryData && categoryData.items && categoryData.items.some((item) => item.name.toLowerCase() === productName.toLowerCase());
+
+                if (!isValidProduct) {
+                    //console.error('Product not found', productName);
+                    navigate('/error');
+                }
             } catch (error) {
-                console.error('Failed to fetch data:', error);
+                navigate('/error');
             }
         };
 
         fetchData();
+    }, [category, productName, navigate]);
 
-        // Переместите navigate внутрь useEffect
-        const currentCategory = data.categories?.find((cat) => cat.name.toLowerCase() === category.toLowerCase());
-        const currentProduct = currentCategory?.items?.find((product) => product.name.toLowerCase() === productName.toLowerCase());
-
-        if (!currentProduct) {
-            navigate('/error');
-        }
-    }, [dispatch, navigate, data, category, productName]);
 
 
     return (
         <div className="product__name">{productName}</div>
-    )
+    );
 }
 
 export default ProductPage;
+
+
+

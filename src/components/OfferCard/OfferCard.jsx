@@ -1,12 +1,11 @@
 import "./OfferCard.scss"
 import {Link} from "react-router-dom";
 import Span from "@/components/Span/Span";
-import {paths} from '@/common/url';
-import {string} from "prop-types";
+import {func, string} from "prop-types";
 
-export default function OfferCard({cardClass, spanText, pText}) {
+export default function OfferCard({cardClass, spanText, pText, link, moveTop}) {
     return (
-            <Link to={paths.SHOP} className="card-link">
+            <Link to={link} onClick={moveTop} className="card-link">
                 <div className={`${cardClass} card-block`}>
                     <div className="content-block">
                         <Span>{spanText}</Span>
@@ -22,6 +21,8 @@ OfferCard.propTypes = {
     spanClass: string,
     spanText: string,
     pText: string,
+    link: string,
+    moveTop: func
 }
 
 //Example with position absolute

@@ -19,9 +19,10 @@ const categoriesSlice = createSlice({
         },
     },
     extraReducers: (builder) => {
-        builder.addCase(fetchDataAsync.fulfilled, (state, action) => {
-            state.data = action.payload;
-        });
+        builder
+            .addCase(fetchDataAsync.fulfilled, (state, action) => {
+                state.data = action.payload;
+            })
     },
 });
 

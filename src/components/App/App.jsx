@@ -1,23 +1,8 @@
 import './App.scss';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { Header, Footer, HomePage, AboutPage, ShopPage, ServicePage, ServiceSinglePage, TeamPage, ContactPage, CartPage, ErrorPage, ChangeLogPage, LicencesPage, PasswordPage, Subscription, CategoryPage, ProductPage, } from "./imports";
-import {useDispatch} from "react-redux";
-import {useEffect} from "react";
-import {fetchDataAsync} from "../../store/slices/categoriesSlice";
+
 function App() {
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                await dispatch(fetchDataAsync());
-            } catch (error) {
-                console.error('Failed to fetch data:', error);
-            }
-        };
-
-        fetchData();
-    }, [dispatch]);
     const handleSubscribe = (values) => {
         const SUBSCRIBE_KEY = "subscribeData";
         const currentData = JSON.parse(localStorage.getItem(SUBSCRIBE_KEY)) || [];
