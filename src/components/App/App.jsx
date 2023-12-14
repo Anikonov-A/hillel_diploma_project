@@ -17,7 +17,7 @@ function App() {
     return (
       <div>
           <Router>
-              <Header></Header>
+              <Header />
               <Routes>
                   <Route exact path="/" element={<HomePage/>} />
                   <Route path="/about" element={<AboutPage/>}/>
@@ -35,9 +35,8 @@ function App() {
                   <Route path="/services/single" element={<ServiceSinglePage/>}/>
               </Routes>
               <Subscription subscribe={handleSubscribe}></Subscription>
-              <Footer></Footer>
+              <Footer />
           </Router>
-
       </div>
   );
 }

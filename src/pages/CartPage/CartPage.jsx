@@ -1,11 +1,12 @@
 import './CartPage.scss'
 import Title from "@/components/Title/Title";
 import CrossIcon from "@/components/CrossIcon";
-import TestimonialModalSection from "./TestimonialModalsection/TestimonialModalSection";
 import {useDispatch, useSelector} from "react-redux";
 import {decreaseQuantity, increaseQuantity, removeItem} from "@/store/slices/cartSlice";
+import OrderForm from "../../components/OrderForm/OrderForm";
 
 function ProductCard({product, handleRemove, handleIncrease, handleDecrease}) {
+
     const handleActionOnClick = (action) => {
         return () => action(product.id);
     };
@@ -39,23 +40,18 @@ function ProductCard({product, handleRemove, handleIncrease, handleDecrease}) {
 function CartPage() {
     const dispatch = useDispatch();
     const cartItems = useSelector((state) => state.cart.items);
-
     const handleRemoveItem = (itemId) => {
         dispatch(removeItem(itemId));
     };
-
     const handleIncreaseQuantity = (itemId) => {
         dispatch(increaseQuantity(itemId));
     };
-
     const handleDecreaseQuantity = (itemId) => {
         dispatch(decreaseQuantity(itemId));
     };
-
     const calculateTotalPrice = () => {
         return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
     };
-
     return (
         <div className='container feedback'>
             <div className='wrapper container'>
@@ -70,18 +66,15 @@ function CartPage() {
                                                      index={index} handleRemove={handleRemoveItem}
                                                      handleDecrease={handleDecreaseQuantity}
                                                      handleIncrease={handleIncreaseQuantity}>
-
                                         </ProductCard>
                                     ))
                                 }
                             </ul>
                         </div>
                         <div className="block-body__order-info info-order">
-                            <Title size={4} addClasses="info-order__subtitle">Cart Totals</Title>
+                            <Title size={6}>Cart totals</Title>
                             <div className="info-order__final-price">
-                                <Title size={5}>Final Price</Title>
-                                {calculateTotalPrice()}$
-                                <TestimonialModalSection/>
+                                <OrderForm price={calculateTotalPrice()}/>
                             </div>
                         </div>
                     </div>
