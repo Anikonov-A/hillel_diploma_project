@@ -41,8 +41,8 @@ FormButton.propTypes = {
     text:string.isRequired
 }
 
-export function AddBtn () {
+export function AddBtn ({handler}) {
     return (
-        <button type="button" className="btn-add green">Add to cart</button>
+        <button type="button" className="btn-add green" onClick={handler}>Add to cart</button>
     )
 }

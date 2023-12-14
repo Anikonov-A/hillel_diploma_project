@@ -7,7 +7,7 @@ function Copyright () {
         <div className="copyright">
             <Paragraph>Copyright ©</Paragraph>
             <div className="copyright__title">
-                <NavLink to={paths.MAIN}>Organick</NavLink>
+                <NavLink to={paths.MAIN} onClick={()=>window.scrollTo(0,0)}>Organick</NavLink>
             </div>
         </div>
     )

@@ -17,7 +17,7 @@ function App() {
     return (
       <div>
           <Router>
-              <Header></Header>
+              <Header />
               <Routes>
                   <Route exact path="/" element={<HomePage/>} />
                   <Route path="/about" element={<AboutPage/>}/>
@@ -27,7 +27,7 @@ function App() {
                   <Route path="/services" element={<ServicePage/>}/>
                   <Route path="/team" element={<TeamPage/>}/>
                   <Route path="/contacts" element={<ContactPage/>}/>
-                  <Route path="/cart" element={<CartPage/>}/>
+                  <Route path="/cart" element={<CartPage />}/>
                   <Route path="/error" element={<ErrorPage/>}/>
                   <Route path="/licences" element={<LicencesPage/>}/>
                   <Route path="/password-protection" element={<PasswordPage/>}/>
@@ -35,9 +35,8 @@ function App() {
                   <Route path="/services/single" element={<ServiceSinglePage/>}/>
               </Routes>
               <Subscription subscribe={handleSubscribe}></Subscription>
-              <Footer></Footer>
+              <Footer />
           </Router>
-
       </div>
   );
 }
