@@ -1,4 +1,3 @@
-// ServicesVideoSection.js
 import React, { useState } from 'react';
 import Title from '@/components/Title/Title';
 import Paragraph from '../../../components/Paragraph/Paragraph';
@@ -8,11 +7,9 @@ import ServicesVideoModal from './ServicesVideoModal';
 
 const ServicesVideoSection = () => {
   const [showVideo, setShowVideo] = useState(false);
-
   const handleVideoClick = () => {
     setShowVideo(true);
   };
-
   const handleCloseModal = () => {
     setShowVideo(false);
   };

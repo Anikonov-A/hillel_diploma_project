@@ -1,4 +1,3 @@
-// ServicesVideoModal.js
 import React from 'react';
 import './ServicesVideoModal.scss';
 

@@ -20,6 +20,7 @@ function App() {
           <Router>
               <Header />
               <Routes>
+
                   <Route exact path="/" element={<HomePage/>} />
                   <Route path="/about" element={<AboutPage/>}/>
                   <Route path="/products" element={<ShopPage/>}/>

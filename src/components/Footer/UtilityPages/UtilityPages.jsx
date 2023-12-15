@@ -3,7 +3,7 @@ import Title from '../../Title/Title';
 import {paths} from '../../../common/url';
 import {Fragment} from 'react';
 import {NavLink} from 'react-router-dom';
-
+import {scrollTop} from "../../../common/scrollFunction";
 function UtilityPages () {
     const pages = [
         {name: "404 Not Found", path: paths.ERROR},
@@ -19,7 +19,7 @@ function UtilityPages () {
                     return (
                         <Fragment key={page.name}>
                             <li>
-                                <NavLink to="#" onClick={()=>window.scrollTo(0,0)}>{page.name}</NavLink>
+                                <NavLink to="#" onClick={scrollTop}>{page.name}</NavLink>
                             </li>
                         </Fragment>
                     )

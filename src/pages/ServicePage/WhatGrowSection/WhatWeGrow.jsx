@@ -5,8 +5,7 @@ import './WhatWeGrow.scss'
 import Points from './Points';
 import { NavButton } from "@/components/Buttons/Buttons";
 
-//render points
-function renderPoints(cardsData, className, isLeft) { //для левой части true =применить стиль
+function renderPoints(cardsData, className, isLeft) {
   return (
     <ul className={className}>
       {cardsData.map((card, index) => (
@@ -16,13 +15,12 @@ function renderPoints(cardsData, className, isLeft) { //для левой час
           title={card.title}
           description={card.description}
           imagePath={card.imagePath}
-          className={isLeft ? 'left-content point-card_content' : 'point-card_content'}//для левой части left-content
+          className={isLeft ? 'left-content point-card_content' : 'point-card_content'}
         />
       ))}
     </ul>
   );
 }
-//rendeer points
 
 const WhatWeGrowSection = () => {
 

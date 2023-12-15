@@ -1,7 +1,7 @@
 import './Navigation.scss';
 import NavItem from "../NavItem/NavItem";
 import {paths} from '@/common/url';
-
+import {scrollTop} from "../../../common/scrollFunction";
 function Navigation () {
     const pages = [
         {name: 'Home', path: paths.MAIN},
@@ -11,9 +11,7 @@ function Navigation () {
         {name: 'Team', path: paths.TEAM},
         {name: 'Contact us', path: paths.CONTACTS},
     ];
-    function scrollTop(){
-        window.scrollTo(0,0)
-    }
+
 
     return (
         <nav className="navbar">

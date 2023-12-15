@@ -7,7 +7,7 @@ import './WhatWeGrow.scss'
 const Points = ({ cardNumber, title, description, imagePath, className }) => {
   return (
     <li className={`point-card card${cardNumber}`}>
-      <div className={`point-card_content ${className}`}> {/* добавлен проп для left-contetn */}
+      <div className={`point-card_content ${className}`}>
         <div className="point-card-wrapper" style={{ backgroundImage: `url(${imagePath})` }}></div>
         <Title size={6} addClasses="point-card_title">
           {title}

@@ -24,18 +24,3 @@ OfferCard.propTypes = {
     link: string,
     moveTop: func
 }
-
-//Example with position absolute
-// export function DiscountCard(){
-//     return (
-//         <Link to={paths.SHOP} className="card-item-link">
-//             <div className="disc-wrapper">
-//                 <img src="./images/cards-bg/first-card.jpg" alt="first-card"/>
-//                 <div className="content-box">
-//                     <Span>Natural!!</Span>
-//                     <p>Get Garden <br/> Fresh Fruits</p>
-//                 </div>
-//             </div>
-//         </Link>
-//     )
-// }
