@@ -13,8 +13,7 @@ import LicencesPage from '../../pages/LicencesPage/LicencesPage';
 import PasswordPage from '../../pages/PasswordPage/PasswordPage';
 import Subscription from '../Subscription/Subscription';
 import CategoryPage from '@/pages/CategoryPage/CategoryPage';
-import ProductPage from "../ProductPage/ProductPage";
-import ProductDetail from '../ProductPage/ProductPage';
+import {ProductPage} from "../ProductPage/ProductPage";
 
 import ServiceSinglePage from "../../pages/ServiceSinglePage/ServiceSinglePage";
 export {
@@ -35,5 +34,4 @@ export {
     CategoryPage,
     ProductPage,
     ServiceSinglePage,
-    ProductDetail
 };
