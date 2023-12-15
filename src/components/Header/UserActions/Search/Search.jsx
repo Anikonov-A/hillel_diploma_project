@@ -2,7 +2,7 @@ import './Search.scss';
 import {useState , useEffect} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
-
+import {scrollTop} from "../../../../common/scrollFunction";
 
 const filterProducts = (searchText, listOfCategories,setListVisible) => {
     if (!searchText) {
@@ -27,7 +27,7 @@ function Search() {
 
 
     function operationWithSearch(){
-        window.scrollTo(0,0);
+        scrollTop();
         setListVisible(false);
         setSearchTerm( "");
     }

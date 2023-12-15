@@ -7,6 +7,7 @@ import axios from "axios";
 function ProductPage() {
     const {productName,category} = useParams();
     const navigate = useNavigate();
+
     useEffect(() => {
         const fetchData = async () => {
             try {

@@ -56,12 +56,7 @@ function ProductsSection() {
     return (
         <section className="products">
             <div className="container">
-                {/*<Title size={2} addClasses="products__title">*/}
-                {/*    All Products*/}
-                {/*</Title>*/}
-
                 <SortForm sortBy={sortBy} onSortChange={handleSortChange} />
-
                 <div className="products__wrapper">
                     {sortedProducts.map((item) => (
                         <ProductCard key={item.id} data={item} category={getCategoryName(item.id)} />

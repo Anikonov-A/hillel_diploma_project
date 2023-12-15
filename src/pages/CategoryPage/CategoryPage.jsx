@@ -41,18 +41,3 @@ function CategoryPage() {
 }
 
 export default CategoryPage;
-
-/*
-
-    ==============================================================================
-    useEffect(() => {
-        const isValidCategory = data.categories && data.categories.some((cat) => cat.name.toLowerCase() === category.toLowerCase());
-
-        if (!loading && !isValidCategory && data.categories) {
-            navigate('/error');
-        }
-    }, [loading, data, category, navigate]);
-
-    //Above is the way I have tried to write some code connected with showing ErrorPage when manually typing the unexisting category name. I also added
-    //loading state to categoriesSlice, used useSelector, but I had not managed to do the same with ProductPage. So, I have chosen another way.
-*/
