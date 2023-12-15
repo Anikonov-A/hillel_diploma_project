@@ -55,7 +55,8 @@
   }
   &-image{
     max-width: 100%;
-    height: 330px;
+    aspect-ratio: 330 / 330 ;
+    object-fit: contain;
     transition: transform .3s ease 0s;
   }
   &-price{

@@ -12,10 +12,11 @@ import ChangeLogPage from '../../pages/ChangeLogPage/ChangeLogPage';
 import LicencesPage from '../../pages/LicencesPage/LicencesPage';
 import PasswordPage from '../../pages/PasswordPage/PasswordPage';
 import Subscription from '../Subscription/Subscription';
-import CategoryPage from '../CategoryPage/CategoryPage';
+import CategoryPage from '@/pages/CategoryPage/CategoryPage';
 import ProductPage from "../ProductPage/ProductPage";
 import ProductDetail from '../ProductPage/ProductPage';
 
+import ServiceSinglePage from "../../pages/ServiceSinglePage/ServiceSinglePage";
 export {
     Header,
     Footer,
@@ -33,5 +34,6 @@ export {
     Subscription,
     CategoryPage,
     ProductPage,
+    ServiceSinglePage,
     ProductDetail
 };

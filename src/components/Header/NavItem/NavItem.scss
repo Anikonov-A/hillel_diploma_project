@@ -3,11 +3,35 @@
     color: var(--main-color);
     font-size: 20px;
     font-weight: 700;
+    &::after{
+      content: "";
+      width: 0;
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: relative;
+      background-color: var(--hover-bg-color);
+      transition: all 0.3s;
+    }
     &.active{
       color: var(--hover-bg-color);
     }
+    &.active::after{
+           content: "";
+           width: 100%;
+           left: 0;
+           display: block;
+           height: 2px;
+           position: relative;
+           background-color: var(--hover-bg-color);
+    }
     &:hover{
       color: var(--hover-bg-color);
+    }
+    &:hover::after{
+      background-color: var(--hover-bg-color);
+      width: 100%;
+      left: 0;
     }
   }
 }

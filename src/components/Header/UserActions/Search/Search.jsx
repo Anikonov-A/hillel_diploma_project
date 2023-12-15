@@ -25,6 +25,7 @@ function Search() {
     const [listVisible, setListVisible] = useState(true);
 
 
+
     function operationWithSearch(){
         window.scrollTo(0,0);
         setListVisible(false);

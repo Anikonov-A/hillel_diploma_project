@@ -1,0 +1,46 @@
+.form {
+  .form-items {
+    display: grid;
+    gap: 46px;
+    grid-template-columns: repeat(2, 48%);
+    margin-bottom: 60px;
+
+    & .form-item:nth-child(3){
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+    }
+
+    .form-item {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        color: var(--main-color);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-left: 0;
+      }
+
+      input,  textarea {
+        padding: 28px 23px 31px ;
+        margin-top: 26px;
+        border: 1px solid var(--secondary-color);
+        border-radius: var(--border-radius-button);
+      }
+
+      textarea {
+        height: 247px;
+      }
+    }
+  }
+  .btn-block {
+    text-align: center;
+  }
+}
+
+
+
+

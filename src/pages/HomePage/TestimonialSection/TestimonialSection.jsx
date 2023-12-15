@@ -1,9 +1,10 @@
 import Span from "@/components/Span/Span";
 import Title from "@/components/Title/Title";
 import Paragraph from "@/components/Paragraph/Paragraph";
-import {useState, useEffect} from "react";
 import {Pagination, Autoplay} from "swiper/modules";
 import { Swiper, SwiperSlide} from "swiper/react";
+import { testimonials } from './testimonials';
+import img from './testimonial-avatar.png'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -42,13 +43,6 @@ const CounterElement = ({titleText, paragraphText}) => {
 }
 
 export default function Slider() {
-    const [testimonials, setTestimonials] = useState([]);
-    useEffect(() => {
-        fetch('/data/testimonials.json')
-            .then(res => res.json())
-            .then(result => setTestimonials(result))
-            .catch((error) => console.error('ERROR', error));
-    }, []);
 
     return (
        <section className='testimonial-wrapper'>
@@ -72,7 +66,7 @@ export default function Slider() {
                    {testimonials.map((testimonial) => (
                        <SwiperSlide  key = {testimonial.id} >
                            <div>
-                               <img className='slider-img' src={testimonial.photo} alt={testimonial.name}/>
+                               <img className='slider-img' src={testimonial.photo || img} alt={testimonial.name}/>
                            </div>
                            <Paragraph>{testimonial.text}</Paragraph>
                           <div>

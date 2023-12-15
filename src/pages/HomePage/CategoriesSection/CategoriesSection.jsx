@@ -1,54 +1,47 @@
 import './CategoriesSection.scss';
-import Span from '../../../components/Span/Span';
-import Title from '../../../components/Title/Title';
-import {NavButton} from '../../../components/Buttons/Buttons';
-import {useEffect, useState, useCallback} from "react";
-import axios from "axios";
-import ProductCard from '../../../components/ProductCard/ProductCard';
+import Span from '@/components/Span/Span';
+import Title from '@/components/Title/Title';
+import {NavButton} from '@/components/Buttons/Buttons';
+import {useEffect} from "react";
+import ProductCard from '@/components/ProductCard/ProductCard';
+import {useDispatch, useSelector} from "react-redux";
+import {fetchDataAsync, setRandomProducts} from "@/store/slices/categoriesSlice";
 
-function CategoriesSection () {
-    const [data, setData] = useState({});
-    const [randomProducts, setRandomProducts] = useState([]);
+function CategoriesSection() {
+    const dispatch = useDispatch();
+    const { data, randomProducts } = useSelector((state) => state.categories);
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get("/data/data.json");
-                setData(response.data);
-            } catch (error) {
-                console.log("Error fetching data", error);
+        dispatch(fetchDataAsync());
+    }, [dispatch]);
+
+    useEffect(() => {
+        const getRandomProducts = () => {
+            if (data && data.categories) {
+                let randomCategoryData = [];
+
+                for (const category of data.categories) {
+                    randomCategoryData = [...randomCategoryData, ...category.items];
+                }
+
+                randomCategoryData.sort(() => Math.random() - 0.5);
+
+                return randomCategoryData;
             }
+            return [];
         };
-        fetchData();
-    },[])
 
-    const getRandomProducts = useCallback(() => {
-        if (data && data.categories) {
-            let randomCategoryData = [];
-
-            for (const category of data.categories) {
-                randomCategoryData = [...randomCategoryData, ...category.items];
-            }
-
-            randomCategoryData.sort(() => Math.random() - 0.5);
-
-            return randomCategoryData;
-        }
-        return [];
-    }, [data]);
-
-    useEffect(() => {
-        setRandomProducts(getRandomProducts());
-    }, [getRandomProducts])
+        dispatch(setRandomProducts(getRandomProducts()));
+    }, [data, dispatch]);
 
     const getCategoryName = (itemId) => {
         for (const category of data.categories) {
-            const foundItem = category.items.find(item => item.id === itemId);
+            const foundItem = category.items.find((item) => item.id === itemId);
             if (foundItem) {
                 return category.name;
             }
         }
-        return "";
+        return '';
     };
 
     return (
@@ -56,7 +49,9 @@ function CategoriesSection () {
             <div className="container">
                 <div className="categories__content">
                     <Span addClasses="categories__span">Categories</Span>
-                    <Title addClasses="categories__title" size={2}>Our Products</Title>
+                    <Title addClasses="categories__title" size={2}>
+                        Our Products
+                    </Title>
                     <div className="categories__wrapper">
                         {randomProducts.slice(0, 8).map((item) => (
                             <ProductCard key={item.id} data={item} category={getCategoryName(item.id)} />
@@ -66,7 +61,7 @@ function CategoriesSection () {
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
 export default CategoriesSection;

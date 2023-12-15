@@ -1,0 +1,44 @@
+.store__services{
+  padding-top: 78px;
+  &-container{
+    max-width: 966px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  &-bg{
+    background: url("../../../../public/images/ServicePage/single-bg.jpg") center / cover no-repeat;
+    padding-top: 371px;
+    padding-bottom: 371px;
+    margin-bottom: 78px;
+  }
+  &-info,
+  &-content,
+  &-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &-info{
+    gap: 70px;
+  }
+  &-content{
+    gap: 28px;
+  }
+  &-wrapper{
+    gap: 28px;
+  }
+  &-addInfo{
+    &-points{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 28px;
+    }
+    &-title{
+      margin-bottom: 11px;
+    }
+    &-desc{
+      margin-bottom: 60px;
+    }
+  }
+}
