@@ -1,10 +1,9 @@
 import "./OfferCardsSection.scss"
 import OfferCard from "@/components/OfferCard/OfferCard";
 import {paths} from '@/common/url';
+import {scrollTop} from "../../../common/scrollFunction";
 export default function OfferCardsSection(){
-    function scrollTop(){
-        window.scrollTo(0,0)
-    }
+
     return(
         <div className="offers-container">
             <OfferCard moveTop={scrollTop} link={paths.FRESH} cardClass="first-card" spanText="Natural!!"  pText="Get Garden Fresh Fruits" />

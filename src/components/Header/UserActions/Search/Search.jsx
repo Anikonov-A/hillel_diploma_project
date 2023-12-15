@@ -2,6 +2,8 @@ import './Search.scss';
 import {useState , useEffect} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
+import {scrollTop} from "../../../../common/scrollFunction";
+
 
 function Search() {
     const [state,setState] = useState({
@@ -11,7 +13,7 @@ function Search() {
         listVisible:false
     })
     function operationWithSearch(){
-        window.scrollTo(0,0);
+        scrollTop();
         setState(prevState => ({
             ...prevState,
             listVisible: false
