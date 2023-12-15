@@ -2,6 +2,8 @@ import TestimonialForm from "../TestimonialForm/TestimonialForm";
 import { useState } from "react";
 import { testimonials }  from "@/pages/HomePage/TestimonialSection/testimonials";
 import Title from "@/components/Title/Title";
+import { ToastContainer, toast} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import './TestimonialModal.scss';
 
 export default function TestimonialModal ({ openModal, setOpenModal }) {
@@ -14,6 +16,17 @@ export default function TestimonialModal ({ openModal, setOpenModal }) {
         ]);
         testimonials.push(newItem);
         setOpenModal(false);
+        toast.success('Thank you for your feedback!', {
+            className:"toast-modify",
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            progress: undefined,
+            theme: "light",
+        });
     }
         return (
         <div className={openModal ? 'modal active' : 'modal'} onClick={()=> setOpenModal(false)}>
@@ -32,6 +45,20 @@ export default function TestimonialModal ({ openModal, setOpenModal }) {
                    <TestimonialForm onAdd={handleTaskAdd}/>
                 </div>
             </div>
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss={false}
+                draggable={false}
+                pauseOnHover={false}
+                theme="light"
+            />
         </div>
+
+
     )
 }

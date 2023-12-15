@@ -9,7 +9,9 @@ export const paths = {
     ERROR: '/error',
     LICENCES: '/licences',
     PASSWORD: '/password-protection',
-    CHANGELOG: '/changelog'
+    CHANGELOG: '/changelog',
+    FRESH: '/products/fresh',
+    VEGETABLES: '/products/vegetables'
 }
 
 export const imagePaths = {
