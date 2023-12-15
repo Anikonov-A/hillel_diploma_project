@@ -27,6 +27,10 @@ function CategoryProducts() {
                     sortedCategoryData.sort((a, b) => a.price - b.price);
                 } else if (sortBy === 'highToLow') {
                     sortedCategoryData.sort((a, b) => b.price - a.price);
+                } else if (sortBy === 'ascending') {
+                    sortedCategoryData.sort((a, b) => a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1);
+                } else if (sortBy === 'descending') {
+                    sortedCategoryData.sort((a, b) => a.name.toLowerCase() < b.name.toLowerCase() ? 1 : -1);
                 } else {
                     sortedCategoryData.sort(() => Math.random() - 0.5);
                 }

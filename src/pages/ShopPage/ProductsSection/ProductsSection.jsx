@@ -1,6 +1,5 @@
 import './ProductsSection.scss';
 import { useEffect} from "react";
-// import Title from '@/components/Title/Title';
 import SortForm from '@/components/SortForm/SortForm';
 import ProductCard from '@/components/ProductCard/ProductCard';
 import {useDispatch, useSelector} from "react-redux";
@@ -29,6 +28,16 @@ function ProductsSection() {
                     sortedCategoryData = [...sortedCategoryData, ...category.items];
                 }
                 sortedCategoryData.sort((a, b) => b.price - a.price);
+            } else if (sortBy === 'ascending') {
+                for (const category of data.categories) {
+                    sortedCategoryData = [...sortedCategoryData, ...category.items];
+                }
+                sortedCategoryData.sort((a, b) => a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1);
+            } else if (sortBy === 'descending') {
+                for (const category of data.categories) {
+                    sortedCategoryData = [...sortedCategoryData, ...category.items];
+                }
+                sortedCategoryData.sort((a, b) => a.name.toLowerCase() < b.name.toLowerCase() ? 1 : -1);
             } else {
                 for (const category of data.categories) {
                     sortedCategoryData = [...sortedCategoryData, ...category.items];
@@ -56,12 +65,7 @@ function ProductsSection() {
     return (
         <section className="products">
             <div className="container">
-                {/*<Title size={2} addClasses="products__title">*/}
-                {/*    All Products*/}
-                {/*</Title>*/}
-
                 <SortForm sortBy={sortBy} onSortChange={handleSortChange} />
-
                 <div className="products__wrapper">
                     {sortedProducts.map((item) => (
                         <ProductCard key={item.id} data={item} category={getCategoryName(item.id)} />
