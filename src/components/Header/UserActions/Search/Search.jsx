@@ -3,38 +3,19 @@ import {useState , useEffect} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
 
-
-const filterProducts = (searchText, listOfCategories,setListVisible) => {
-    if (!searchText) {
-        setListVisible(false);
-        return []
-    }
-    setListVisible(true);
-    return listOfCategories.reduce((acc, category) => {
-        const filteredItems = category.items.filter(({ name }) =>
-            name.toLowerCase().includes(searchText.toLowerCase())
-        );
-        return [...acc, ...filteredItems];
-    }, []);
-};
-
 function Search() {
-    // const [searchData, setSearchData] = useState([]);
-    // const [searchTerm, setSearchTerm] = useState("");
-    // const [productList, setProductList] = useState([]);
-    const [listVisible, setListVisible] = useState(false);
     const [state,setState] = useState({
         searchData:[],
         searchTerm:'',
         productList:[],
-
+        listVisible:false
     })
-
-
-
     function operationWithSearch(){
         window.scrollTo(0,0);
-        setListVisible(false);
+        setState(prevState => ({
+            ...prevState,
+            listVisible: false
+        }));
         setState(prevState => (
             {...prevState,
             searchTerm:""}
@@ -54,15 +35,35 @@ function Search() {
 
     useEffect(() => {
         const debounce = setTimeout(() => {
-            const filteredProducts = filterProducts(state.searchTerm, state.searchData,setListVisible);
+            const filteredProducts = filterProducts(state.searchTerm, state.searchData,state.listVisible);
             setState(prevState => ({
                 ...prevState,
                 productList:filteredProducts
             }));
-        }, 0);
+        }, 300);
 
         return () => clearTimeout(debounce);
-    }, [state.searchTerm, state.searchData, setListVisible]);
+    }, [state.searchTerm, state.searchData, state.listVisible]);
+
+    const filterProducts = (searchText, listOfCategories) => {
+        if (!searchText) {
+            setState(prevState => ({
+                ...prevState,
+                listVisible: false
+            }));
+            return []
+        }
+        setState(prevState => ({
+            ...prevState,
+            listVisible: true
+        }));
+        return listOfCategories.reduce((acc, category) => {
+            const filteredItems = category.items.filter(({ name }) =>
+                name.toLowerCase().includes(searchText.toLowerCase())
+            );
+            return [...acc, ...filteredItems];
+        }, []);
+    };
 
     return (
         <div className="search">
@@ -82,7 +83,7 @@ function Search() {
                         }))}
                         autoComplete="off"
                     />
-                    <ul className={listVisible ? 'visible' : 'hidden'}  >
+                    <ul className={state.listVisible ? 'visible' : 'hidden'}  >
                         {state.productList.length > 0 ? (
                             state.productList.map((product, index) => (
                                 <li key={index}>
