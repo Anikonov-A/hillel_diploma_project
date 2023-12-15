@@ -19,36 +19,50 @@ const filterProducts = (searchText, listOfCategories,setListVisible) => {
 };
 
 function Search() {
-    const [searchData, setSearchData] = useState([]);
-    const [searchTerm, setSearchTerm] = useState("");
-    const [productList, setProductList] = useState([]);
-    const [listVisible, setListVisible] = useState(true);
+    // const [searchData, setSearchData] = useState([]);
+    // const [searchTerm, setSearchTerm] = useState("");
+    // const [productList, setProductList] = useState([]);
+    const [listVisible, setListVisible] = useState(false);
+    const [state,setState] = useState({
+        searchData:[],
+        searchTerm:'',
+        productList:[],
+
+    })
 
 
 
     function operationWithSearch(){
         window.scrollTo(0,0);
         setListVisible(false);
-        setSearchTerm( "");
+        setState(prevState => (
+            {...prevState,
+            searchTerm:""}
+        ))
     }
 
     useEffect(() => {
         const fetchData = async () => {
                 const response = await axios.get('/data/data.json');
-                setSearchData(response.data.categories);
-
+                setState(prevState => ({
+                    ...prevState,
+                    searchData: response.data.categories
+                }))
         };
         fetchData();
     }, []);
 
     useEffect(() => {
         const debounce = setTimeout(() => {
-            const filteredProducts = filterProducts(searchTerm, searchData,setListVisible);
-            setProductList(filteredProducts);
-        }, 300);
+            const filteredProducts = filterProducts(state.searchTerm, state.searchData,setListVisible);
+            setState(prevState => ({
+                ...prevState,
+                productList:filteredProducts
+            }));
+        }, 0);
 
         return () => clearTimeout(debounce);
-    }, [searchTerm, searchData, setListVisible]);
+    }, [state.searchTerm, state.searchData, setListVisible]);
 
     return (
         <div className="search">
@@ -60,14 +74,17 @@ function Search() {
                     <input
                         type="text"
                         id="searchInput"
-                        value={searchTerm}
+                        value={state.searchTerm}
                         className="search__input"
-                        onChange={(e) => setSearchTerm(e.target.value)}
+                        onChange={(e) => setState(prevState => ({
+                            ...prevState,
+                            searchTerm: e.target.value
+                        }))}
                         autoComplete="off"
                     />
                     <ul className={listVisible ? 'visible' : 'hidden'}  >
-                        {productList.length > 0 ? (
-                            productList.map((product, index) => (
+                        {state.productList.length > 0 ? (
+                            state.productList.map((product, index) => (
                                 <li key={index}>
                                     <Link to={`/products/${product.category}/${product.name.toLowerCase()}`} onClick={operationWithSearch}>
                                         {product.name}
