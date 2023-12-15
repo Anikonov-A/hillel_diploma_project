@@ -8,8 +8,9 @@ const formElementsConfiguration = {
     author: {
         defaultValue: '',
         inputType: 'text',
-        labelText: 'Full Name* ',
+        labelText: 'Full Name*',
         placeholder: 'your full name',
+        id:"fullName",
         vSchema: string()
             .min(2, 'too short name')
             .max(20, 'too long name')
@@ -19,8 +20,9 @@ const formElementsConfiguration = {
     trade: {
         defaultValue: '',
         inputType: 'text',
-        labelText: 'Profession* ',
+        labelText: 'Profession*',
         placeholder: 'your profession',
+        id:"trade",
         vSchema: string()
             .min(3, 'too short profession name')
             .required(),
@@ -30,6 +32,7 @@ const formElementsConfiguration = {
         inputType: 'textarea',
         labelText: 'Message* ',
         placeholder: 'the text of your review...',
+        id:"text",
         vSchema: string()
             .min(2, 'too short text')
             .max(200, 'too long text')
@@ -68,18 +71,19 @@ export default function TestimonialForm({ onAdd }) {
     const generateFormElements = () => {
         const formItems = [];
         for (let key of Object.keys(formElementsConfiguration)) {
-            const { labelText, inputType, placeholder } = formElementsConfiguration[key];
+            const { labelText, inputType, placeholder ,id } = formElementsConfiguration[key];
             formItems.push((
                 <Fragment key={key}>
                    <div className='form-item'>
 
-                           <label htmlFor={key}>{labelText}</label>
+                           <label htmlFor={id}>{labelText}</label>
                        {inputType === 'textarea' ? (
                            <textarea
                                placeholder={placeholder}
                                name={key}
                                value={formik.values[key]}
                                onChange={formik.handleChange}
+                               id={id}
                            />
                        ) : (
                            <input
@@ -88,6 +92,7 @@ export default function TestimonialForm({ onAdd }) {
                                name={key}
                                value={formik.values[key]}
                                onChange={formik.handleChange}
+                               id={id}
                            />
                        )}
                        {formik.errors[key] && <div style={{color: 'red'}}>{formik.errors[key]}</div>}

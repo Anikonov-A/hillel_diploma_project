@@ -15,11 +15,10 @@ function App() {
         localStorage.setItem(SUBSCRIBE_KEY, JSON.stringify(currentData));
 
     }
-
     return (
       <div>
           <Router>
-              <Header></Header>
+              <Header />
               <Routes>
                   <Route exact path="/" element={<HomePage/>} />
                   <Route path="/about" element={<AboutPage/>}/>
@@ -37,9 +36,8 @@ function App() {
                   <Route path="*" element={<ErrorPage/>}/>
               </Routes>
               <Subscription subscribe={handleSubscribe}></Subscription>
-              <Footer></Footer>
+              <Footer />
           </Router>
-
       </div>
   );
 }

@@ -1,8 +1,13 @@
 import './ProductCard.scss';
 import {Link} from 'react-router-dom';
 import {AddBtn} from '../Buttons/Buttons';
+import {useDispatch} from "react-redux";
+import {addItem} from "../../store/slices/cartSlice";
 function ProductCard ({data, category}) {
-
+    const dispatch = useDispatch();
+    const handleAddToCart = () => {
+        dispatch(addItem(data));
+    };
     function scroll(){
         window.scrollTo(0,0)
     }
@@ -19,7 +24,7 @@ function ProductCard ({data, category}) {
                 </Link>
             </div>
             <div className="offer__product-price">{`$${data.price}.00`}</div>
-            <AddBtn />
+            <AddBtn handler={handleAddToCart}/>
         </div>
     )
 }
