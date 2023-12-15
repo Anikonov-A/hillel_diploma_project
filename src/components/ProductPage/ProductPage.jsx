@@ -99,8 +99,7 @@ function ProductDetail() {
                         <Title size={3}>{product.name}</Title>
 
                         <p className='productPage__content-prices'>
-                            <span className='productPage__content-prices-old'>${(product.price + 7) * quantity}.00</span>
-                            ${product.price * quantity}.00
+                            ${product.price*quantity}.00
                         </p>
 
                         <Paragraph>{product.info}</Paragraph>
