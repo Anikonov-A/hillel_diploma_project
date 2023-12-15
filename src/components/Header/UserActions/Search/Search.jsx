@@ -4,51 +4,68 @@ import axios from "axios";
 import {Link} from "react-router-dom";
 import {scrollTop} from "../../../../common/scrollFunction";
 
-const filterProducts = (searchText, listOfCategories,setListVisible) => {
-    if (!searchText) {
-        setListVisible(false);
-        return []
-    }
-    setListVisible(true);
-    return listOfCategories.reduce((acc, category) => {
-        const filteredItems = category.items.filter(({ name }) =>
-            name.toLowerCase().includes(searchText.toLowerCase())
-        );
-        return [...acc, ...filteredItems];
-    }, []);
-};
 
 function Search() {
-    const [searchData, setSearchData] = useState([]);
-    const [searchTerm, setSearchTerm] = useState("");
-    const [productList, setProductList] = useState([]);
-    const [listVisible, setListVisible] = useState(true);
-
-
-
+    const [state,setState] = useState({
+        searchData:[],
+        searchTerm:'',
+        productList:[],
+        listVisible:false
+    })
     function operationWithSearch(){
         scrollTop();
-        setListVisible(false);
-        setSearchTerm( "");
+        setState(prevState => ({
+            ...prevState,
+            listVisible: false
+        }));
+        setState(prevState => (
+            {...prevState,
+            searchTerm:""}
+        ))
     }
 
     useEffect(() => {
         const fetchData = async () => {
                 const response = await axios.get('/data/data.json');
-                setSearchData(response.data.categories);
-
+                setState(prevState => ({
+                    ...prevState,
+                    searchData: response.data.categories
+                }))
         };
         fetchData();
     }, []);
 
     useEffect(() => {
         const debounce = setTimeout(() => {
-            const filteredProducts = filterProducts(searchTerm, searchData,setListVisible);
-            setProductList(filteredProducts);
+            const filteredProducts = filterProducts(state.searchTerm, state.searchData,state.listVisible);
+            setState(prevState => ({
+                ...prevState,
+                productList:filteredProducts
+            }));
         }, 300);
 
         return () => clearTimeout(debounce);
-    }, [searchTerm, searchData, setListVisible]);
+    }, [state.searchTerm, state.searchData, state.listVisible]);
+
+    const filterProducts = (searchText, listOfCategories) => {
+        if (!searchText) {
+            setState(prevState => ({
+                ...prevState,
+                listVisible: false
+            }));
+            return []
+        }
+        setState(prevState => ({
+            ...prevState,
+            listVisible: true
+        }));
+        return listOfCategories.reduce((acc, category) => {
+            const filteredItems = category.items.filter(({ name }) =>
+                name.toLowerCase().includes(searchText.toLowerCase())
+            );
+            return [...acc, ...filteredItems];
+        }, []);
+    };
 
     return (
         <div className="search">
@@ -60,14 +77,17 @@ function Search() {
                     <input
                         type="text"
                         id="searchInput"
-                        value={searchTerm}
+                        value={state.searchTerm}
                         className="search__input"
-                        onChange={(e) => setSearchTerm(e.target.value)}
+                        onChange={(e) => setState(prevState => ({
+                            ...prevState,
+                            searchTerm: e.target.value
+                        }))}
                         autoComplete="off"
                     />
-                    <ul className={listVisible ? 'visible' : 'hidden'}  >
-                        {productList.length > 0 ? (
-                            productList.map((product, index) => (
+                    <ul className={state.listVisible ? 'visible' : 'hidden'}  >
+                        {state.productList.length > 0 ? (
+                            state.productList.map((product, index) => (
                                 <li key={index}>
                                     <Link to={`/products/${product.category}/${product.name.toLowerCase()}`} onClick={operationWithSearch}>
                                         {product.name}
