@@ -11,6 +11,8 @@ function SortForm ({ sortBy, onSortChange }) {
                 <option value="random">All products</option>
                 <option value="lowToHigh">Price: (Low to High)</option>
                 <option value="highToLow">Price: (High to Low)</option>
+                <option value="ascending">A-Z Sorting</option>
+                <option value="descending">Z-A Sorting</option>
             </select>
         </form>
     )
