@@ -4,12 +4,11 @@ import CrossIcon from "@/components/CrossIcon";
 import {useDispatch, useSelector} from "react-redux";
 import {decreaseQuantity, increaseQuantity, removeItem} from "@/store/slices/cartSlice";
 import OrderForm from "../../components/OrderForm/OrderForm";
+import {useEffect} from "react";
+import {loadCartFromStorage} from "../../store/slices/cartSlice";
 
 function ProductCard({product, handleRemove, handleIncrease, handleDecrease}) {
-
-    const handleActionOnClick = (action) => {
-        return () => action(product.id);
-    };
+    const handleActionOnClick = (action) => () => action(product.id);
 
     return (
         <div className="product-card">
@@ -40,6 +39,10 @@ function ProductCard({product, handleRemove, handleIncrease, handleDecrease}) {
 function CartPage() {
     const dispatch = useDispatch();
     const cartItems = useSelector((state) => state.cart.items);
+
+    useEffect(() => {
+        dispatch(loadCartFromStorage());
+    }, [dispatch]);
     const handleRemoveItem = (itemId) => {
         dispatch(removeItem(itemId));
     };
