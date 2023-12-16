@@ -20,9 +20,14 @@ import {addItem} from "../../store/slices/cartSlice";
 export function ProductPage() {
     const [activeTab, setActiveTab] = useState('description');
     const [quantity, setQuantity] = useState(1);
+    const handleTabClick = (tab) => {
+        setActiveTab(tab);
+    };
+
     const { productName, category } = useParams();
     const navigate = useNavigate();
     const dispatch = useDispatch();
+
     const productData = useSelector(selectProductData);
     const loading = useSelector(selectProductLoading);
     const error = useSelector(selectProductError);
@@ -131,7 +136,6 @@ export function ProductPage() {
                                    autoComplete="off" />
                         </div>
                         <button type='button' className='button form-button' onClick={handleAddToCart}>Add to cart</button>
-
                     </div>
                 </div>
 
@@ -139,8 +143,18 @@ export function ProductPage() {
 
             <article className='productPage-btns__wrapper container'>
                 <div className='productPage-btns__block'>
-                    <button className='productPage-btns green' onClick={() => setActiveTab('description')}>Product Description</button>
-                    <button className='productPage-btns productPage-btns__transparent green' onClick={() => setActiveTab('additional_info')}>Additional Info</button>
+                    <button
+                        className={`pag-btn ${activeTab === 'description' ? 'btn-active' : 'btn-nonactive'}`}
+                        onClick={() => handleTabClick('description')}
+                    >
+                        Product Description
+                    </button>
+                    <button
+                        className={`pag-btn ${activeTab === 'additional_info' ? 'btn-active' : 'btn-nonactive'}`}
+                        onClick={() => handleTabClick('additional_info')}
+                    >
+                        Additional Info
+                    </button>
                 </div>
 
                 <div className='productPage-btns__desc'>

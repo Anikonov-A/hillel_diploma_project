@@ -71,13 +71,6 @@
     font-size: 25px;
     font-weight: 700;
 
-    &-old {
-      font-size: 22px;
-      font-weight: 400;
-      text-decoration: line-through;
-      margin-right: 10px;
-      color: #B8B8B8;
-    }
   }
 }
 
@@ -88,24 +81,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 35px;
-
-    &__btn {
-      position: relative;
-      display: inline-block;
-      font-weight: 700;
-      font-size: 20px;
-      border-radius: 20px;
-      transition: all 0.3s ease 0s;
-      padding: 30px 78px 30px 39px;
-
-      &::after {
-        content: "\2192";
-        position: absolute;
-        right: 40px;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-    }
+  
   }
 
   &__label {
