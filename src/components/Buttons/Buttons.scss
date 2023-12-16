@@ -16,7 +16,7 @@
 .green {
   background: var(--main-color);
   color: var(--white-color);
-  &:hover, &:focus {
+  &:hover {
     background: var(--hover-bg-color);
     color: var(--main-color);
   }
@@ -39,7 +39,7 @@
   background: var(--hover-bg-color);
   color: var(--main-color);
 
-  &:hover, &:focus {
+  &:hover{
     background: var(--main-color);
     color: var(--white-color);
   }
@@ -60,7 +60,7 @@
 .yellow-on-green{
   background: var(--hover-bg-color);
   color: var(--main-color);
-  &:hover, &:focus {
+  &:hover {
     background: var(--hover-bg-color);
     box-shadow: 0 10px 25px -3px var(--active-bg-yellow);
     color: var(--white-color);
@@ -83,7 +83,7 @@
   border: 2px solid var(--main-color);
   background: transparent;
   color: #274C5B;
-  &:hover,&:focus{
+  &:hover{
     background: var(--main-color);
     color: var(--white-color);
   }
