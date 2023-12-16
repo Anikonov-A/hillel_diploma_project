@@ -1,4 +1,4 @@
-@mixin flex-center { //если кому понадобиться не забудьте @import '...' |Dima|
+@mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
