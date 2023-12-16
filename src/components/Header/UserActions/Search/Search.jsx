@@ -90,7 +90,11 @@ function Search() {
                             state.productList.map((product, index) => (
                                 <li key={index}>
                                     <Link to={`/products/${product.category}/${product.name.toLowerCase()}`} onClick={operationWithSearch}>
-                                        {product.name}
+                                        <div className="product__wrapper">
+                                            <img className="product__image" src={product.image} alt={product.name}/>
+                                            <div className="product__name">{product.name}</div>
+                                            <div className="product__price">{`$${product.price}`}</div>
+                                        </div>
                                     </Link>
                                 </li>
                             ))
