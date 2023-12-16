@@ -1,3 +1,6 @@
+a, a:visited{
+  color: var(--paragraph-color);
+}
 .search {
   &__form {
     display: flex;
@@ -45,15 +48,21 @@
 .search__wrapper {
   ul {
     position: absolute;
-    padding: 15px 30px;
+    padding: 15px;
     background-color: #FAFAFA;
     border-radius: var(--border-radius-card);
     width: 100%;
     margin-top: 10px;
-
+    li{
+      width: inherit;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      transition: all .3s ease-in-out;
+      border-radius: var(--border-radius-button);
+    }
     li:hover {
-      text-decoration: underline;
       cursor: pointer;
+      background: var(--secondary-color);
     }
   }
 }
@@ -64,4 +73,33 @@
 
 .visible {
   visibility: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+
+.product__wrapper{
+  display: flex;
+  align-items: center;
+  overflow: clip;
+}
+
+.product__image{
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius-round);
+}
+
+.product__name{
+  margin-left: 10px;
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+.product__price{
+  margin-left: auto;
+  margin-right: 10px;
+  font-weight: 700;
 }
