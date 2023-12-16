@@ -30,9 +30,9 @@ PaginationButton.propTypes ={
     className:string.isRequired
 }
 
-export function FormButton({text}) {
+export function FormButton({text,callback}) {
     return (
-        <button type="submit" className="button form-button">
+        <button type="submit" className="button form-button" onClick={callback}>
             {text}
         </button>
     )

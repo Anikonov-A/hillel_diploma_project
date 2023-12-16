@@ -103,7 +103,7 @@
 .pag-btn{
   text-align: center;
   font-family: "Open Sans",sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.2;
   border-radius: var(--border-radius-button);
@@ -117,13 +117,13 @@
   color: var(--main-color);
   background: var(--tab-na-bg-color);
   padding: 23px 61px;
-
 }
+
 //===========================================Form Button=================================================//
 .form-button{
   padding: 28px 65px;
   background: var(--main-color);
-  &:hover, &:focus {
+  &:hover {
     background: var(--hover-bg-color);
     color: var(--main-color);
   }
