@@ -1,10 +1,11 @@
 import './ProductsSection.scss';
-import { useEffect} from "react";
+import React, { useEffect} from "react";
 import SortForm from '@/components/SortForm/SortForm';
 import ProductCard from '@/components/ProductCard/ProductCard';
 import {useDispatch, useSelector} from "react-redux";
 import {setSortBy, setSortedProducts} from "@/store/slices/productsSlice";
 import {fetchDataAsync} from "../../../store/slices/categoriesSlice";
+import {ToastContainer} from "react-toastify";
 
 function ProductsSection() {
     const dispatch = useDispatch();
@@ -64,6 +65,21 @@ function ProductsSection() {
 
     return (
         <section className="products">
+            <ToastContainer
+                enableMultiContainer={true}
+                containerId={"id4"}
+                position="top-center"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick={true}
+                rtl={false}
+                pauseOnFocusLoss={false}
+                draggable={true}
+                pauseOnHover={false}
+                theme="light"
+                limit={3}
+            />
             <div className="container">
                 <SortForm sortBy={sortBy} onSortChange={handleSortChange} />
                 <div className="products__wrapper">

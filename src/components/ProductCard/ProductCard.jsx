@@ -4,11 +4,18 @@ import {AddBtn} from '../Buttons/Buttons';
 import {useDispatch} from "react-redux";
 import {addItem} from "../../store/slices/cartSlice";
 import {scrollTop} from "../../common/scrollFunction";
+import {toast} from "react-toastify";
+import React from "react";
 
 function ProductCard ({data, category}) {
     const dispatch = useDispatch();
     const handleAddToCart = () => {
         dispatch(addItem(data));
+        toast.success('Product added to cart',{
+            className:"toast-modify",
+            position:"top-center",
+            containerId:"id4"
+        });
     };
 
     return (
@@ -30,6 +37,7 @@ function ProductCard ({data, category}) {
                 currency: 'USD'
             }).format(data.price)}</div>
             <AddBtn handler={handleAddToCart}/>
+
         </div>
     )
 }

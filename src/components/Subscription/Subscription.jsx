@@ -26,12 +26,14 @@ function Subscription({subscribe}) {
                 className:"toast-modify",
                 position: "top-center",
                 autoClose: 5000,
+                containerId:"id1",
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
                 progress: undefined,
                 theme: "light",
+
             });
             resetForm();
 
@@ -57,6 +59,8 @@ function Subscription({subscribe}) {
                 </div>
             </div>
             <ToastContainer
+                enableMultiContainer={true}
+                containerId="id1"
                 position="top-center"
                 autoClose={5000}
                 hideProgressBar={false}
