@@ -6,8 +6,8 @@ export default function OfferCardsSection(){
 
     return(
         <div className="offers-container">
-            <OfferCard moveTop={scrollTop} link={paths.FRESH} cardClass="first-card" spanText="Natural!!"  pText="Get Garden Fresh Fruits" />
-            <OfferCard moveTop={scrollTop} link={paths.VEGETABLES} cardClass="second-card" spanText="Offer!!" pText="Get 10% off on Vegetables"/>
+            <OfferCard moveTop={scrollTop} link={paths.FRESH} cardClass="first-card" spanText="Natural!!"  pText="Get Garden Fresh Fruit"/>
+            <OfferCard moveTop={scrollTop} link={paths.VEGETABLES} cardClass="second-card" spanText="Offer!!" pText="Get Fresh Vegetables"/>
         </div>
     )
 }

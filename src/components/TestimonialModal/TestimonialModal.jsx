@@ -18,6 +18,7 @@ export default function TestimonialModal ({ openModal, setOpenModal }) {
         setOpenModal(false);
         toast.success('Thank you for your feedback!', {
             className:"toast-modify",
+            containerId:"id2",
             position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,
@@ -26,6 +27,7 @@ export default function TestimonialModal ({ openModal, setOpenModal }) {
             draggable: false,
             progress: undefined,
             theme: "light",
+
         });
     }
         return (
@@ -47,6 +49,8 @@ export default function TestimonialModal ({ openModal, setOpenModal }) {
             </div>
             <ToastContainer
                 position="top-center"
+                enableMultiContainer={true}
+                containerId="id2"
                 autoClose={5000}
                 hideProgressBar={false}
                 newestOnTop={false}

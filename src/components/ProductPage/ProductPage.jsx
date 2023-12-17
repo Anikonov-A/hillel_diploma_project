@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import {useNavigate, useParams} from "react-router-dom";
 import axios from "axios";
 import './ProductPage.scss';
@@ -7,24 +7,20 @@ import Title from '@/components/Title/Title';
 import Paragraph from '../../components/Paragraph/Paragraph';
 import StyleGuide from '../../components/StyleGuide/StyleGuide'
 import {useDispatch, useSelector} from "react-redux";
-import {
-    selectProductData,
-    selectProductError,
-    selectProductLoading,
-    setError,
-    setLoading, setProductData
-} from "../../store/slices/productSlice";
+import {selectProductData, selectProductError, selectProductLoading, setError,setLoading, setProductData} from "../../store/slices/productSlice";
 import {addItem} from "../../store/slices/cartSlice";
-
+import {toast, ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export function ProductPage() {
     const [activeTab, setActiveTab] = useState('description');
     const [quantity, setQuantity] = useState(1);
+
     const handleTabClick = (tab) => {
         setActiveTab(tab);
     };
 
-    const { productName, category } = useParams();
+    const {productName, category} = useParams();
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -40,8 +36,15 @@ export function ProductPage() {
             setQuantity(newQuantity);
         }
     };
-    const handleAddToCart = () => {
-        dispatch(addItem({ ...productData, quantity }));
+
+    const handleAddProduct = () => {
+        dispatch(addItem({...productData, quantity}));
+        toast.success('Product added to cart',{
+            className:"toast-modify",
+            position:"top-center",
+            containerId:"id3"
+
+        });
     };
 
     useEffect(() => {
@@ -96,36 +99,46 @@ export function ProductPage() {
 
     return (
         <div className='wrapper'>
-
+            <ToastContainer
+                enableMultiContainer={true}
+                containerId={"id3"}
+                position="top-center"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick={true}
+                rtl={false}
+                pauseOnFocusLoss={false}
+                draggable={true}
+                pauseOnHover={false}
+                theme="light"
+                limit={3}
+            />
             <StyleGuide titleText="Shop Single" backgroundClass="bg-shop-single"/>
-
             <section className='productPage-section__details container'>
 
                 <div className="productPage-img__wrapper">
                     <span className='productPage-img__wrapper-span offer__product-category-link green'>{category}</span>
-                    <img className='productPage-img__wrapper-image' src={productData.image} alt={productData.name} />
+                    <img className='productPage-img__wrapper-image' src={productData.image} alt={productData.name}/>
                 </div>
 
                 <div className='productPage-content__wrapper'>
-
                     <div className="productPage__content">
                         <Title size={3}>{productData.name}</Title>
-
                         <p className='productPage__content-prices'>
                             {
                                 new Intl.NumberFormat('en-US', {
                                     style: 'currency',
                                     currency: 'USD'
-                                }).format(productData.price*quantity)
+                                }).format(productData.price * quantity)
                             }
                         </p>
-
                         <Paragraph>{productData.info}</Paragraph>
                     </div>
 
                     <div className='productPage-controls__wrapper'>
                         <div>
-                            <label className='productPage-controls__label' htmlFor='quantity'>Quantity :  </label>
+                            <label className='productPage-controls__label' htmlFor='quantity'>Quantity : </label>
                             <input className='productPage-controls__input'
                                    type="number"
                                    min="1"
@@ -133,9 +146,10 @@ export function ProductPage() {
                                    onChange={handleQuantityChange}
                                    name="quantity"
                                    id="quantity"
-                                   autoComplete="off" />
+                                   autoComplete="off"/>
                         </div>
-                        <button type='button' className='button form-button' onClick={handleAddToCart}>Add to cart</button>
+                        <button type='button' className='button form-button' onClick={handleAddProduct}>Add to cart
+                        </button>
                     </div>
                 </div>
 
@@ -162,7 +176,6 @@ export function ProductPage() {
                 </div>
 
             </article>
-
 
         </div>
     );
