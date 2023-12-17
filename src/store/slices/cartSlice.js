@@ -22,7 +22,7 @@ const cartSlice = createSlice({
             if (existingItem) {
                 existingItem.quantity +=action.payload.quantity || 1;
             } else {
-                state.items.push({ ...newItem, quantity: action.payload.quantity });
+                state.items.push({ ...newItem, quantity: action.payload.quantity || 1 });
             }
             localStorage.setItem('cart', JSON.stringify(state.items));
         },
