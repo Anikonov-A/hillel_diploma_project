@@ -6,6 +6,8 @@ import {decreaseQuantity, increaseQuantity, removeItem} from "@/store/slices/car
 import OrderForm from "../../components/OrderForm/OrderForm";
 import {useEffect} from "react";
 import {loadCartFromStorage} from "../../store/slices/cartSlice";
+import {Link} from "react-router-dom";
+import {scrollTop} from "../../common/scrollFunction";
 
 function ProductCard({product, handleRemove, handleIncrease, handleDecrease}) {
     const handleActionOnClick = (action) => () => action(product.id);
@@ -20,7 +22,7 @@ function ProductCard({product, handleRemove, handleIncrease, handleDecrease}) {
                     <img src={product.image} alt={product.name}/>
                 </div>
                 <div className="product-card__info">
-                    <Title size={6} addClasses="product-card__name">{product.name}</Title>
+                    <Link to={`/products/${product.category}/${product.name.toLowerCase()}`} onClick={scrollTop} className="product-card__name">{product.name}</Link>
                     <div className="product-card__counter">
                         <button onClick={handleActionOnClick(handleDecrease)}>-</button>
                         <div>{product.quantity}</div>
