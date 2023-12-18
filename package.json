@@ -24,8 +24,11 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test"
+    "test": "react-app-rewired test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "https://github.com/Anikonov-A/Organik.git",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -46,6 +49,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
+    "gh-pages": "^6.1.0",
     "postcss": "^8.4.31",
     "react-app-rewired": "^2.2.1"
   }
