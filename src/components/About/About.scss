@@ -74,22 +74,17 @@
 
 .aboutSection1 {
  width: 911px;
- max-height: 967px;
  background-image: url("../../../public/about-section-bg1.webp");
- background-position: center;
- background-size: cover;
+ background-position: left center;
+ background-size: 100%;
  background-repeat: no-repeat;
 
 }
 
 .aboutSection2 {
  width: 911px;
- height: 867px;
-
  background-image: url("../../../public/about-section-bg2.webp");
  background-repeat: no-repeat;
- background-position-x: 15%;
- background-position-y: 50px;
- background-size: cover;
-
+ background-position:left center;
+ background-size: 100%;
 }

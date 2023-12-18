@@ -8,6 +8,8 @@
     font-family: 'Open Sans', sans-serif;
     color: var(--paragraph-color);
     font-weight: 700;
+    cursor: pointer;
+
   }
   &-select{
     padding: 15px;
@@ -18,6 +20,8 @@
     border-radius: var(--border-radius-button);
     //outline: 10px solid var(--paragraph-color);
     transition: all .3s ease-in-out;
+    cursor: pointer;
+
     &:focus{
       outline: 1px solid var(--secondary-color);
     }
