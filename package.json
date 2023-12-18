@@ -2,7 +2,6 @@
   "name": "hillel_diploma_project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Anikonov-A.github.io/hillel_diploma_project/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
     "@testing-library/jest-dom": "^5.17.0",
@@ -25,11 +24,8 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "test": "react-app-rewired test"
   },
-
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -50,7 +46,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
-    "gh-pages": "^6.1.0",
     "postcss": "^8.4.31",
     "react-app-rewired": "^2.2.1"
   }
