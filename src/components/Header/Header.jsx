@@ -8,9 +8,9 @@ function Header () {
         <header className="header">
             <div className="header__container">
                 <div className="header__inner">
-                    <Logo></Logo>
-                    <Navigation></Navigation>
-                    <UserActions></UserActions>
+                    <Logo />
+                    <Navigation />
+                    <UserActions />
                 </div>
             </div>
         </header>

@@ -7,12 +7,12 @@ function FooterSocials () {
 
     return (
         <div className="socials">
-            <Logo></Logo>
+            <Logo />
             <Paragraph addClasses="socials__desc">
                 Simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum simply dummy text of the printing
             </Paragraph>
-            <SocialList></SocialList>
+            <SocialList />
         </div>
     )
 }

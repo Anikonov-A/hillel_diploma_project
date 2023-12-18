@@ -8,12 +8,12 @@ function Footer () {
         <footer className="footer">
             <div className="container">
                 <div className="footer__inner">
-                    <FooterContacts></FooterContacts>
-                    <FooterSocials></FooterSocials>
-                    <UtilityPages></UtilityPages>
+                    <FooterContacts />
+                    <FooterSocials />
+                    <UtilityPages />
                 </div>
             </div>
-            <Copyright></Copyright>
+            <Copyright />
         </footer>
     )
 }

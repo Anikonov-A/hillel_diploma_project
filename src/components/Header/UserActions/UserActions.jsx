@@ -4,8 +4,8 @@ import Cart from './Cart/Cart';
 function UserActions () {
     return (
         <div className="user__actions">
-            <Search></Search>
-            <Cart></Cart>
+            <Search />
+            <Cart />
         </div>
     )
 }
