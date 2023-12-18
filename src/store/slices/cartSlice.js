@@ -4,18 +4,18 @@ export const loadCartFromStorage = () => (dispatch) => {
     const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
     dispatch(setCartItems(storedCart));
 };
-
-
+const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
 
 const cartSlice = createSlice({
     name: 'cart',
     initialState: {
-        items: [],
+        items:storedCart,
     },
     reducers: {
         setCartItems: (state, action) => {
             state.items = action.payload;
-        },
+
+            },
         addItem: (state, action) => {
             const newItem = action.payload;
             const existingItem = state.items.find(item => item.id === newItem.id);
@@ -36,7 +36,9 @@ const cartSlice = createSlice({
             const itemIdToIncrease = action.payload;
             const itemToIncrease = state.items.find(item => item.id === itemIdToIncrease);
             if (itemToIncrease) {
-                itemToIncrease.quantity += 1;
+                if (itemToIncrease.quantity < 99) {
+                    itemToIncrease.quantity += 1;
+                }
             }
 
             localStorage.setItem('cart', JSON.stringify(state.items));

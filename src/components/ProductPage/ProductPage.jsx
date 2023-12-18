@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import {useNavigate, useParams} from "react-router-dom";
 import axios from "axios";
 import './ProductPage.scss';
@@ -79,6 +79,8 @@ export function ProductPage() {
                     navigate('/*');
                     return;
                 }
+                setQuantity(1);
+
 
                 const isValidCategory = result.categories.some((cat) => cat.name.toLowerCase() === category.toLowerCase());
 
@@ -183,6 +185,7 @@ export function ProductPage() {
                             <input className='productPage-controls__input'
                                    type="number"
                                    min="1"
+                                   max="99"
                                    value={quantity}
                                    onChange={handleQuantityChange}
                                    name="quantity"
