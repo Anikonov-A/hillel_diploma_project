@@ -17,7 +17,7 @@
     margin-left: 55px;
     color: var(--white-color);
   }
-  &__form{
+  &__content{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,6 +33,13 @@
       font-size: 18px;
       color: #ABABAB;
     }
+  }
+  & .error-message-email {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    color: red;
+    width: 349px;
+    padding: 5px;
   }
 }
 .toast-modify{
