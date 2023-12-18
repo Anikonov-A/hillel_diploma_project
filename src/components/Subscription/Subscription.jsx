@@ -6,7 +6,6 @@ import {validSchemaEmailForm} from "../../common/validationSchemas";
 import {ToastContainer, toast} from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
-import styles from "../OrderForm/OrderForm.module.scss";
 
 const email = {
     defaultValue: '',
