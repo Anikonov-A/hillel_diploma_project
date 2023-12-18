@@ -7,7 +7,7 @@ import TestimonialModal from "../TestimonialModal/TestimonialModal";
 import {useDispatch, useSelector} from "react-redux";
 import {clearCart} from "../../store/slices/cartSlice";
 
-export default function OrderForm({price}) {
+export default function OrderForm({price,isEmpty}) {
     const [modalOpen, setModalOpen] = useState(false);
     const dispatch = useDispatch();
     const cartItems = useSelector((state) => state.cart.items);
@@ -57,6 +57,8 @@ export default function OrderForm({price}) {
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
                                 value={formik.values.name}
+                                disabled={isEmpty}
+
                             />
                             {formik.touched.name && formik.errors.name && (
                                 <div className={styles.error_message}>{formik.errors.name}</div>
@@ -71,6 +73,8 @@ export default function OrderForm({price}) {
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
                                 value={formik.values.address}
+                                disabled={isEmpty}
+
                             />
                             {formik.touched.address && formik.errors.address && (
                                 <div className={styles.error_message}>{formik.errors.address}</div>
@@ -85,6 +89,8 @@ export default function OrderForm({price}) {
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
                                 value={formik.values.phone}
+                                disabled={isEmpty}
+
                             />
                             {formik.touched.phone && formik.errors.phone && (
                                 <div className={styles.error_message}>{formik.errors.phone}</div>
@@ -97,6 +103,8 @@ export default function OrderForm({price}) {
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
                                 defaultValue="default"
+                                disabled={isEmpty}
+
                             >
                                 <option value="default" disabled hidden>Select Payment Type</option>
                                 <option value="cash">Cash</option>
@@ -116,6 +124,7 @@ export default function OrderForm({price}) {
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
                                     value={formik.values.cardNumber}
+                                    disabled={isEmpty}
                                 />
                                 {formik.touched.cardNumber && formik.errors.cardNumber && (
                                     <div className={styles.error_message}>{formik.errors.cardNumber}</div>
@@ -129,7 +138,7 @@ export default function OrderForm({price}) {
                         currency: 'USD'
                     }).format(price)}</span></Title>
                     <div className={styles.button}>
-                        <button type="submit">Place Order</button>
+                        <button type="submit" disabled={isEmpty} className={isEmpty ? styles.disabled : ""} >Place Order</button>
                     </div>
                 </div>
             </form>

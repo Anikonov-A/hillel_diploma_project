@@ -41,6 +41,7 @@ function ProductCard({product, handleRemove, handleIncrease, handleDecrease}) {
 function CartPage() {
     const dispatch = useDispatch();
     const cartItems = useSelector((state) => state.cart.items);
+    const isCartEmpty = cartItems.length === 0;
 
     useEffect(() => {
         dispatch(loadCartFromStorage());
@@ -79,7 +80,7 @@ function CartPage() {
                         <div className="block-body__order-info info-order">
                             <Title size={6}>Cart totals</Title>
                             <div className="info-order__final-price">
-                                <OrderForm price={calculateTotalPrice()}/>
+                                <OrderForm price={calculateTotalPrice()} isEmpty={isCartEmpty}/>
                             </div>
                         </div>
                     </div>
