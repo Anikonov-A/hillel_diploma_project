@@ -31,6 +31,7 @@ export default function TestimonialModal ({ openModal, setOpenModal }) {
         });
     }
         return (
+        <div>
         <div className={openModal ? 'modal active' : 'modal'} onClick={()=> setOpenModal(false)}>
             <div className={openModal ? 'modal-content active' : 'modal-content'} onClick={e => e.stopPropagation()}>
                 <div className="titleCloseBtn">
@@ -47,22 +48,21 @@ export default function TestimonialModal ({ openModal, setOpenModal }) {
                    <TestimonialForm onAdd={handleTaskAdd}/>
                 </div>
             </div>
-            <ToastContainer
-                position="top-center"
-                enableMultiContainer={true}
-                containerId="id2"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss={false}
-                draggable={false}
-                pauseOnHover={false}
-                theme="light"
-            />
         </div>
-
-
+    <ToastContainer
+        position="top-center"
+        enableMultiContainer={true}
+        containerId="id2"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable={false}
+        pauseOnHover={false}
+        theme="light"
+    />
+    </div>
     )
 }
