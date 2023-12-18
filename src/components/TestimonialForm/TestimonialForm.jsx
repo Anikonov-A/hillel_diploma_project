@@ -1,7 +1,7 @@
 import { useFormik } from "formik";
 import { Fragment } from "react";
-import { string, object } from 'yup';
-
+import { object } from 'yup';
+import {validSchemaTestimonialForm} from "../../common/validationSchemas";
 import './TestimonialForm.scss'
 
 const formElementsConfiguration = {
@@ -11,10 +11,7 @@ const formElementsConfiguration = {
         labelText: 'Full Name*',
         placeholder: 'your full name',
         id:"fullName",
-        vSchema: string()
-            .min(2, 'too short name')
-            .max(20, 'too long name')
-            .required(),
+        vSchema: validSchemaTestimonialForm.fields.author,
     },
 
     trade: {
@@ -23,9 +20,7 @@ const formElementsConfiguration = {
         labelText: 'Profession*',
         placeholder: 'your profession',
         id:"trade",
-        vSchema: string()
-            .min(3, 'too short profession name')
-            .required(),
+        vSchema: validSchemaTestimonialForm.fields.trade,
     },
     text: {
         defaultValue: '',
@@ -33,10 +28,7 @@ const formElementsConfiguration = {
         labelText: 'Message* ',
         placeholder: 'the text of your review...',
         id:"text",
-        vSchema: string()
-            .min(2, 'too short text')
-            .max(200, 'too long text')
-            .required(),
+        vSchema: validSchemaTestimonialForm.fields.text,
     },
 };
 
@@ -71,7 +63,8 @@ export default function TestimonialForm({ onAdd }) {
     const generateFormElements = () => {
         const formItems = [];
         for (let key of Object.keys(formElementsConfiguration)) {
-            const { labelText, inputType, placeholder ,id } = formElementsConfiguration[key];
+            const { labelText, inputType, placeholder ,id} = formElementsConfiguration[key];
+
             formItems.push((
                 <Fragment key={key}>
                    <div className='form-item'>
@@ -95,7 +88,7 @@ export default function TestimonialForm({ onAdd }) {
                                id={id}
                            />
                        )}
-                       {formik.errors[key] && <div style={{color: 'red'}}>{formik.errors[key]}</div>}
+                       {formik.touched[key] && formik.errors[key] && <div style={{color: 'red'}}>{formik.errors[key]}</div>}
                    </div>
                 </Fragment>
             ));
