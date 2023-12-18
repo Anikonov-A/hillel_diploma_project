@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Giovani Bacardo",
       "industry": "Farmer",
-      "photo": "./images/expert-photo/giovani.jpg",
+      "photo": "./images/expert-photo/giovani.webp",
       "social": {
         "facebook": {
           "img": "./images/social/facebook.svg",
@@ -20,7 +20,7 @@
       "id": 2,
       "name": "Marianne Loreno",
       "industry": "Designer",
-      "photo": "./images/expert-photo/marianne.jpg",
+      "photo": "./images/expert-photo/marianne.webp",
       "social": {
         "instagram": {
           "img": "./images/social/instagram.svg",
@@ -40,7 +40,7 @@
       "id": 3,
       "name": "Riga Pelore",
       "industry": "Farmer",
-      "photo": "./images/expert-photo/riga.jpg",
+      "photo": "./images/expert-photo/riga.webp",
       "social": {
         "instagram": {
           "img": "./images/social/instagram.svg",
@@ -60,7 +60,7 @@
       "id": 4,
       "name": "Keira Knightley",
       "industry": "Farmer",
-      "photo": "./images/expert-photo/keira.jpg",
+      "photo": "./images/expert-photo/keira.webp",
       "social": {
         "facebook": {
           "img": "./images/social/facebook.svg",
@@ -76,7 +76,7 @@
       "id": 5,
       "name": "Scott Lawrence",
       "industry": "Designer",
-      "photo": "./images/expert-photo/scott.jpg",
+      "photo": "./images/expert-photo/scott.webp",
       "social": {
         "instagram": {
           "img": "./images/social/instagram.svg",
@@ -96,7 +96,7 @@
       "id": 6,
       "name": "Karen Allen",
       "industry": "Farmer",
-      "photo": "./images/expert-photo/karen.jpg",
+      "photo": "./images/expert-photo/karen.webp",
       "social": {
         "instagram": {
           "img": "./images/social/instagram.svg",

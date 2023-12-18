@@ -74,15 +74,22 @@
 
 .aboutSection1 {
  width: 911px;
- background-image: url("../../../public/about-section-bg1.png");
+ max-height: 967px;
+ background-image: url("../../../public/about-section-bg1.webp");
+ background-position: center;
+ background-size: cover;
  background-repeat: no-repeat;
- background-position-y: 40px;
+
 }
 
 .aboutSection2 {
  width: 911px;
- background-image: url("../../../public/about-section-bg2.png");
+ height: 867px;
+
+ background-image: url("../../../public/about-section-bg2.webp");
  background-repeat: no-repeat;
  background-position-x: 15%;
- background-position-y: 120px;
+ background-position-y: 50px;
+ background-size: cover;
+
 }

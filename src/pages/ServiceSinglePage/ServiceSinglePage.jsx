@@ -5,7 +5,7 @@ function ServiceSinglePage () {
     return (
         <main className="wrapper">
             <StyleGuide titleText="Quality Standart" backgroundClass="bg-services-single"/>
-            <StoreServices></StoreServices>
+            <StoreServices />
         </main>
     )
 }

@@ -14,7 +14,7 @@ function LocationSection () {
                         Established fact that a reader will be distracted by the readable content of a page
                         when looking a layout. The point of using.
                     </Paragraph>
-                    <LocationList></LocationList>
+                    <LocationList />
                 </div>
             </div>
         </section>

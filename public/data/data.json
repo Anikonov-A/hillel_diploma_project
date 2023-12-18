@@ -6,7 +6,7 @@
         {
           "id": 1,
           "name": "Zucchini",
-          "image": "/images/products/vegetables/zucchini.png",
+          "image": "/images/products/vegetables/zucchini.webp",
           "price": 12,
           "info": "Don't miss your chance to purchase our organic Zucchini at the best price! We guarantee 100% quality and freshness of our products. Take care of your health now and tell your friends!",
           "description": "Zucchini is a summer squash that can be eaten raw or cooked. It has a mild flavor and can be used in various dishes.",
@@ -16,7 +16,7 @@
         {
           "id": 2,
           "name": "Cabbage",
-          "image": "/images/products/vegetables/cabbage.png",
+          "image": "/images/products/vegetables/cabbage.webp",
           "price": 17,
           "info": "Don't miss your chance to purchase our organic Cabbage at the best price! We guarantee 100% quality and freshness of our products. Take care of your health now and tell your friends!",
           "description": "Cabbage is a leafy green or purple biennial plant that's commonly used in salads or cooked dishes.",
@@ -26,7 +26,7 @@
         {
           "id": 3,
           "name": "Onion",
-          "image": "/images/products/vegetables/onion.png",
+          "image": "/images/products/vegetables/onion.webp",
           "price": 17,
           "info": "Don't miss your chance to purchase our organic Onion at the best price! We guarantee 100% quality and freshness of our products. Take care of your health now and tell your friends!",
           "description": "Onion is a vegetable that comes in various colors and flavors. It's a versatile ingredient used in cooking.",
@@ -36,7 +36,7 @@
         {
           "id": 4,
           "name": "Broccoli",
-          "image": "/images/products/vegetables/broccoli.png",
+          "image": "/images/products/vegetables/broccoli.webp",
           "price": 13,
           "info": "Don't miss your chance to purchase our organic Broccoli at the best price! We guarantee 100% quality and freshness of our products. Take care of your health now and tell your friends!",
           "description": "Broccoli is a green vegetable with a tree-like shape. It's known for its nutritional value and health benefits.",
@@ -46,7 +46,7 @@
         {
           "id": 5,
           "name": "Red Tomatoes",
-          "image": "/images/products/vegetables/tomatoes.png",
+          "image": "/images/products/vegetables/tomatoes.webp",
           "price": 17,
           "info": "Don't miss your chance to purchase our organic Red Tomatoes at the best price! We guarantee 100% quality and freshness of our products. Take care of your health now and tell your friends!",
           "description": "Red tomatoes are juicy fruits used as vegetables. They are a staple in many cuisines worldwide.",
@@ -61,7 +61,7 @@
         {
           "id": 6,
           "name": "Bananas",
-          "image": "/images/products/fresh/bananas.png",
+          "image": "/images/products/fresh/bananas.webp",
           "price": 14,
           "info": "Don't miss your chance to purchase our organic Bananas at the best price! We guarantee 100% quality and freshness of our products. Take care of your health now and tell your friends!",
           "description": "Bananas are elongated yellow fruits with a sweet taste. They are a good source of potassium and other nutrients.",
@@ -71,7 +71,7 @@
         {
           "id": 7,
           "name": "Eggs",
-          "image": "/images/products/fresh/eggs.png",
+          "image": "/images/products/fresh/eggs.webp",
           "price": 17,
           "info": "Don't miss your chance to purchase our organic Eggs at the best price! We guarantee 100% quality and freshness of our products. Take care of your health now and tell your friends!",
           "description": "Eggs are a common food item and are used in various recipes. They are a good source of protein and nutrients.",
@@ -81,7 +81,7 @@
         {
           "id": 8,
           "name": "Zelco Suji Eloichi Rusk",
-          "image": "/images/products/fresh/rusk.png",
+          "image": "/images/products/fresh/rusk.webp",
           "price": 15,
           "info": "Don't miss your chance to purchase our organic Zelco Suji Eloichi Rusk at the best price! We guarantee 100% quality and freshness of our products. Take care of your health now and tell your friends!",
           "description": "Zelco Suji Eloichi Rusk is a type of biscuit or bread that's crunchy and flavored with cardamom.",
@@ -91,7 +91,7 @@
         {
           "id": 9,
           "name": "Fresh Corn",
-          "image": "/images/products/fresh/corn.png",
+          "image": "/images/products/fresh/corn.webp",
           "price": 17,
           "info": "Don't miss your chance to purchase our organic Fresh Corn at the best price! We guarantee 100% quality and freshness of our products. Take care of your health now and tell your friends!",
           "description": "Fresh corn is a cereal grain that can be eaten as a vegetable. It's commonly boiled, grilled, or steamed.",
@@ -101,7 +101,7 @@
         {
           "id": 10,
           "name": "Mung Bean",
-          "image": "/images/products/fresh/mungbean.png",
+          "image": "/images/products/fresh/mungbean.webp",
           "price": 11,
           "info": "Don't miss your chance to purchase our organic Mung Bean at the best price! We guarantee 100% quality and freshness of our products. Take care of your health now and tell your friends!",
           "description": "Mung beans are small green legumes used in various cuisines. They are versatile and nutritious.",
@@ -116,7 +116,7 @@
         {
           "id": 11,
           "name": "Brown Hazelnut",
-          "image": "/images/products/nuts/hazelnut.png",
+          "image": "/images/products/nuts/hazelnut.webp",
           "price": 12,
           "info": "Don't miss your chance to purchase our organic Brown Hazelnut at the best price! We guarantee 100% quality and freshness of our products. Take care of your health now and tell your friends!",
           "description": "Brown hazelnuts are nuts with a rich flavor commonly used in confectionery or as a snack.",
@@ -126,7 +126,7 @@
         {
           "id": 12,
           "name": "Organic Almonds",
-          "image": "/images/products/nuts/almonds.png",
+          "image": "/images/products/nuts/almonds.webp",
           "price": 15,
           "info": "Don't miss your chance to purchase our organic Organic Almonds at the best price! We guarantee 100% quality and freshness of our products. Take care of your health now and tell your friends!",
           "description": "Organic almonds are nuts that are often eaten raw or used in cooking. They have a mild, nutty flavor.",
@@ -137,7 +137,7 @@
         {
           "id": 13,
           "name": "White Cashew",
-          "image": "/images/products/nuts/cashew.png",
+          "image": "/images/products/nuts/cashew.webp",
           "price": 12,
           "info": "Don't miss your chance to purchase our organic White Cashew at the best price! We guarantee 100% quality and freshness of our products. Take care of your health now and tell your friends!",
           "description": "White cashews are kidney-shaped nuts often eaten roasted or used in various dishes.",
@@ -148,7 +148,7 @@
         {
           "id": 14,
           "name": "Pistachios",
-          "image": "/images/products/nuts/pistachios.png",
+          "image": "/images/products/nuts/pistachios.webp",
           "price": 15,
           "info": "Don't miss your chance to purchase our organic Pistachios at the best price! We guarantee 100% quality and freshness of our products. Take care of your health now and tell your friends!",
           "description": "Pistachios are green nuts with a slightly sweet taste. They are commonly used in both sweet and savory dishes.",

@@ -8,7 +8,7 @@ function WorkTogether () {
         <section className="cooperation">
             <div className="container">
                 <div className="cooperation__wrapper">
-                    <img src="./images/contacts/fruits.jpg" alt="fruits"/>
+                    <img src="/images/contacts/fruits.webp" alt="fruits" className="cooperation__image" />
                     <div className="cooperation__content">
                         <Title addClasses="cooperation__title" size={2}>
                             We'd love to talk about how we can work together.
