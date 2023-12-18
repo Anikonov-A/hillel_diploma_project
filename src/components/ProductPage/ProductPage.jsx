@@ -7,14 +7,24 @@ import Title from '@/components/Title/Title';
 import Paragraph from '../../components/Paragraph/Paragraph';
 import StyleGuide from '../../components/StyleGuide/StyleGuide'
 import {useDispatch, useSelector} from "react-redux";
-import {selectProductData, selectProductError, selectProductLoading, setError,setLoading, setProductData} from "../../store/slices/productSlice";
+import {
+    selectProductData,
+    selectProductError,
+    selectProductLoading,
+    setError,
+    setLoading,
+    setProductData
+} from "../../store/slices/productSlice";
 import {addItem} from "../../store/slices/cartSlice";
 import {toast, ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import ProductCard from "../ProductCard/ProductCard";
 
 export function ProductPage() {
     const [activeTab, setActiveTab] = useState('description');
     const [quantity, setQuantity] = useState(1);
+    const [relatedProducts, setRelatedProducts] = useState([]);
+
 
     const handleTabClick = (tab) => {
         setActiveTab(tab);
@@ -39,13 +49,22 @@ export function ProductPage() {
 
     const handleAddProduct = () => {
         dispatch(addItem({...productData, quantity}));
-        toast.success('Product added to cart',{
-            className:"toast-modify",
-            position:"top-center",
-            containerId:"id3"
+        toast.success('Product added to cart', {
+            className: "toast-modify",
+            position: "top-center",
+            containerId: "id3"
 
         });
     };
+    const shuffleArray = (array) => {
+        const shuffledArray = array.slice();
+        for (let i = shuffledArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+        }
+        return shuffledArray;
+    };
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -77,6 +96,14 @@ export function ProductPage() {
                     navigate('/*');
                     return;
                 }
+                const relatedProducts = result.categories
+                    .filter((cat) => cat.name.toLowerCase() !== category.toLowerCase())
+                    .flatMap((cat) => cat.items);
+
+                const shuffledRelatedProducts = shuffleArray(relatedProducts);
+
+                setRelatedProducts(shuffledRelatedProducts);
+
 
                 dispatch(setProductData(categoryData.items.find((item) => item.name.toLowerCase() === productName.toLowerCase())));
             } catch (error) {
@@ -102,6 +129,20 @@ export function ProductPage() {
             <ToastContainer
                 enableMultiContainer={true}
                 containerId={"id3"}
+                position="top-center"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick={true}
+                rtl={false}
+                pauseOnFocusLoss={false}
+                draggable={true}
+                pauseOnHover={false}
+                theme="light"
+                limit={3}
+            />  <ToastContainer
+                enableMultiContainer={true}
+                containerId={"id4"}
                 position="top-center"
                 autoClose={3000}
                 hideProgressBar={false}
@@ -154,7 +195,6 @@ export function ProductPage() {
                 </div>
 
             </section>
-
             <article className='productPage-btns__wrapper container'>
                 <div className='productPage-btns__block'>
                     <button
@@ -174,8 +214,15 @@ export function ProductPage() {
                 <div className='productPage-btns__desc'>
                     <Paragraph>{activeTab === 'description' ? productData.description : productData.additional_info}</Paragraph>
                 </div>
-
             </article>
+            <div className="related-products container">
+                <Title size={3}>Related Products</Title>
+                <div className="related-products__cards ">
+                    {relatedProducts.slice(0,4).map((relatedProduct) => (
+                        <ProductCard key={relatedProduct.id} data={relatedProduct} category={relatedProduct.category}/>
+                    ))}
+                </div>
+            </div>
 
         </div>
     );
