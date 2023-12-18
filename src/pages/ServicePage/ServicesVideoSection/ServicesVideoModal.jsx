@@ -6,7 +6,7 @@ const ServicesVideoModal = ({ showVideo, onClose }) => {
 
   return (
     <div className="modal-overlay">
-      <div className="modal-content">
+      <div className="modal-content1">
         <span className="close-icon" onClick={onClose}>✖</span>
         <iframe
           className="video-frame"
