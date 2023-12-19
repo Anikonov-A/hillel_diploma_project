@@ -14,7 +14,7 @@ import 'aos/dist/aos.css'
 
 AOS.init({
         duration: 1000,
-        once: false,
+        once: true,
         offset: 150
     }
 );
