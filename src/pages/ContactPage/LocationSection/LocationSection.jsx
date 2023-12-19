@@ -6,7 +6,7 @@ import LocationList from './LocationList/LocationList';
 function LocationSection () {
     return (
         <section className="location">
-            <div className="container">
+            <div className="container" data-aos="fade-up">
                 <div className="location__content">
                     <Span addClasses="location__span">Location</Span>
                     <Title addClasses="location__title" size={2}>Our Farms</Title>

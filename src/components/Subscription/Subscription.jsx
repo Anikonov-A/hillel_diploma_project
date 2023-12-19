@@ -37,8 +37,8 @@ function Subscription({subscribe}) {
 
 
     return (
-        <section className="subscription">
-            <div className="container">
+        <section className="subscription" >
+            <div className="container" data-aos="fade-up">
                 <div className="subscription__wrapper">
                     <Title addClasses="subscription__title" size={2}>
                         Subscribe to our Newsletter

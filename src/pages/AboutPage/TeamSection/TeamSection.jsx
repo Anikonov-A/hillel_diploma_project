@@ -27,9 +27,9 @@ export default function TeamSection({sliceFrom,sliceTo}) {
     return (
         <section className={styles.container}>
             <div className={styles.parag_wrapper}>
-                <Span children="">Team</Span>
-                <Title size={2}>Our Organic Experts</Title>
-                <Paragraph>
+                <Span children="" anim="fade-up">Team</Span>
+                <Title size={2} anim="fade-up">Our Organic Experts</Title>
+                <Paragraph anim="fade-up">
                     Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a
                     galley.
@@ -37,7 +37,7 @@ export default function TeamSection({sliceFrom,sliceTo}) {
             </div>
             <div className={styles.expert_cont}>
                 {displayedExperts && displayedExperts.map(item => (
-                    <ExpertCard key={item.id} data={item}/>
+                    <ExpertCard key={item.id} data={item} anim="fade-up"/>
                 ))}
             </div>
         </section>

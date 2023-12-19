@@ -45,19 +45,19 @@ function CategoriesSection() {
     };
 
     return (
-        <section className="categories">
+        <section className="categories" >
             <div className="container">
                 <div className="categories__content">
-                    <Span addClasses="categories__span">Categories</Span>
-                    <Title addClasses="categories__title" size={2}>
+                    <Span addClasses="categories__span" anim="fade-up">Categories</Span>
+                    <Title addClasses="categories__title" size={2} anim="fade-up">
                         Our Products
                     </Title>
                     <div className="categories__wrapper">
                         {randomProducts.slice(0, 8).map((item) => (
-                            <ProductCard key={item.id} data={item} category={getCategoryName(item.id)} />
+                            <ProductCard key={item.id} data={item} category={getCategoryName(item.id)} anim="fade-up"/>
                         ))}
                     </div>
-                    <NavButton to="/products" text="Watch more" className="upload-btn button green"></NavButton>
+                    <NavButton to="/products" text="Watch more" className="upload-btn button green" anim="fade-up"></NavButton>
                 </div>
             </div>
         </section>

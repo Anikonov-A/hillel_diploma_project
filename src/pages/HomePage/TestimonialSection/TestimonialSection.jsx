@@ -35,7 +35,7 @@ const counters = [
 ]
 const CounterElement = ({titleText, paragraphText}) => {
     return (
-        <div className='counter-element'>
+        <div className='counter-element' data-aos="fade-up">
             <Title size={2}>{titleText}</Title>
             <Paragraph>{paragraphText}</Paragraph>
         </div>
@@ -47,8 +47,8 @@ export default function Slider() {
     return (
        <section className='testimonial-wrapper'>
            <div>
-               <Span addClasses="spanMb">Testimonial</Span>
-               <Title size={2}>What Our Customer Saying?</Title>
+               <Span addClasses="spanMb" anim="fade-up">Testimonial</Span>
+               <Title size={2} anim="fade-up">What Our Customer Saying?</Title>
                <Swiper
                    loop={true}
                    spaceBetween={30}
@@ -65,19 +65,19 @@ export default function Slider() {
 
                    {testimonials.map((testimonial) => (
                        <SwiperSlide  key = {testimonial.id} >
-                           <div>
+                           <div data-aos="fade-up">
                                <img className='slider-img' src={testimonial.photo || img} alt={testimonial.name}/>
                            </div>
-                           <Paragraph>{testimonial.text}</Paragraph>
+                           <Paragraph anim="fade-up">{testimonial.text}</Paragraph>
                           <div>
-                              <Title size={6}> {testimonial.author}</Title>
-                              <div>{testimonial.trade}</div>
+                              <Title size={6} anim="fade-up"> {testimonial.author}</Title>
+                              <div data-aos="fade-up">{testimonial.trade}</div>
                           </div>
                        </SwiperSlide>
                    ))}
                </Swiper>
            </div>
-           <div className='line'></div>
+           <div className='line' data-aos="fade-up"></div>
            <div className='counters'>
                {counters.map((counter) => (
                    <CounterElement key={counter.id} titleText= {counter.title} paragraphText={counter.text}/>

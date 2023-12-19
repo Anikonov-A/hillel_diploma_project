@@ -11,12 +11,21 @@ import Slider from "./TestimonialSection/TestimonialSection";
 import {ToastContainer} from "react-toastify";
 import React from "react";
 
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 150
+    }
+);
 export default function HomePage() {
     return (
         <main className="wrapper">
             <HeroSection/>
             <OfferCardsSection />
-            <AboutSection className='AboutSection'/>
+            <AboutSection className='AboutSection' />
             <CategoriesSection></CategoriesSection>
             <Slider/>
             <OfferSection/>

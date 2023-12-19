@@ -9,7 +9,7 @@ function WorkTogether () {
             <div className="container">
                 <div className="cooperation__wrapper">
                     <img src="/images/contacts/fruits.webp" alt="fruits" className="cooperation__image" />
-                    <div className="cooperation__content">
+                    <div className="cooperation__content" data-aos="fade-up">
                         <Title addClasses="cooperation__title" size={2}>
                             We'd love to talk about how we can work together.
                         </Title>

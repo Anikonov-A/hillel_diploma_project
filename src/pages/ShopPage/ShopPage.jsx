@@ -1,6 +1,7 @@
 import './ShopPage.scss'
 import StyleGuide from "../../components/StyleGuide/StyleGuide";
 import ProductsSection from './ProductsSection/ProductsSection';
+
 function ShopPage() {
     return (
         <div className="wrapper">

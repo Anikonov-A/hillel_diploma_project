@@ -31,18 +31,18 @@ export function About({addClasses, className, spanTitle, title, pText1, pText2, 
     return (
         <section className={`${addClasses || ""} aboutWrapper`}>
                 <div className={className}></div>
-                <div className='aboutContentBlock'>
-                    <Span addClasses="spanMb">
+                <div className='aboutContentBlock' data-aos="fade-up">
+                    <Span addClasses="spanMb" anim="fade-up">
                         {spanTitle}
                     </Span>
-                    <Title size={2} >{title}< /Title>
-                    <Paragraph addClasses='paragraph'>{pText1}</Paragraph>
-                    <Paragraph addClasses='paragraph'>{pText2}</Paragraph>
+                    <Title size={2} anim="fade-up">{title}< /Title>
+                    <Paragraph addClasses='paragraph' anim="fade-up">{pText1}</Paragraph>
+                    <Paragraph addClasses='paragraph' anim="fade-up">{pText2}</Paragraph>
                     <div id={id}>
-                        <div>{imgBlock1}</div>
-                        <div>{imgBlock2}</div>
+                        <div data-aos="fade-up">{imgBlock1}</div>
+                        <div data-aos="fade-up">{imgBlock2}</div>
                     </div>
-                    <NavButton to="/products" className="button green" text={buttonText} />
+                    <NavButton to="/products" className="button green" text={buttonText} anim="fade-up"/>
                 </div>
         </section>
     )
