@@ -11,17 +11,14 @@ import Slider from "./TestimonialSection/TestimonialSection";
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import {useEffect} from "react";
 
+AOS.init({
+        duration: 1000,
+        once: false,
+        offset: 150
+    }
+);
 export default function HomePage() {
-    useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            once: false,
-            offset: 150
-            }
-        );
-    }, [])
     return (
         <main className="wrapper">
             <HeroSection/>

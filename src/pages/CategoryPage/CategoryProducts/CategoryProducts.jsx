@@ -70,7 +70,7 @@ function CategoryProducts() {
 
                 <div className="products__wrapper">
                     {sortedProducts.map((item) => (
-                        <ProductCard key={item.id} data={item} category={getCategoryName(item.id)} />
+                        <ProductCard key={item.id} data={item} category={getCategoryName(item.id)} anim="fade-up"/>
                     ))}
                 </div>
             </div>

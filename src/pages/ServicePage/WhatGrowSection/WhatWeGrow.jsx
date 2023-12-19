@@ -16,6 +16,7 @@ function renderPoints(cardsData, className, isLeft) {
           description={card.description}
           imagePath={card.imagePath}
           className={isLeft ? 'left-content point-card_content' : 'point-card_content'}
+          anim="fade-up"
         />
       ))}
     </ul>
@@ -72,7 +73,7 @@ const WhatWeGrowSection = () => {
       <div className='container'>
         <section className='wwGrowHeading'>
 
-          <Span addClasses="spanMb"> What we Grow </Span>
+          <Span addClasses="spanMb" > What we Grow </Span>
 
           <div>
             <Title size={2} >Better Agriculture for Better Future</Title>
@@ -86,7 +87,7 @@ const WhatWeGrowSection = () => {
         </section>
 
         <div className='wwButton'>
-          <NavButton to="/services/single" className="button green" text="Explore More" />
+          <NavButton to="/services/single" className="button green" text="Explore More" anim="fade-up"/>
         </div>
 
       </div>

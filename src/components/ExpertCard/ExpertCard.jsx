@@ -3,9 +3,9 @@ import Title from "../Title/Title";
 import Span from "../Span/Span";
 import {Link} from "react-router-dom";
 
-export default function ExpertCard({data}){
+export default function ExpertCard({data, anim}){
     return (
-        <div className={styles.expert_card}>
+        <div className={styles.expert_card} data-aos={anim}>
             <div className={styles.expert_img}>
                 <img src={data.photo} alt={data.name} />
             </div>

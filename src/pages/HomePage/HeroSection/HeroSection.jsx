@@ -6,7 +6,7 @@ import {NavButton} from "@/components/Buttons/Buttons";
 export default function HeroSection() {
     return (
         <section className="heroSection">
-            <div className="container">
+            <div className="container" data-aos="fade-up">
                 <div className="heroContentBlock">
                     <Span addClasses="spanMb">
                         100% Natural Food

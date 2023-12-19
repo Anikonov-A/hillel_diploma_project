@@ -16,7 +16,7 @@ const ServicesVideoSection = () => {
 
   return (
     <div className="services-video-section">
-      <div className="container svs-container">
+      <div className="container svs-container" data-aos="zoom-in">
 
         <div>
 

@@ -31,7 +31,7 @@ export function About({addClasses, className, spanTitle, title, pText1, pText2, 
     return (
         <section className={`${addClasses || ""} aboutWrapper`}>
                 <div className={className}></div>
-                <div className='aboutContentBlock' >
+                <div className='aboutContentBlock' data-aos="fade-up">
                     <Span addClasses="spanMb" anim="fade-up">
                         {spanTitle}
                     </Span>
