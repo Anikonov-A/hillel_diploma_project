@@ -5,7 +5,7 @@ import {scrollTop} from "../../../common/scrollFunction";
 export default function OfferCardsSection(){
 
     return(
-        <div className="offers-container">
+        <div className="offers-container" data-aos="zoom-in">
             <OfferCard moveTop={scrollTop} link={paths.FRESH} cardClass="first-card" spanText="Natural!!"  pText="Get Garden Fresh Fruit"/>
             <OfferCard moveTop={scrollTop} link={paths.VEGETABLES} cardClass="second-card" spanText="Offer!!" pText="Get Fresh Vegetables"/>
         </div>

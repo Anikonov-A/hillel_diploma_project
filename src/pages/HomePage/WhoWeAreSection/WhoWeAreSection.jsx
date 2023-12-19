@@ -5,13 +5,13 @@ import Paragraph from "@/components/Paragraph/Paragraph";
 
 export default function WhoWeAre() {
     return (
-        <section className='whoWeAreSection'>
+        <section className='whoWeAreSection' data-aos="zoom-in">
             <div className="whoWeAreSection-wrapper">
                 <div className='whoWeAreContentBlock'>
                     <Span addClasses="spanMb">
                         Eco Friendly
                     </Span>
-                    <div>
+                    <div >
                         <Title size={2} >Econis is a Friendly <br/>Organic Store</Title>
                         <div className='block'>
                             <Title size={6} >Start with Our Company First </Title>

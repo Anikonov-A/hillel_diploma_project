@@ -9,12 +9,24 @@ import "./HomePage.scss"
 import OfferCardsSection from "./OfferCardsSection/OfferCardsSection";
 import Slider from "./TestimonialSection/TestimonialSection";
 
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import {useEffect} from "react";
+
 export default function HomePage() {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: false,
+            offset: 100
+            }
+        );
+    }, [])
     return (
         <main className="wrapper">
             <HeroSection/>
             <OfferCardsSection />
-            <AboutSection className='AboutSection'/>
+            <AboutSection className='AboutSection' />
             <CategoriesSection></CategoriesSection>
             <Slider/>
             <OfferSection/>

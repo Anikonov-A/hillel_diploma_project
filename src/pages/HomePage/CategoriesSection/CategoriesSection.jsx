@@ -45,7 +45,7 @@ function CategoriesSection() {
     };
 
     return (
-        <section className="categories">
+        <section className="categories" data-aos="zoom-in" >
             <div className="container">
                 <div className="categories__content">
                     <Span addClasses="categories__span">Categories</Span>

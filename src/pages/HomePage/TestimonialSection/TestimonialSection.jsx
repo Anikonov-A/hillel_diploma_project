@@ -45,7 +45,7 @@ const CounterElement = ({titleText, paragraphText}) => {
 export default function Slider() {
 
     return (
-       <section className='testimonial-wrapper'>
+       <section className='testimonial-wrapper' data-aos="zoom-in">
            <div>
                <Span addClasses="spanMb">Testimonial</Span>
                <Title size={2}>What Our Customer Saying?</Title>

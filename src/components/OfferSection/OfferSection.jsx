@@ -24,7 +24,7 @@ function OfferSection() {
     }, [selectedCategory, dispatch]);
 
     return (
-        <section className="offer">
+        <section className="offer" data-aos="zoom-in">
             <div className="container">
                 <Span>Offer</Span>
                 <div className="offer__wrapper">

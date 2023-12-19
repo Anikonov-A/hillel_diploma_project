@@ -20,7 +20,7 @@ export default function AboutSection() {
     const buttonText = 'Shop Now'
 
     return (
-       <div>
+       <div data-aos="zoom-in" >
            <About addClasses='bgGrey' className='aboutSection1' spanTitle={spanTitle} title = {title} pText1 = {pText1}
                    id = 'containerVertical' imgBlock1 = {imgBlock1} imgBlock2 = {imgBlock2}
                   buttonText = {buttonText}/>

@@ -37,7 +37,7 @@ function Subscription({subscribe}) {
 
 
     return (
-        <section className="subscription">
+        <section className="subscription" data-aos="zoom-in">
             <div className="container">
                 <div className="subscription__wrapper">
                     <Title addClasses="subscription__title" size={2}>
