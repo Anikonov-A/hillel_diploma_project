@@ -37,8 +37,8 @@ function Subscription({subscribe}) {
 
 
     return (
-        <section className="subscription" data-aos="zoom-in">
-            <div className="container">
+        <section className="subscription" >
+            <div className="container" data-aos="zoom-in">
                 <div className="subscription__wrapper">
                     <Title addClasses="subscription__title" size={2}>
                         Subscribe to our Newsletter

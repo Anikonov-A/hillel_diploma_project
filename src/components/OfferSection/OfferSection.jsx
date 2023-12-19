@@ -24,18 +24,18 @@ function OfferSection() {
     }, [selectedCategory, dispatch]);
 
     return (
-        <section className="offer" data-aos="zoom-in">
+        <section className="offer" >
             <div className="container">
-                <Span>Offer</Span>
-                <div className="offer__wrapper">
-                    <Title addClasses="offer__title" size={2}>
+                <Span anim="fade-up">Offer</Span>
+                <div className="offer__wrapper" >
+                    <Title addClasses="offer__title" size={2} anim="fade-up">
                         We Offer Organic For You
                     </Title>
-                    <NavButton to={'/products'} className="offer__products-link button yellow-on-green" text="View All Products" />
+                    <NavButton to={'/products'} className="offer__products-link button yellow-on-green" text="View All Products" anim="fade-up"/>
                 </div>
                 <div className="offer__products-wrapper">
                     {categoryData.map((item) => (
-                        <ProductCard key={item.id} data={item} category={selectedCategory.name} />
+                        <ProductCard key={item.id} data={item} category={selectedCategory.name} anim="fade-up"/>
                     ))}
                 </div>
             </div>

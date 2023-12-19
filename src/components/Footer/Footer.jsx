@@ -6,7 +6,7 @@ import Copyright from './Copyright/Copyright';
 function Footer () {
     return (
         <footer className="footer">
-            <div className="container">
+            <div className="container" data-aos="fade-up">
                 <div className="footer__inner">
                     <FooterContacts />
                     <FooterSocials />

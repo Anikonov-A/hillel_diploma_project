@@ -4,9 +4,9 @@ import "./Buttons.scss"
 import { string } from "prop-types";
 
 // Classes for Nav buttons -- button(is default styles) green||yellow||yellow-on-green||transparent (for modify nav button)
-export function NavButton({to, text, className}) {
+export function NavButton({to, text, className, anim}) {
     return (
-        <Link to={to} className={className} onClick={()=>window.scrollTo(0,0)}>
+        <Link to={to} className={className} onClick={()=>window.scrollTo(0,0)} data-aos={anim}>
             {text} <ArrowButton/>
         </Link>
     )

@@ -5,7 +5,7 @@ import {NavButton} from "@/components/Buttons/Buttons";
 
 export default function HeroSection() {
     return (
-        <section className="heroSection" data-aos="zoom-in">
+        <section className="heroSection">
             <div className="container">
                 <div className="heroContentBlock">
                     <Span addClasses="spanMb">

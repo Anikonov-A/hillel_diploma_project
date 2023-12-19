@@ -5,27 +5,27 @@ import Paragraph from "@/components/Paragraph/Paragraph";
 
 export default function WhoWeAre() {
     return (
-        <section className='whoWeAreSection' data-aos="zoom-in">
+        <section className='whoWeAreSection'>
             <div className="whoWeAreSection-wrapper">
                 <div className='whoWeAreContentBlock'>
-                    <Span addClasses="spanMb">
+                    <Span addClasses="spanMb" anim="fade-up">
                         Eco Friendly
                     </Span>
                     <div >
-                        <Title size={2} >Econis is a Friendly <br/>Organic Store</Title>
-                        <div className='block'>
+                        <Title size={2} anim="fade-up">Econis is a Friendly <br/>Organic Store</Title>
+                        <div className='block' data-aos="fade-up">
                             <Title size={6} >Start with Our Company First </Title>
                             <Paragraph>Sed ut perspiciatis unde omnis iste natus error
                                 sit voluptat accusantium doloremque laudantium. Sed ut perspiciatis.
                             </Paragraph>
                         </div>
-                        <div className='block'>
+                        <div className='block' data-aos="fade-up">
                             <Title size={6} >Learn How to Grow Yourself </Title>
                             <Paragraph>Sed ut perspiciatis unde omnis iste natus error
                                 sit voluptat accusantium doloremque laudantium. Sed ut perspiciatis.
                             </Paragraph>
                         </div>
-                        <div className='block'>
+                        <div className='block' data-aos="fade-up">
                             <Title size={6} >Farming Strategies of Today </Title>
                             <Paragraph>Sed ut perspiciatis unde omnis iste natus error
                                 sit voluptat accusantium doloremque laudantium. Sed ut perspiciatis.

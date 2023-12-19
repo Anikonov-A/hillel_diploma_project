@@ -6,7 +6,7 @@ import {addItem} from "../../store/slices/cartSlice";
 import {scrollTop} from "../../common/scrollFunction";
 import {toast} from "react-toastify";
 
-function ProductCard({data, category}) {
+function ProductCard({data, category, anim}) {
     const dispatch = useDispatch();
     const handleAddToCart = () => {
         dispatch(addItem(data));
@@ -18,7 +18,7 @@ function ProductCard({data, category}) {
     };
 
     return (
-        <div className="offer__product">
+        <div className="offer__product" data-aos={anim}>
             <Link className="offer__product-category-link green" to={`/products/${category.toLowerCase()}`}
                   onClick={scrollTop}>{category}</Link>
             <Link className="offer__product-link"
