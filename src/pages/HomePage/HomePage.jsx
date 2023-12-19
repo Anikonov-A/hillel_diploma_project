@@ -8,6 +8,8 @@ import "./HomePage.scss"
 
 import OfferCardsSection from "./OfferCardsSection/OfferCardsSection";
 import Slider from "./TestimonialSection/TestimonialSection";
+import {ToastContainer} from "react-toastify";
+import React from "react";
 
 export default function HomePage() {
     return (
@@ -19,6 +21,21 @@ export default function HomePage() {
             <Slider/>
             <OfferSection/>
             <WhoWeAre/>
+            <ToastContainer
+                enableMultiContainer={true}
+                containerId={"id4"}
+                position="top-center"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick={true}
+                rtl={false}
+                pauseOnFocusLoss={false}
+                draggable={true}
+                pauseOnHover={false}
+                theme="light"
+                limit={3}
+            />
         </main>
     )
 }
