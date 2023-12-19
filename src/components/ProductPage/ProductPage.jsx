@@ -21,13 +21,18 @@ import 'react-toastify/dist/ReactToastify.css';
 import ProductCard from "../ProductCard/ProductCard";
 
 export function ProductPage() {
-    const [activeTab, setActiveTab] = useState('description');
-    const [quantity, setQuantity] = useState(1);
-    const [relatedProducts, setRelatedProducts] = useState([]);
+    const [state, setState] = useState({
+        activeTab: "description",
+        quantity:1,
+        relatedProducts:[]
+    })
 
 
     const handleTabClick = (tab) => {
-        setActiveTab(tab);
+        setState({
+            ...state,
+            activeTab: tab
+        })
     };
 
     const {productName, category} = useParams();
@@ -41,14 +46,20 @@ export function ProductPage() {
     const handleQuantityChange = (event) => {
         const newQuantity = parseInt(event.target.value);
         if (newQuantity < 1 || isNaN(newQuantity)) {
-            setQuantity(1);
+            setState(prevState => ({
+                ...prevState,
+                quantity: 1
+            }));
         } else {
-            setQuantity(newQuantity);
+            setState(prevState => ({
+                ...prevState,
+                quantity: newQuantity
+            }));
         }
     };
 
     const handleAddProduct = () => {
-        dispatch(addItem({...productData, quantity}));
+        dispatch(addItem({...productData,quantity: state.quantity }));
         toast.success('Product added to cart', {
             className: "toast-modify",
             position: "top-center",
@@ -79,7 +90,10 @@ export function ProductPage() {
                     navigate('/*');
                     return;
                 }
-                setQuantity(1);
+                setState(prevState => ({
+                    ...prevState,
+                    quantity: 1
+                }));
 
 
                 const isValidCategory = result.categories.some((cat) => cat.name.toLowerCase() === category.toLowerCase());
@@ -103,9 +117,10 @@ export function ProductPage() {
                     .flatMap((cat) => cat.items);
 
                 const shuffledRelatedProducts = shuffleArray(relatedProducts);
-
-                setRelatedProducts(shuffledRelatedProducts);
-
+                setState(prevState => ({
+                    ...prevState,
+                    relatedProducts: shuffledRelatedProducts
+                }));
 
                 dispatch(setProductData(categoryData.items.find((item) => item.name.toLowerCase() === productName.toLowerCase())));
             } catch (error) {
@@ -142,21 +157,21 @@ export function ProductPage() {
                 pauseOnHover={false}
                 theme="light"
                 limit={3}
-            />  <ToastContainer
-                enableMultiContainer={true}
-                containerId={"id4"}
-                position="top-center"
-                autoClose={3000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick={true}
-                rtl={false}
-                pauseOnFocusLoss={false}
-                draggable={true}
-                pauseOnHover={false}
-                theme="light"
-                limit={3}
-            />
+            /> <ToastContainer
+            enableMultiContainer={true}
+            containerId={"id4"}
+            position="top-center"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick={true}
+            rtl={false}
+            pauseOnFocusLoss={false}
+            draggable={true}
+            pauseOnHover={false}
+            theme="light"
+            limit={3}
+        />
             <StyleGuide titleText="Shop Single" backgroundClass="bg-shop-single"/>
             <section className='productPage-section__details container'>
 
@@ -173,7 +188,7 @@ export function ProductPage() {
                                 new Intl.NumberFormat('en-US', {
                                     style: 'currency',
                                     currency: 'USD'
-                                }).format(productData.price * quantity)
+                                }).format(productData.price * state.quantity)
                             }
                         </p>
                         <Paragraph>{productData.info}</Paragraph>
@@ -186,7 +201,7 @@ export function ProductPage() {
                                    type="number"
                                    min="1"
                                    max="99"
-                                   value={quantity}
+                                   value={state.quantity}
                                    onChange={handleQuantityChange}
                                    name="quantity"
                                    id="quantity"
@@ -201,13 +216,13 @@ export function ProductPage() {
             <article className='productPage-btns__wrapper container'>
                 <div className='productPage-btns__block'>
                     <button
-                        className={`pag-btn ${activeTab === 'description' ? 'btn-active' : 'btn-nonactive'}`}
+                        className={`pag-btn ${state.activeTab === 'description' ? 'btn-active' : 'btn-nonactive'}`}
                         onClick={() => handleTabClick('description')}
                     >
                         Product Description
                     </button>
                     <button
-                        className={`pag-btn ${activeTab === 'additional_info' ? 'btn-active' : 'btn-nonactive'}`}
+                        className={`pag-btn ${state.activeTab === 'additional_info' ? 'btn-active' : 'btn-nonactive'}`}
                         onClick={() => handleTabClick('additional_info')}
                     >
                         Additional Info
@@ -215,13 +230,13 @@ export function ProductPage() {
                 </div>
 
                 <div className='productPage-btns__desc'>
-                    <Paragraph>{activeTab === 'description' ? productData.description : productData.additional_info}</Paragraph>
+                    <Paragraph>{state.activeTab === 'description' ? productData.description : productData.additional_info}</Paragraph>
                 </div>
             </article>
             <div className="related-products container">
                 <Title size={3}>Related Products</Title>
                 <div className="related-products__cards ">
-                    {relatedProducts.slice(0,4).map((relatedProduct) => (
+                    {state.relatedProducts.slice(0, 4).map((relatedProduct) => (
                         <ProductCard key={relatedProduct.id} data={relatedProduct} category={relatedProduct.category}/>
                     ))}
                 </div>

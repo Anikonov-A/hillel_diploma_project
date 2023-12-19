@@ -9,18 +9,12 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const email = {
     defaultValue: '',
-    // inputType: 'email',
-    // vSchema: string()
-    //     .email('Invalid email address')
-    //     .required('Email is a required field'),
-
 }
 
 function Subscription({subscribe}) {
     const formik = useFormik({
         initialValues: {email: email.defaultValue},
         validationSchema: validSchemaEmailForm,
-        // validationSchema: email.vSchema,
         onSubmit: async (values, {resetForm}) => {
             await subscribe(values);
             toast.success("You have successfully subscribed to the newsletter!",{
