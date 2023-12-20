@@ -8,6 +8,8 @@ import {useEffect} from "react";
 import {loadCartFromStorage} from "../../store/slices/cartSlice";
 import {Link} from "react-router-dom";
 import {scrollTop} from "../../common/scrollFunction";
+import Span from "../../components/Span/Span";
+import {NavButton} from "../../components/Buttons/Buttons";
 
 function ProductCard({product, handleRemove, handleIncrease, handleDecrease}) {
     const handleActionOnClick = (action) => () => action(product.id);
@@ -63,6 +65,14 @@ function CartPage() {
             <div className='wrapper container'>
                 <div className="shopping-cart">
                     <Title size={3} addClasses="shopping-cart__title">Shopping cart</Title>
+                    <div className="shopping-cart__empty">
+                        {isCartEmpty ? (
+                            <>
+                                <Span anim="fade-up" addClasses="shopping-cart__span" children="Not a single product in your cart yet!" />
+                                <NavButton className="button green shop__link" to="/products" text="Continue Shopping" anim="fade-up" />
+                            </>
+                        ) : null}
+                    </div>
                     <div className="shopping-cart__body-block block-body">
                         <div className="block-body__order-content content-order">
                             <ul className="content-order__list">

@@ -52,9 +52,9 @@ function CategoriesSection() {
                     <Title addClasses="categories__title" size={2} anim="fade-up">
                         Our Products
                     </Title>
-                    <div className="categories__wrapper">
+                    <div className="categories__wrapper" data-aos="fade-up">
                         {randomProducts.slice(0, 8).map((item) => (
-                            <ProductCard key={item.id} data={item} category={getCategoryName(item.id)} anim="fade-up"/>
+                            <ProductCard key={item.id} data={item} category={getCategoryName(item.id)}/>
                         ))}
                     </div>
                     <NavButton to="/products" text="Watch more" className="upload-btn button green" anim="fade-up"></NavButton>
