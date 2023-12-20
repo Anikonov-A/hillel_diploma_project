@@ -44,18 +44,22 @@ export function ProductPage() {
     const error = useSelector(selectProductError);
 
     const handleQuantityChange = (event) => {
-        const newQuantity = parseInt(event.target.value);
-        if (newQuantity < 1 || isNaN(newQuantity)) {
-            setState(prevState => ({
+        const inputValue = event.target.value;
+        const newQuantity = parseFloat(inputValue);
+
+        if (inputValue === '' || isNaN(newQuantity) || newQuantity < 1) {
+            setState((prevState) => ({
                 ...prevState,
-                quantity: 1
+                quantity: 1,
             }));
         } else {
-            setState(prevState => ({
+            const cleanedValue = Math.min(Math.round(newQuantity), 99);
+            setState((prevState) => ({
                 ...prevState,
-                quantity: newQuantity
+                quantity: cleanedValue,
             }));
         }
+        event.target.value = parseFloat(inputValue).toString();
     };
 
     const handleAddProduct = () => {
