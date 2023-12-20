@@ -82,9 +82,9 @@ function ProductsSection() {
             />
             <div className="container">
                 <SortForm sortBy={sortBy} onSortChange={handleSortChange} />
-                <div className="products__wrapper">
+                <div className="products__wrapper" data-aos="fade-up">
                     {sortedProducts.map((item) => (
-                        <ProductCard key={item.id} data={item} category={getCategoryName(item.id)} anim="fade-up"/>
+                        <ProductCard key={item.id} data={item} category={getCategoryName(item.id)}/>
                     ))}
                 </div>
             </div>

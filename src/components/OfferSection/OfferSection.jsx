@@ -33,9 +33,9 @@ function OfferSection() {
                     </Title>
                     <NavButton to={'/products'} className="offer__products-link button yellow-on-green" text="View All Products" anim="fade-up"/>
                 </div>
-                <div className="offer__products-wrapper">
+                <div className="offer__products-wrapper" data-aos="fade-up">
                     {categoryData.map((item) => (
-                        <ProductCard key={item.id} data={item} category={selectedCategory.name} anim="fade-up"/>
+                        <ProductCard key={item.id} data={item} category={selectedCategory.name}/>
                     ))}
                 </div>
             </div>

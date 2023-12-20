@@ -35,9 +35,9 @@ export default function TeamSection({sliceFrom,sliceTo}) {
                     galley.
                 </Paragraph>
             </div>
-            <div className={styles.expert_cont}>
+            <div className={styles.expert_cont} data-aos="fade-up">
                 {displayedExperts && displayedExperts.map(item => (
-                    <ExpertCard key={item.id} data={item} anim="fade-up"/>
+                    <ExpertCard key={item.id} data={item}/>
                 ))}
             </div>
         </section>
