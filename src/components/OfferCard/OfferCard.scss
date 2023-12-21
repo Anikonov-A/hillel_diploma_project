@@ -19,10 +19,10 @@
 }
 
 .card-link:first-of-type:hover {
-  transform: scale(1.04) ;
+  transform: scale(1.04) !important;
 }
 .card-link:last-of-type:hover {
-  transform: scale(1.04);
+  transform: scale(1.04) !important;
 }
 
 .first-card {
